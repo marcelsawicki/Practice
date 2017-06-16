@@ -1,23 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Kalkulator.aspx.cs" Inherits="Kalkulator.Kalkulator" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Kalkulator.aspx.cs" Inherits="Calculator" %>
 
-<br />
-<br />
-<asp:TextBox ID="TextBox1" runat="server" Width="140px"></asp:TextBox>
-<asp:TextBox ID="TextBox2" runat="server" Width="141px"></asp:TextBox>
-<br />
-<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Dodaj" />
-<br />
-<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Odejmij" />
-<br />
-<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Mnóż" />
-<br />
-<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Dziel" />
-<br />
-<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+<!DOCTYPE html>
 
-</asp:Content>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Substract" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Multiply" OnClick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="Divide" OnClick="Button4_Click" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
+    </div>
+    </form>
+</body>
+</html>
