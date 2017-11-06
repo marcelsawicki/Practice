@@ -7,9 +7,9 @@
  */
 
  
-public class list4_O1_I3{
+public class List4_O1_I3{
 
-public static class liczby{
+public static class Liczby{
 	//pola klas
 	int liczba;
 	int kolejna_cyfra;

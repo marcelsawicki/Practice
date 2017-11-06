@@ -7,7 +7,7 @@
  */
 
 
-public class list3_t3_F4 {
+public class List3_t3_F4 {
 
     public static void main(String[] args) {
     	

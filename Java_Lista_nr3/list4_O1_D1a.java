@@ -48,19 +48,19 @@ class Punkt{
     }
 }
 
-public class list4_O1_D1a {
+public class List4_O1_D1a {
 	public static void main(String[] args){
-	//tworze obiekt klasy Punkt	
-	Punkt punktMoj=new Punkt();
-	
-	//pobieram wspolrzedne od uzytkownika
-	punktMoj.ustawX(Czytanie.czytajDouble("x="));
-	punktMoj.ustawY(Czytanie.czytajDouble("y="));
-	
-	punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4);
-	System.out.println(punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4));
-	
-	punktMoj.NalezyDoObszaru1(punktMoj.pokazX(),punktMoj.pokazY());
+		//tworze obiekt klasy Punkt	
+		Punkt punktMoj=new Punkt();
+		
+		//pobieram wspolrzedne od uzytkownika
+		punktMoj.ustawX(Czytanie.czytajDouble("x="));
+		punktMoj.ustawY(Czytanie.czytajDouble("y="));
+		
+		punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4);
+		System.out.println(punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4));
+		
+		punktMoj.NalezyDoObszaru1(punktMoj.pokazX(),punktMoj.pokazY());
 	}
 	
     

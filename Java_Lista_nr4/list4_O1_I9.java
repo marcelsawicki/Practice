@@ -6,9 +6,9 @@
  * @version 1.00 2014/01/18
  */
 
-public class list4_O1_I9{
+public class List4_O1_I9{
 
-public static class liczba{
+public static class Liczba{
 	//zmienne
 
 	double rozw;
@@ -18,25 +18,25 @@ public static class liczba{
 	//metody
 	//settery
 	
-	public  void ustawRozw(double rozw){
-		this.rozw=rozw;	
-	}
-	//gettery
-	
-	public double potega(double x,double k) {
-	
-	do{
-			rozw=rozw*x;
-			k=k-1;
-			
-	}while(k>0);
-	return rozw;
-	}//potega
+		public  void ustawRozw(double rozw){
+			this.rozw=rozw;	
+		}
+		//gettery
+		
+		public double potega(double x,double k) {
+		
+		do{
+				rozw=rozw*x;
+				k=k-1;
+				
+		}while(k>0);
+		return rozw;
+		}//potega
 
 }//class liczba
 
 public static void main(String[] args) {
-	liczba Moja = new liczba();
+	liczba Moja = new Liczba();
 	Moja.ustawRozw(1);
 	System.out.println("Program obliczajacy x do potegi k:");
 	

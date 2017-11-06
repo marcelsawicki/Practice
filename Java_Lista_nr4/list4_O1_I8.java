@@ -8,7 +8,7 @@
 
 public class list4_O1_I8{
 
-public static class liczba{
+public static class Liczba{
 	//zmienne
 	//int a, b, c;
 	//metody
@@ -16,24 +16,24 @@ public static class liczba{
 	//gettery
 	
 	public static int nwd(int a,int b) {
-	int c;
-                  
-	while(a!=b)                
-	{ 
+		int c;
+					  
+		while(a!=b)                
+		{ 
 
-	if(a>b){a=a-b;
-	}else{b=b-a;
-	};                    
-	}//while
+		if(a>b){a=a-b;
+		}else{b=b-a;
+		};                    
+		}//while
 
-	return a;                          
-                 	        
-	}//nwd
+		return a;                          
+								
+		}//nwd
 	}
 
-public static void main(String[] args) {
-	liczba Moja = new liczba();
-	
-	System.out.println(Moja.nwd(8,2));
-} //main
+	public static void main(String[] args) {
+		liczba Moja = new Liczba();
+		
+		System.out.println(Moja.nwd(8,2));
+	} //main
 }

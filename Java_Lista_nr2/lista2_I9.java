@@ -6,7 +6,7 @@
  * @version 1.00 2013/12/09
  */
 
-public class lista2_I9{
+public class Lista2_I9{
 	        
 public static void main(String[] args) {
 

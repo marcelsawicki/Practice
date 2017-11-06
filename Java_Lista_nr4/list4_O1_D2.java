@@ -6,7 +6,7 @@
  * @version 1.00 2013/02/20
  */
 
-public class list4_O1_D2{
+public class List4_O1_D2{
 	
 public static void main(String[] args) {
  

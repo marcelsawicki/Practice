@@ -7,7 +7,7 @@
  */
  
 import static java.lang.Math.*;
-public class lista2_I10_a{
+public class Lista2_I10_a{
 	        
 public static void main(String[] args) {
 	double a=1;
@@ -15,13 +15,11 @@ public static void main(String[] args) {
 	int k=0;
 	double x=3;
 	double epsilon=0.1;
-	do{
+		do{
 			k++;
 			a*=(x/k);
-			f+=a;
-			
-			
-	}while(a>epsilon);
+			f+=a;	
+		}while(a>epsilon);
 	System.out.println("e^("+x+")="+f);
 } //main
 }

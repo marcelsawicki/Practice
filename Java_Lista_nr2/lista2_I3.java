@@ -8,19 +8,19 @@
 
 public class lista2_I3{
 
-public static void main(String[] args){
-	int liczba;
-	int kolejna_cyfra;
-	
-	int ile=0;
-	
-	liczba=123;
-	while(liczba>0){
-    	kolejna_cyfra=liczba % 10;
-    	System.out.println(kolejna_cyfra);
-    	liczba/=10;
-    	ile++;
-    };
-	System.out.println("Liczb znaczacych:"+ile);
-} //main
+	public static void main(String[] args){
+		int liczba;
+		int kolejna_cyfra;
+		
+		int ile=0;
+		
+		liczba=123;
+		while(liczba>0){
+			kolejna_cyfra=liczba % 10;
+			System.out.println(kolejna_cyfra);
+			liczba/=10;
+			ile++;
+		};
+		System.out.println("Liczb znaczacych:"+ile);
+	} //main
 }

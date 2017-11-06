@@ -7,9 +7,9 @@
  */
 
  
-public class list4_O1_I2{
+public class List4_O1_I2{
 
-public static class liczby{
+public static class Liczby{
 	//pola klas
 	int liczba;
 	int kolejna_cyfra;
@@ -57,7 +57,7 @@ public static class liczby{
 
 public static void main(String[] args){
 	
-	liczby mojaLiczba = new liczby();
+	liczby mojaLiczba = new Liczby();
 	/////////////////////////////////////////////////////
 	System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
 	mojaLiczba.ustawLiczbe(12345);

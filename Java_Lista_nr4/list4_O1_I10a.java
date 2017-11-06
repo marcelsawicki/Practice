@@ -6,9 +6,9 @@
  * @version 1.00 2014/01/18
  */
 
-public class list4_O1_I10a{
+public class List4_O1_I10a{
 
-public static class liczba{
+public static class Liczba{
 	//zmienne
 	
 	double a=1;
@@ -36,7 +36,7 @@ public static class liczba{
 }//class liczba
 
 public static void main(String[] args) {
-	liczba Moja = new liczba();
+	liczba Moja = new Liczba();
 //	Moja.ustawRozw(1);
 	System.out.println("Program obliczajacy e do potegi x:");
 	
