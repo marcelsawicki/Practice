@@ -6,7 +6,7 @@
  * @version 1.00 2013/12/11
  */
 
-public class Lista2_I4{
+public class Lista2I4 {
 	
 	public static void main(String[] args){
 		int liczba;
@@ -15,7 +15,10 @@ public class Lista2_I4{
 		liczba=123987688;
 		while(liczba>0){
 			kolejna_cyfra=liczba % 10;
-			if(kolejna_cyfra>max_a){max_a=kolejna_cyfra;};
+			if(kolejna_cyfra>max_a)
+			{
+				max_a=kolejna_cyfra;
+			};
 
 			System.out.println(kolejna_cyfra);
 			liczba/=10;

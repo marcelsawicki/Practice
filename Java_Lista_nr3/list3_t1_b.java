@@ -6,7 +6,7 @@
  * @version 1.00 2013/12/17
  */
 
-public class List3_t1_b {
+public class Lista3T1b {
 
 	public static void main(String[] args){
 		
@@ -53,4 +53,4 @@ public class List3_t1_b {
 		};
 		
 	};
-}; //main
+}; 

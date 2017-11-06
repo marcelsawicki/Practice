@@ -16,22 +16,52 @@ public class Ash{
 
 
 	System.out.println("Sprawdzam, czy mozna zbudowac trojkat z odcinkow a, b, c:");
-	if( (a<(b+c)) && (b<(c+a)) && (c<(a+b))){ System.out.println("Z odcinkow a, b, c mozna zbudowac trojkat");
-	//
-	System.out.println("*****************************************************************************************");
-	if(a==b && b==c){System.out.println("Trojkat jest trojkatem rownobocznym.");};
-	//
-	if(a==b && a!=c){System.out.println("Trojkat jest trojkatem rownoramiennym.");};
-	if(a==c && a!=b){System.out.println("Trojkat jest trojkatem rownoramiennym.");};
-	if(c==b && c!=a){System.out.println("Trojkat jest trojkatem rownoramiennym.");};
-	//
-	if(a!=b && b!=c && a!=c){System.out.println("Trojkat jest trojkatem roznobocznym.");};
-	//
-	if((a*a==(b*b+c*c)) || (b*b==(a*a+c*c)) || (c*c==(b*b+a*a))){System.out.println("Trojkat jest trojkatem prostokatnym.");};
-	if((a*a<(b*b+c*c)) && (b*b<(a*a+c*c)) && (c*c<(b*b+a*a))){System.out.println("Trojkat jest trojkatem ostrokatnym.");};
-	if((a*a>(b*b+c*c)) || (b*b>(a*a+c*c)) || (c*c>(b*b+a*a))){System.out.println("Trojkat jest trojkatem rozwartokatnym.");};
+	if( (a<(b+c)) && (b<(c+a)) && (c<(a+b)))
+	{ 
+		System.out.println("Z odcinkow a, b, c mozna zbudowac trojkat");
+		//
+		System.out.println("*****************************************************************************************");
+		if(a==b && b==c)
+		{
+			System.out.println("Trojkat jest trojkatem rownobocznym.");
+		};
+		
+		if(a==b && a!=c)
+		{
+			System.out.println("Trojkat jest trojkatem rownoramiennym.");
+		};
+		
+		if(a==c && a!=b)
+		{
+			System.out.println("Trojkat jest trojkatem rownoramiennym.");
+		};
+		
+		if(c==b && c!=a)
+		{
+			System.out.println("Trojkat jest trojkatem rownoramiennym.");
+		};
+		
+		if(a!=b && b!=c && a!=c)
+		{
+			System.out.println("Trojkat jest trojkatem roznobocznym.");
+		};
+		
+		if((a*a==(b*b+c*c)) || (b*b==(a*a+c*c)) || (c*c==(b*b+a*a)))
+		{
+			System.out.println("Trojkat jest trojkatem prostokatnym.");
+		};
+		
+		if((a*a<(b*b+c*c)) && (b*b<(a*a+c*c)) && (c*c<(b*b+a*a)))
+		{
+			System.out.println("Trojkat jest trojkatem ostrokatnym.");
+		};
+		
+		if((a*a>(b*b+c*c)) || (b*b>(a*a+c*c)) || (c*c>(b*b+a*a)))
+		{
+			System.out.println("Trojkat jest trojkatem rozwartokatnym.");
+		};
 
-	System.out.println("*****************************************************************************************");
+		System.out.println("*****************************************************************************************");
 
 	}//koniec sprawdzania czy mozna zbudowac trojkat z odcinkow a, b , c.
 	else System.out.println("Nie mozna.");

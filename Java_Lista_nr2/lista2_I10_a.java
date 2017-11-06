@@ -7,7 +7,7 @@
  */
  
 import static java.lang.Math.*;
-public class Lista2_I10_a{
+public class Lista2I10a{
 	        
 public static void main(String[] args) {
 	double a=1;

@@ -7,7 +7,7 @@
  */
 import static java.lang.Math.*;
 
-public class Lista2_I10_b{
+public class Lista2I10b{
 	
 	static double silnia (double n) {
 			double wynik = 1;
@@ -22,26 +22,21 @@ public class Lista2_I10_b{
 		double f=a;
 		double k=0;
 		double x=1;
-		
 		double licznik;
 		double mianownik;
-		
 		double epsilon=0.0001;
-		
-		
 		do{
 			k++;
-				licznik=(Math.pow(x,2*k+1));
-				mianownik=silnia(2*k+1);
-		
-				a=(Math.pow((-1),k))*((licznik/mianownik));
-				System.out.println("Licznik:"+licznik+" dla k="+k);
-				System.out.println("Mianownik:"+mianownik+" dla k="+k);
-				System.out.println("a:"+a+" dla k="+k);
-				System.out.println("f:"+f+" dla k="+k);
-				double z=Czytanie.czytajDouble("z=");
-				f=f+a;
-				
+			licznik=(Math.pow(x,2*k+1));
+			mianownik=silnia(2*k+1);
+	
+			a=(Math.pow((-1),k))*((licznik/mianownik));
+			System.out.println("Licznik:"+licznik+" dla k="+k);
+			System.out.println("Mianownik:"+mianownik+" dla k="+k);
+			System.out.println("a:"+a+" dla k="+k);
+			System.out.println("f:"+f+" dla k="+k);
+			double z=Czytanie.czytajDouble("z=");
+			f=f+a;
 		}while(Math.abs(a)>epsilon);
 		System.out.println("sin("+x+")="+f);
 		System.out.println(Math.sin(x));

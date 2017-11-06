@@ -8,38 +8,38 @@
 
 public class List4_O1_I9{
 
-public static class Liczba{
-	//zmienne
+	public static class Liczba{
+		//zmienne
 
-	double rozw;
-	double k;
-	double x;
-	
-	//metody
-	//settery
-	
-		public  void ustawRozw(double rozw){
-			this.rozw=rozw;	
-		}
-		//gettery
+		double rozw;
+		double k;
+		double x;
 		
-		public double potega(double x,double k) {
+		//metody
+		//settery
 		
-		do{
-				rozw=rozw*x;
-				k=k-1;
-				
-		}while(k>0);
-		return rozw;
-		}//potega
+			public  void ustawRozw(double rozw){
+				this.rozw=rozw;	
+			}
+			//gettery
+			
+			public double potega(double x,double k) {
+			
+			do{
+					rozw=rozw*x;
+					k=k-1;
+					
+			}while(k>0);
+			return rozw;
+			}//potega
 
-}//class liczba
+	}//class liczba
 
-public static void main(String[] args) {
-	liczba Moja = new Liczba();
-	Moja.ustawRozw(1);
-	System.out.println("Program obliczajacy x do potegi k:");
-	
-	System.out.println(Moja.potega(6,2));
-} //main
+	public static void main(String[] args) {
+		liczba Moja = new Liczba();
+		Moja.ustawRozw(1);
+		System.out.println("Program obliczajacy x do potegi k:");
+		
+		System.out.println(Moja.potega(6,2));
+	} //main
 }

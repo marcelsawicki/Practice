@@ -7,7 +7,7 @@
  */
 
 
-public class List3_t4 {
+public class List3T4 {
 
 	public static double odl(double xa, double xb, double ya, double yb){
 		double dx=xa-xb;
@@ -27,19 +27,21 @@ public class List3_t4 {
 		
 		for(int h=0;h<n;h++){
 			System.out.println("Punkt nr "+h);
-		mac[h][0]=Czytanie.czytajDouble("x=");
-		mac[h][1]=Czytanie.czytajDouble("y=");
+			mac[h][0]=Czytanie.czytajDouble("x=");
+			mac[h][1]=Czytanie.czytajDouble("y=");
 		}//for
 		
 		System.out.println("Szukam punktu najbardziej odleglego od poczatku ukladu wspolrzednych XOY.");
 		int j=0;
 		for(int k=0;k<n;k++){
 			//for(int j=0;j<2;j++){
-			
 			System.out.println(odl(mac[k][j],0,mac[k][j+1],0));
-			if(maxOdl<odl(mac[k][j],0,mac[k][j+1],0)){maxOdl=odl(mac[k][j],0,mac[k][j+1],0); ktoryPkt=k;};
+			if(maxOdl<odl(mac[k][j],0,mac[k][j+1],0))
+			{
+				maxOdl=odl(mac[k][j],0,mac[k][j+1],0); ktoryPkt=k;
+			};
 			//}
 		}//for
 		System.out.println("Najbardziej odlegly pkt. = " +maxOdl +"Jest to pkt. nr "+ktoryPkt);    
 	}//main
-}//class List3_t4
+}// class List3T4

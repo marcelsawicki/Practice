@@ -10,7 +10,7 @@ public class List3_t1_a{
 	
 	public static void main(String[] args){
 		
-		int[] ciag={10, 20, 30, 40, 50};
+		int[] ciag ={ 10, 20, 30, 40, 50 };
 		System.out.println(ciag[1]);
 		
 	}; //main

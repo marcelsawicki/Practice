@@ -8,11 +8,9 @@
 
 public class List4_O1_D2{
 	
-public static void main(String[] args) {
- 
-Liczba mojaLiczba = new Liczba();
-Liczba.rosnacoLiczby(Liczba.ustawA(),Liczba.ustawB(),Liczba.ustawC());
-
+	public static void main(String[] args) {
+		Liczba mojaLiczba = new Liczba();
+		Liczba.rosnacoLiczby(Liczba.ustawA(),Liczba.ustawB(),Liczba.ustawC());
 	}//main
 
-}//list4_O1_D2
+}//	List4_O1_D2

@@ -14,8 +14,6 @@ public static class Liczby{
 	int liczba;
 	int kolejna_cyfra;
 	int ile;
-		
-	//metody////////////////////////////////////////////////////
 	
 	//setters
 	public void ustawLiczbe(int liczba){
@@ -28,46 +26,35 @@ public static class Liczby{
 	
 	//getters
 	public int pokazLiczbe(){
-	return liczba;	
+		return liczba;	
 	}
-	///////////////////////////////////////////////////////////
+	
 	public int znaczaceLiczbe(){
-		
-		//
-		//
-		//	int liczba;
-	    //int kolejna_cyfra;
-	    //
+		// int liczba;
+	    // int kolejna_cyfra;
 	    // int ile=0;
-	    //
-	    //liczba=1234567890;
-		while(liczba>0){
-    	kolejna_cyfra=liczba % 10;
-    	//System.out.println(kolejna_cyfra);
-    	liczba/=10;
-    	ile++;
+	    // liczba=1234567890;
+		while(liczba>0)
+		{
+			kolejna_cyfra=liczba % 10;
+			// System.out.println(kolejna_cyfra);
+			liczba/=10;
+			ile++;
     	};
-
-	    //System.out.println("Suma cyfr:"+ile);
-	    //
-		//
-		
+	    // System.out.println("Suma cyfr:"+ile);
 		return ile;
 	}
 }
 
-public static void main(String[] args){
-	
-	liczby mojaLiczba = new liczby();
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
-	mojaLiczba.ustawLiczbe(123);
-	mojaLiczba.ustawIle(0);
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
-	System.out.println(mojaLiczba.pokazLiczbe());
-	System.out.println("Uzywam metody do pokazania sumy cyfr liczby:");
-	mojaLiczba.znaczaceLiczbe();
-	System.out.println("Liczb znaczacych:"+mojaLiczba.znaczaceLiczbe());
-}; //main
+	public static void main(String[] args){
+		liczby mojaLiczba = new liczby();
+		System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
+		mojaLiczba.ustawLiczbe(123);
+		mojaLiczba.ustawIle(0);
+		System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
+		System.out.println(mojaLiczba.pokazLiczbe());
+		System.out.println("Uzywam metody do pokazania sumy cyfr liczby:");
+		mojaLiczba.znaczaceLiczbe();
+		System.out.println("Liczb znaczacych:"+mojaLiczba.znaczaceLiczbe());
+	}; //main
 }

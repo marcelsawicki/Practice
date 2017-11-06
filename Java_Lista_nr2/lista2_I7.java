@@ -12,9 +12,9 @@ public class Lista2_I7{
 		int c;                  
 		while(b!=0)               
 		{ 
-		c=a%b;                
-		a=b;             
-		b=c;             
+			c=a%b;                
+			a=b;             
+			b=c;             
 		}
 		return a;                    	        
 	}//nwd

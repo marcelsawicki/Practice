@@ -14,29 +14,32 @@ public class List5_1{
 		File plikTextowy = new File("tablica.txt");
 		try {
 				if (plikTextowy.createNewFile())
-				System.out.println("Utworzono plik.");
-				else System.out.println("Nie utworzono pliku, plik juz istnieje.");
-			} catch(IOException e) {
-				System.out.println("B³¹d wejœcia/wyjœcia!"); return;
+				{
+					System.out.println("Utworzono plik.");
+				}
+				else
+				{
+					System.out.println("Nie utworzono pliku, plik juz istnieje.");
+				}
+			} 
+			catch(IOException e) 
+			{
+				System.out.println("B³¹d wejœcia/wyjœcia!"); 
+				return;
 			}
 		//zapisuje tresc do pliku o nazwie "tablica.txt"
-		
 		PrintWriter zapisujeTutaj = new PrintWriter("tablica.txt");
-					zapisujeTutaj.println("Macierz");
-					zapisujeTutaj.println("-------");
-					zapisujeTutaj.close();
+		zapisujeTutaj.println("Macierz");
+		zapisujeTutaj.println("-------");
+		zapisujeTutaj.close();
 		//odczytuje to co zapisalem w pliku "tablica.txt"
-		
 		File file = new File("tablica.txt");
-			   Scanner in = new Scanner(file);
-		  
-			   String nazwa = in.nextLine();
-			   System.out.println(nazwa);
-			   String kreska = in.nextLine();
-			   System.out.println(kreska);
-			   in.close();
-		
-		
+		Scanner in = new Scanner(file);
+		String nazwa = in.nextLine();
+		System.out.println(nazwa);
+		String kreska = in.nextLine();
+		System.out.println(kreska);
+		in.close();
 	}; //main
 	
 }//class List5_1

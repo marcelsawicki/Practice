@@ -18,8 +18,6 @@ public static class Liczby{
 	double p;
 	double k;
 	boolean test;
-		
-	//metody////////////////////////////////////////////////////
 	
 	//setters
 	public void ustawLiczbe(double k){
@@ -38,37 +36,40 @@ public static class Liczby{
 	public double pokazLiczbe(){
 	return k;	
 	}
-	///////////////////////////////////////////////////////////
 	public boolean czyPierwsza(){
-	/////////////////////////	
 
 	do{
-	p++;
-	//System.out.println("p:="+p+" k:="+k);
-	
+		p++;
+		//System.out.println("p:="+p+" k:="+k);
 	}while((k%p)!=0);
 	
 	
-	if(p==k){test=true;}else {if(k%p==0){test=false;}};
-	/////////////////////////
+	if(p==k)
+	{
+		test=true;
+	}
+	else
+	{
+		if(k%p==0)
+		{
+			test=false;
+		}
+	};
 	return test;	
 	}
 }
 
-public static void main(String[] args){
-	
-	liczby mojaLiczba = new Liczby();
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
-	
-	System.out.println("Program sprawdza czy podana liczba k jest liczb¹ pierwsza.");
-	mojaLiczba.ustawLiczbe(Czytanie.czytajDouble("k="));	
-	mojaLiczba.ustawP(1);
-	//mojaLiczba.ustawMaxA(0);
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
-	System.out.println(mojaLiczba.pokazLiczbe());
-    System.out.println("*********************************************************");
-    System.out.println("Czy jest to liczba pierwsza?:" +mojaLiczba.czyPierwsza());
-}; //main
+	public static void main(String[] args){
+		
+		liczby mojaLiczba = new Liczby();
+		System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
+		System.out.println("Program sprawdza czy podana liczba k jest liczb¹ pierwsza.");
+		mojaLiczba.ustawLiczbe(Czytanie.czytajDouble("k="));	
+		mojaLiczba.ustawP(1);
+		//mojaLiczba.ustawMaxA(0);
+		System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
+		System.out.println(mojaLiczba.pokazLiczbe());
+		System.out.println("*********************************************************");
+		System.out.println("Czy jest to liczba pierwsza?:" +mojaLiczba.czyPierwsza());
+	}; //main
 }

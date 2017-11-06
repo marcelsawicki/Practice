@@ -6,7 +6,7 @@
  * @version 1.00 2013/12/11
  */
 
-public class Lista2_I8{
+public class Lista2I8{
 
 	public static int nwd(int a,int b) {
 		int c;				  

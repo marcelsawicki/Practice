@@ -7,7 +7,7 @@
  */
 import static java.lang.Math.*;
 
-public class lista2_I10_c{
+public class lista2I10c{
 	
 	static double silnia (double n) {
 			double wynik = 1;
@@ -22,26 +22,20 @@ public class lista2_I10_c{
 		double f=a;
 		double k=0;
 		double x=1;
-		
 		double licznik;
 		double mianownik;
-		
 		double epsilon=0.0001;
-		
-		
 		do{
 			k++;
-				licznik=(Math.pow(x,2*k));
-				mianownik=silnia(2*k);
-		
-				a=(Math.pow((-1),k))*((licznik/mianownik));
-				System.out.println("Licznik:"+licznik+" dla k="+k);
-				System.out.println("Mianownik:"+mianownik+" dla k="+k);
-				System.out.println("a:"+a+" dla k="+k);
-				System.out.println("f:"+f+" dla k="+k);
-				double z=Czytanie.czytajDouble("z=");
-				f=f+a;
-				
+			licznik=(Math.pow(x,2*k));
+			mianownik=silnia(2*k);
+			a=(Math.pow((-1),k))*((licznik/mianownik));
+			System.out.println("Licznik:"+licznik+" dla k="+k);
+			System.out.println("Mianownik:"+mianownik+" dla k="+k);
+			System.out.println("a:"+a+" dla k="+k);
+			System.out.println("f:"+f+" dla k="+k);
+			double z=Czytanie.czytajDouble("z=");
+			f=f+a;
 		}while(Math.abs(a)>epsilon);
 		System.out.println("cos("+x+")="+f);
 		System.out.println(Math.cos(x));

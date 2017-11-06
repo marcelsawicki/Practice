@@ -6,7 +6,7 @@
  * @version 1.00 2013/12/11
  */
 
-public class Lista2_I2{
+public class Lista2I2{
 
 	public static void main(String[] args){
 		int liczba;

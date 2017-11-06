@@ -7,7 +7,7 @@
  */
 
 
-public class List3_t3 {
+public class List3T3 {
 
     public static void main(String[] args) {
     	
@@ -22,7 +22,7 @@ public class List3_t3 {
     	System.out.println("Podaj wspolczynniki wielomianu:");
     	
     	for(int k=0;k<=n;k++){
-    	a[k]=(int)Czytanie.czytajDouble("a"+k+" =");	
+			a[k]=(int)Czytanie.czytajDouble("a"+k+" =");	
     	};//for
     	
     	System.out.println("========================[Wypisanie wielomianu]============================================");
@@ -30,9 +30,13 @@ public class List3_t3 {
     	int h=n; //zmienna pomocnicza
     	for(int d=0;d<=n;d++){
     		if(h!=0){
-    		System.out.print(a[d]+"*x^("+h+") + ");
-    		h--;
-    		}else{ System.out.print(a[d]);};//else
+				System.out.print(a[d]+"*x^("+h+") + ");
+				h--;
+    		}
+			else
+			{ 
+				System.out.print(a[d]);
+			};//else
     	};//for
     	System.out.println();
     	System.out.println("========================[Czesc F2]=======================================================");
@@ -44,11 +48,16 @@ public class List3_t3 {
     	int w=0;
     	int ds=n; //zmienna pomocnicza
     	for(int j=0;j<=n;j++){
-    		if(ds!=0){
+    		if(ds!=0)
+			{
     			w+=a[j]*(int)Math.pow(x,ds);
-    		//System.out.print(a[j]+"*x^("+ds+") + ");
-    		ds--;
-    		}else{ w+=a[j];};//else
+				//System.out.print(a[j]+"*x^("+ds+") + ");
+				ds--;
+    		}
+			else
+			{ 
+				w+=a[j];
+			};//else
 
     		
     	};//for

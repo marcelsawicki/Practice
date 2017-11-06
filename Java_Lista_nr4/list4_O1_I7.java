@@ -16,20 +16,19 @@ public static class Liczba{
 		//gettery
 		
 		public static int nwd(int a,int b) {
-		int c;                
-		while(b!=0)               
-		{ 
-		c=a%b;                
-		a=b;             
-		b=c;             
-		}
-		return a;                    	        
+			int c;                
+			while(b!=0)               
+			{ 
+				c=a%b;                
+				a=b;             
+				b=c;             
+			}
+			return a;                    	        
 		}//nwd
 	}
 
-public static void main(String[] args) {
-	liczba Moja = new Liczba();
-	
-	System.out.println(Moja.nwd(4,2));
-} //main
+	public static void main(String[] args) {
+		liczba Moja = new Liczba();
+		System.out.println(Moja.nwd(4,2));
+	} //main
 }

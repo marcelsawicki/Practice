@@ -15,8 +15,6 @@ public static class Liczby{
 	int kolejna_cyfra;
 	int ile;
 	int max_a;
-		
-	//metody////////////////////////////////////////////////////
 	
 	//setters
 	public void ustawLiczbe(int liczba){
@@ -35,7 +33,7 @@ public static class Liczby{
 	public int pokazLiczbe(){
 	return liczba;	
 	}
-	///////////////////////////////////////////////////////////
+
 	public int maxCyfr(){
 		
 	while(liczba>0){
@@ -47,18 +45,16 @@ public static class Liczby{
 	}
 }
 
-public static void main(String[] args){
-	
-	liczby mojaLiczba = new Liczby();
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
-	mojaLiczba.ustawLiczbe(1923);
-	mojaLiczba.ustawIle(0);
-	mojaLiczba.ustawMaxA(0);
-	/////////////////////////////////////////////////////
-	System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
-	System.out.println(mojaLiczba.pokazLiczbe());
-    System.out.println("*********************************************************");
-    System.out.println("najwieksza cyfra to:" +mojaLiczba.maxCyfr());
-}; //main
+	public static void main(String[] args){
+		
+		liczby mojaLiczba = new Liczby();
+		System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
+		mojaLiczba.ustawLiczbe(1923);
+		mojaLiczba.ustawIle(0);
+		mojaLiczba.ustawMaxA(0);
+		System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
+		System.out.println(mojaLiczba.pokazLiczbe());
+		System.out.println("*********************************************************");
+		System.out.println("najwieksza cyfra to:" +mojaLiczba.maxCyfr());
+	}; //main
 }

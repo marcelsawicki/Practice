@@ -36,30 +36,33 @@ class Punkt{
     //metoda sprawdzajaca przynaleznosc punktu do Obszaru nr 1.
     boolean NalezyDoObszaru1(double x0, double y0){
     	
-	if(x0>0 && y0>0){System.out.println("Obszar nr 1.");
-					return true;
-					//double r0=odl(1,x0,1,y0);
-					 //System.out.println("Utworzony promien od srodka okregu (1,1) do P(x,y)="+r0);
-					 //if(r0*r0<=1*1){System.out.println("Punkt nalezy do okrêgu");};
-					 //if(r0*r0>1*1 && x0<=2 && y0<=2)
-					 //	{System.out.println("Punkt nie nalezy do okrêgu, ale nalezy do kwadratu.");}
-					//	else{System.out.println("Punkt nie nalezy do okrêgu oraz nie nalezy do kwadratu.");};
-					}else return false;  
+		if(x0>0 && y0>0)
+		{
+			System.out.println("Obszar nr 1.");
+			return true;
+			//double r0=odl(1,x0,1,y0);
+			 //System.out.println("Utworzony promien od srodka okregu (1,1) do P(x,y)="+r0);
+			 //if(r0*r0<=1*1){System.out.println("Punkt nalezy do okrêgu");};
+			 //if(r0*r0>1*1 && x0<=2 && y0<=2)
+			 //	{System.out.println("Punkt nie nalezy do okrêgu, ale nalezy do kwadratu.");}
+			//	else{System.out.println("Punkt nie nalezy do okrêgu oraz nie nalezy do kwadratu.");};
+		}
+		else
+		{
+			return false;  
+		}
     }
 }
 
-public class List4_O1_D1a {
+public class List4O1D1a {
 	public static void main(String[] args){
 		//tworze obiekt klasy Punkt	
 		Punkt punktMoj=new Punkt();
-		
 		//pobieram wspolrzedne od uzytkownika
 		punktMoj.ustawX(Czytanie.czytajDouble("x="));
 		punktMoj.ustawY(Czytanie.czytajDouble("y="));
-		
 		punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4);
 		System.out.println(punktMoj.odl(punktMoj.pokazX(),2,punktMoj.pokazY(),4));
-		
 		punktMoj.NalezyDoObszaru1(punktMoj.pokazX(),punktMoj.pokazY());
 	}
 	
