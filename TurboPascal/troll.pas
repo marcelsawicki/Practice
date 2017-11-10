@@ -42,7 +42,37 @@ begin
 end;
 
 procedure spotkaj_wroga( kto: zdarzenie );
+var
+	sila: integer;
+	pieniadz: integer;
+	ekwipunek: integer;
+	decyz: char;
+	walka: boolean;
 begin
+	ekwipunek:=0;
+	sila:=random(6)+kto.sila;
+	writeln("Zza krzkow wyskoczyl", kto.opis, " o sile ", sila);
+	writeln("W]alczysz, U]ciekasz, N]egocjujesz?");
+	decyz:=upcas(readkey);
+	walka:=true;
+	if decyz="U" then
+		begin
+		end
+		else
+			writeln("Zostales zlapany");
+		end
+		else
+		if decyz="N" then
+			begin
+			end
+		
+		if walka then
+			begin
+			end
+			else
+				begin
+				end
+			end;
 end;
 
 procedure spotkaj_nieznajomego(ktos: zdarzenie);
