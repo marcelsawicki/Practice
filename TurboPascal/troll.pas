@@ -57,6 +57,13 @@ begin
 	walka:=true;
 	if decyz="U" then
 		begin
+			if hero.sila>random(6) then
+				begin
+					writeln("Udalo ci sie ujsc z zyciem");
+					walka:=false;
+				end
+			else
+				writeln("Zostales zlapany");
 		end
 		else
 			writeln("Zostales zlapany");
@@ -64,19 +71,47 @@ begin
 		else
 		if decyz="N" then
 			begin
+				write("Ile zlota proponujesz za uwolnienie?");
+				readln(pieniadz);
+				if(pieniadz> (sila.random(5)) and (pieniadz<hero.zloto) then
+					begin
+						writeln("Twoja propozycja zostala przyjeta.");
+						walka:=false;
+						hero.zloto:=hero.zloto-pieniadz;
+					end
 			end
+		else
+			writeln("Propozycja zostala odrzucona. Czeka cie walka.");
 		
 		if walka then
 			begin
+				writeln("Atakujesz...");
+				if miecz in hero.bagaz then
+					ekwipunek:=ekwipunek+2;
+				if sila >= hero.sila+ekwipunek+random(6) then
+					begin
+					end
 			end
 			else
 				begin
+					writeln("Wygrywasz");
+					hero.zloto:=hero.zloto+sila+5;
 				end
 			end;
 end;
 
 procedure spotkaj_nieznajomego(ktos: zdarzenie);
 begin
+	writeln("Spotkales ", kto.opis);
+	case ktos..kto of
+		zlodziej: begin
+					hero.zloto:=0;
+					hero.bagaz:=[];
+				end;
+		dobry_d: hero.sila=hero.sila+1;
+		zly_d: if hero.sila>0 then hero.sila:=hero.sila-1;
+		czarodziej: hero.wytrzymalosc:=hero.wytrzymalosc+1;
+	end;
 end;
 
 procedure znajdz_przedmiot(co: zdarzenie);
