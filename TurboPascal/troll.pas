@@ -90,6 +90,15 @@ begin
 					ekwipunek:=ekwipunek+2;
 				if sila >= hero.sila+ekwipunek+random(6) then
 					begin
+					// dopisac kod
+					writeln("Przegrywasz");
+					if (zbroja in hero.bagaz) and random(6) then
+						writeln("Jednak zbroja chroni cie");
+					else
+						begin
+							hero.wytrzymalosc:=hero.wytrzymalosc-1;
+							hero.zloto:=hero.zloto div 3;
+						end
 					end
 			end
 			else
