@@ -25,20 +25,20 @@ bohater = record
 const 
 	hero: bohater = ( wytrzymalosc: 4; sila: 4; bagaz: []; zloto: 0);
 	swiat: array[1..ile_zdarzen] of zdarzenie = (
+	(opis:'nic'; prawdo:40; rodzaj:wrog; sila:7),
 	(opis:'oblesny gnom'; prawdo:10; rodzaj:wrog; sila:2),
 	(opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
-    (opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7)
+    (opis:'straszny troll'; prawdo:10; rodzaj:wrog; sila:3),
+    (opis:'zlodzieja'; prawdo:1; rodzaj:nieznajomy; sila:1),
+    (opis:'czarodzieja'; prawdo:6; rodzaj:nieznajomy; sila:1),
+    (opis:'dobrego duszka'; prawdo:5; rodzaj:nieznajomy; sila:1),
+    (opis:'zlego ducha'; prawdo:5; rodzaj:nieznajomy; sila:1),
+    (opis:'miecz'; prawdo:2; rodzaj:przedmiot; sila:1),
+    (opis:'zbroje'; prawdo:2; rodzaj:przedmiot; sila:1),
+    (opis:'magiczny eliksir'; prawdo:4; rodzaj:przedmiot; sila:1),
+    (opis:'sztuke miesa'; prawdo:4; rodzaj:przedmiot; sila:1),
+    (opis:'zloto'; prawdo:5; rodzaj:przedmiot; sila:1),
+    (opis:'trucizne'; prawdo:3; rodzaj:przedmiot; sila:1)
 	);
 
 nazwa_p: array [miecz..trucizna] of string = ('miecz', 'zbroja', 'eliksir', 'mieso', 'zloto', 'trucizna');
