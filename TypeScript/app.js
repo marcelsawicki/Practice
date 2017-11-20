@@ -79,10 +79,17 @@ var Bohater = (function () {
 ;
 var Zdarzenie = (function () {
     function Zdarzenie(element) {
+        var _this = this;
         this.element = element;
         //this.element.innerHTML += "Zdarzenie: ";
         //this.span = document.createElement('span');
         //this.element.appendChild(this.span);
+        var btnFight = document.getElementById("fight");
+        btnFight.addEventListener("click", function (e) { return _this.fight(); });
+        var btnFlee = document.getElementById("flee");
+        btnFlee.addEventListener("click", function (e) { return _this.flee(); });
+        var btnTalk = document.getElementById("talk");
+        btnTalk.addEventListener("click", function (e) { return _this.talk(); });
     }
     Zdarzenie.prototype.spotkajWroga = function (kogo) {
         // description
@@ -96,18 +103,18 @@ var Zdarzenie = (function () {
     Zdarzenie.prototype.znajdzPrzedmiot = function (jaki) {
         // description
     };
+    Zdarzenie.prototype.fight = function () {
+        alert('fight');
+    };
+    Zdarzenie.prototype.flee = function () {
+        alert('flee');
+    };
+    Zdarzenie.prototype.talk = function () {
+        alert('talk');
+    };
     return Zdarzenie;
 }());
 ;
-function fight() {
-    alert('fight');
-}
-function flee() {
-    alert('flee');
-}
-function talk() {
-    alert('talk');
-}
 window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);

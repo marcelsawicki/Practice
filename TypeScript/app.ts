@@ -112,6 +112,14 @@ class Zdarzenie {
         //this.element.innerHTML += "Zdarzenie: ";
         //this.span = document.createElement('span');
         //this.element.appendChild(this.span);
+        let btnFight = document.getElementById("fight");
+        btnFight.addEventListener("click", (e: Event) => this.fight());
+
+        let btnFlee = document.getElementById("flee");
+        btnFlee.addEventListener("click", (e: Event) => this.flee());
+
+        let btnTalk = document.getElementById("talk");
+        btnTalk.addEventListener("click", (e: Event) => this.talk());
     }
 
     spotkajWroga(kogo: number) {
@@ -129,19 +137,18 @@ class Zdarzenie {
         // description
     }
 
-};
+    fight(): void {
+        alert('fight');
+    }
 
-function fight(): void {
-    alert('fight');
-}
-
-function flee(): void {
+    flee(): void {
     alert('flee');
-}
+    }
 
-function talk(): void {
+    talk(): void {
     alert('talk');
-}
+    }
+};
 
 window.onload = () => {
     var el = document.getElementById('content');
