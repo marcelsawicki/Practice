@@ -2,7 +2,7 @@ function identity<T>(value: T) {
 	return value;
 }
 
-var text = identity("hej); // -> string
+var text = identity("hej"); // -> string
 var one = identity(1); // -> number
 
 class Pait<T1, T2> {
