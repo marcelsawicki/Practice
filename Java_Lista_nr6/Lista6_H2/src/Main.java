@@ -1,9 +1,11 @@
 
 public class Main {
-Faktura fakt = new Faktura();
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println("Czesc");
+		Faktura fakt = new Faktura();
+		fakt.pokazFaktureKlienta(2);
 	}
 
 }
