@@ -10,7 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Program sprawdza czy podana liczba K jest liczb¹ pierwsza.");
+		System.out.println("Program sprawdza czy podana liczba K jest liczba pierwsza.");
 		
 		/* deklaracja zmiennych */
 		Scanner rk = new Scanner(System.in);
