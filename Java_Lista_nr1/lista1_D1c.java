@@ -1,9 +1,12 @@
-/**
- * @(#)harnbeam.java
+/* Lista 1, Zadanie D1, punkt b:
+ * Okresl przynaleznosc punktu P(x, y) o danych wspolrzednych do pokolorowanych obszarow plaszczyzny lub otoczenia
+ * barwnych obszarow.
  *
- * excercise D1 from list no. 1 (c)
  * @author: Marcel Sawicki
  * @version 1.00 2013/11/25
+ *
+ * @(#)harnbeam.java
+ *
  */
  
 import static java.lang.Math.*;

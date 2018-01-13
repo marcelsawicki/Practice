@@ -1,9 +1,11 @@
-/**
- * @(#)maple.java
+/* Lista 1, Zadanie D2:
+ * Wydrukuj dane trzy liczby: A, B i C w kolejnosci rosnacej.
  *
- * excercise D2 from list no. 1
  * @author: Marcel Sawicki
  * @version 1.00 2013/11/12
+ *
+ * @(#)maple.java
+ *
  */
 
 public class Maple{

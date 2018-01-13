@@ -1,9 +1,12 @@
-/**
- * @(#)oak.java
+/* Lista 1, Zadanie D5:
+ * Sprawdz czy punkt P(x, y) o danych wspolrzednych nalezy do obszaru wyznaczonego przez trojkat o danych
+ * (okreslonych parami wspolrzednych) wierzcholkach A, B i C.
  *
- * excercise D5 from list no. 1
  * @author: Marcel Sawicki
  * @version 1.20 2013/11/11
+ *
+ * @(#)oak.java
+ *
  */
  
 import static java.lang.Math.*;

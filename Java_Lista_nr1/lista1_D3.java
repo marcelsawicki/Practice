@@ -1,9 +1,12 @@
-/**
- * @(#)pine.java
+/* Lista 1, Zadanie D3:
+ * Uporzadkuj dane trzy liczby: A, B i C w kolejnosci rosnacej. Jaka jest roznica miedzy tym algorytmem a algorytmem
+ * z zadania D2?
  *
- * excercise D3 from list no. 1
  * @author: Marcel Sawicki
  * @version 1.20 2013/11/11
+ *
+ * @(#)pine.java
+ *
  */
  
 public class Pine{

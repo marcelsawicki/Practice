@@ -1,9 +1,11 @@
-/*
- * @(#)sorb.java
+/* Lista 1, Zadanie D6:
+ * Dzis jest data D, M, R. Jaka data byla wczoraj? Jaka data bedzie jutro?
  *
- * excercise D6 from list no. 1
  * @author: Marcel Sawicki
  * @version 1.0 2013/11/25
+ *
+ * @(#)sorb.java
+ *
  */
  
 public class Sorb{

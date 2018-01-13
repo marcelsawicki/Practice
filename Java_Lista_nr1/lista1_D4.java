@@ -1,9 +1,13 @@
-/**
- * @(#)ash.java
+/* Lista 1, Zadanie D4:
+ * Sprawdz, czy z odcinkow o dlugosciach A, B, C mozna zbudowac trojkat; jesli tak to jaki:
+ * a) rownoboczny, rownoramienny czy roznoboczny?
+ * b) ostrokatny, prostokatny czy rozwartokatny?
  *
- * excercise D4 from list no. 1
  * @author: Marcel Sawicki
  * @version 1.20 2013/11/11
+ *
+ * @(#)ash.java
+ *
  */
  
 public class Ash{
