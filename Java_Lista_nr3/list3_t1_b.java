@@ -18,7 +18,7 @@ public class Lista3T1b {
 
 	public static void main(String[] args){
 		
-int n=12;
+		int n=12;
 		int[] ciag=new int[n];
 
 		for(int k=0; k<n; k++){
