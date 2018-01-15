@@ -1,56 +1,84 @@
-/**
- * @(#)list3_t1_b.java
+/*
+ * Lista 3: Tablice
+ * T1. 
+ * a) Utworzyć w tablicy ciąg, 
+ * b) Utworzyć w tablicy zbiór  losowych liczb całkowitych z przedziału <1, K> 
+ * (liczebność ciągu: K>0) a następnie: 
+ * - wyświetlić ciąg/zbiór w kolejności dopisywania elementów, 
+ * - wyświetlić ciąg/zbiór w kolejności odwrotnej do kolejności dopisywania elementów, 
+ * - podzielić ciąg/zbiór na dwa uporządkowane podciągi/podzbiory: 
+ * liczb parzystych i liczb nieparzystych. Uwaga: w zbiorze elementy nie mogą się powtarzać. 
  *
- * excercise T1 (b)from list no. 3
  * @author: Marcel Sawicki
  * @version 1.00 2013/12/17
+ *
  */
 
 public class Lista3T1b {
 
 	public static void main(String[] args){
 		
-		int n=5;
+int n=12;
 		int[] ciag=new int[n];
 
 		for(int k=0; k<n; k++){
-			ciag[k]=(int)Math.ceil(Math.random()*100);
+			// Math.ceil ()Zwraca najmniejszą liczbę całkowitą większą od lub równą danej.
+			ciag[k]=(int)Math.ceil(Math.random()*100); 
 		};
 		
-		for(int k=0; k<n; k++){
-			System.out.println(ciag[k]+" - ciag["+k+"]");
-		};
+		for(int i=0; i<ciag.length; i++) {
+			System.out.print(ciag[i] + ", ");
+		}
+		System.out.println("\nWylosowano ciag liczb naturalnych i wyswietlono go powyzej.\n");
 		
-		System.out.println("==================================================================");
+		for(int k=ciag.length-1; k>=0; k--){
+			System.out.print(ciag[k]+", ");
+		}
+		System.out.println("\nPowyzej wyswietlono ciag w odwrotnej kolejnosci.\n");
 		
-		for(int k=n; k<n; k--){
-			System.out.println(ciag[k]+" - ciag["+k+"]");
-		};
+		int ileP = 0; 
+		int ileNP = 0;
 		
-		System.out.println("============[Dziele na podciagi]=================================");
+		// licze ile w ciagu jest parzystych, a ile nie parzystych
+		for(int j=0; j<ciag.length; j++){
+			if(ciag[j]%2==0) 
+			{
+				ileP++;
+			}
+			else 
+			{
+				ileNP++;
+			}
+		}
+
+		System.out.println("W ciagu jest liczb parzystych: "+ileP+", oraz liczb nie parzystych: "+ileNP+" \n");
+		int[] tabP = new int[ileP];
+		int[] tabNP = new int[ileNP];
 		
-		int[] podciag1=new int[n];
-		int[] podciag2=new int[n];
+		// dopisuje do tablic liczby parzyste oraz nie parzyste
+		ileP=0;
+		ileNP=0;
+		for(int j=0; j<ciag.length; j++){
+			if(ciag[j]%2==0) 
+			{
+				tabP[ileP]=ciag[j];
+				ileP++;
+			}
+			else 
+			{
+				tabNP[ileNP]=ciag[j];
+				ileNP++;
+			}
+		}
 		
-		//zerowanie podciagow
-			for(int k=0; k<n; k++){
-			podciag1[k]=0;
-			podciag2[k]=0;
-		};
+		for(int d=0; d<tabP.length; d++) {
+			System.out.print(tabP[d]+", ");
+		}
+		System.out.println("\nPowyzej liczby parzyste. \n");
 		
-		//podzielenie ciagu na podciagi parzyste, nieparzyste
-		for(int k=0; k<n; k++){
-			if(ciag[k]%2!=0){podciag1[k]=ciag[k];}else{podciag2[k]=ciag[k];};
-		};
-		
-		System.out.println("============[Wyswietl podciagi]=================================");	
-		for(int k=0; k<n; k++){
-			System.out.println(podciag1[k]+" - podciag1["+k+"]");
-		};
-		
-		for(int k=0; k<n; k++){
-			System.out.println(podciag2[k]+" - podciag2["+k+"]");
-		};
-		
+		for(int p=0; p<tabNP.length; p++) {
+			System.out.print(tabNP[p]+", ");
+		}
+		System.out.println("\nPowyzej liczby nie parzyste. \n");
 	};
 }; 
