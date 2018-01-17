@@ -39,7 +39,6 @@ public class ZadanieT3_F4 {
     	Scanner nk = new Scanner(System.in);
     	n = nk.nextInt();
     	int[] a=new int[n+1];
-    	nk.close();
     	
     	System.out.println("Podaj wspolczynniki wielomianu: ");
     	
@@ -95,5 +94,6 @@ public class ZadanieT3_F4 {
     		}
     	}
     	System.out.println();
+    	nk.close();
 	}
 }
