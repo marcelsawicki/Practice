@@ -20,7 +20,28 @@ public class ZadanieT4 {
 		double dy=ya-yb;
 		return Math.sqrt(dx*dx+dy*dy);
 	} // odleglosc miedzy punktami
-
+	
+	public static double[] posortuj(double[] tab) {
+		double temp;
+		int zmiana = 1;
+		System.out.println("Posortowane: ");
+		while(zmiana > 0){
+			zmiana = 0;
+			for(int i=0; i<tab.length-1; i++){
+				if(tab[i]>tab[i+1]){
+					temp = tab[i+1];
+					tab[i+1] = tab[i];
+					tab[i] = temp;
+					zmiana++;
+				}
+			}
+		}
+		for(int rj=0;rj<tab.length; rj++) {
+			System.out.print(tab[rj]+", ");
+		}
+		System.out.println();
+		return tab;
+	}
 	public static void main(String[] args) {
 		// tworze tablice dwuwymiarowa
 		
@@ -112,11 +133,17 @@ public class ZadanieT4 {
 							System.out.print(tablicaOdleglosciOdX0Y[v][0]+" # ");
 							System.out.print(tablicaOdleglosciOdX0Y[v][1]+"\n");	
 		}
-
+		
+		// bubble sort
+		double[] tab = new double[n];
+		for(int r=0;r<n;r++) {
+			tab[r]=tablicaOdleglosciOdX0Y[r][1];
+		}
+		posortuj(tab);
 // - uporz¹dkuj pary punktów w kolejnoœci rosn¹cych odleg³oœci pomiêdzy nimi.
 		double[][] tablicaOdleglosciMiedzyPunktami = new double[n*n][3];
 		double[][] uporzadkowanaTablicaOdleglosciMiedzyPunktami = new double[n*n][3];
-	System.out.println("Porzadkuje pary punktów w kolejnoœci rosn¹cych odleg³oœci pomiêdzy nimi.");
+	System.out.println("Porzadkuje pary punktow w kolejnoœci rosn¹cych odleglosci pomiêdzy nimi.");
 	System.out.println("+------------------------------------------+");
 	System.out.println(" Punkt A | Punkt B | Odleglosc miedzy nimi ");
 	System.out.println("+------------------------------------------+");
@@ -135,6 +162,13 @@ public class ZadanieT4 {
 						}
 					}	
 		}
+		// bubble sort
+		double[] tabOdleglosci = new double[n*n];
+		for(int rt=0;rt<n*n;rt++) {
+			tabOdleglosci[rt]=tablicaOdleglosciMiedzyPunktami[rt][2];
+		}
+		posortuj(tabOdleglosci);
+		
 		nk.close();
 		xk.close();
 		yk.close();
