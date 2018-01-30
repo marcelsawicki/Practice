@@ -80,7 +80,47 @@ public class ZadanieT4 {
 		System.out.println("\nJest to punkt nr "+ktoryPkt);
 // - wspó³rzêdne wierzcho³ków prostok¹ta o najmniejszym z mo¿liwych polu powierzchni i bokach 
 // równoleg³ych do osi, w którego polu znajd¹ siê wszystkie punkty zbioru P, 
-
+		System.out.println("\nSzukam wspó³rzêdnych wierzcho³ków prostok¹ta o najmniejszym z mo¿liwych polu powierzchni i bokach");
+		System.out.println("równoleg³ych do osi, w którego polu znajd¹ siê wszystkie punkty zbioru P.");
+		// szukam punktu o najmniejszej zmiennej x (maxX)
+		double maxX = macierz[0][0];
+		for(int y=0; y<n; y++){
+			if(maxX<macierz[y][0]){
+					maxX = macierz[y][0];
+			}
+		}
+		System.out.println("maxX = "+ maxX);
+		// szukam punktu o najmniejszej zmiennej x (minX)
+		double minX = macierz[0][0];
+		for(int y=0; y<n; y++){
+			if(minX>macierz[y][0]){
+					minX = macierz[y][0];
+			}
+		}
+		System.out.println("minX = "+ minX);
+		// szukam punktu o najwiekszej zmiennej y (maxY)
+		double maxY = macierz[0][1];
+		for(int y=0; y<n; y++){
+			if(maxY<macierz[y][1]){
+					maxY = macierz[y][1];
+			}
+		}
+		System.out.println("maxY = "+ maxY);
+		// szukam punktu o najmniejszej zmiennej y (minY)
+		double minY = macierz[0][1];
+		for(int y=0; y<n; y++){
+			if(minY>macierz[y][1]){
+					minY = macierz[y][1];
+			}
+		}
+		System.out.println("minY = "+ minY);
+		System.out.println("\nWspolrzedne prostokata: ");
+		System.out.print("A = (" + minX + ", " +minY+"); ");
+		System.out.print("B = (" + maxX + ", " +minY+"); ");
+		System.out.print("C = (" + maxX + ", " +maxY+"); ");
+		System.out.print("D = (" + minX + ", " +maxY+"); ");
+		System.out.println("\n");
+		
 // - tabelê odleg³oœci pomiêdzy wszystkimi mo¿liwymi parami punktów,
 	System.out.println("Tabela odleglosci pomiedzy wszystkimi mozliwymi parami punktow.");
 	System.out.println("+------------------------------------------+");
