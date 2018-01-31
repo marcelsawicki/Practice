@@ -155,7 +155,14 @@ public class ZadanieT4 {
 		System.out.println("Odleglosc miedzy nimi = " + maxymalnaOdleglosc);
 		
 // - trójkê punktów tworz¹cych trójk¹t o najwiêkszym polu powierzchni.
-		
+		double poleTrojkata;
+		for(int ek=0;ek<n;ek++) {
+			for(int rk=0;rk<n;rk++) {
+				for(int tk=0;tk<n;tk++) {
+					
+				}
+			}
+		}
 // Ponadto:
 // - uporz¹dkuj zbiór punktów w kolejnoœci rosn¹cych odleg³oœci tych punktów 
 // od pocz¹tku uk³adu wspó³rzêdnych, 
