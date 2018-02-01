@@ -14,6 +14,11 @@
 import java.util.Scanner;
 
 public class ZadanieT4 {
+	
+    private static double poleWgHerona(double b1, double b2, double b3){
+		double p=(b1+b2+b3)/2;
+		return Math.sqrt(p*(p-b1)*(p-b2)*(p-b3));
+	}
 
 	public static double odleglosc(double xa, double xb, double ya, double yb){
 		double dx=xa-xb;
@@ -155,14 +160,28 @@ public class ZadanieT4 {
 		System.out.println("Odleglosc miedzy nimi = " + maxymalnaOdleglosc);
 		
 // - trójkê punktów tworz¹cych trójk¹t o najwiêkszym polu powierzchni.
-		double poleTrojkata;
+		double maxPoleTrojkata = 0;
 		for(int ek=0;ek<n;ek++) {
+			double punkt1X = macierz[ek][0];
+			double punkt1Y = macierz[ek][1];
 			for(int rk=0;rk<n;rk++) {
+				double punkt2X = macierz[rk][0];
+				double punkt2Y = macierz[rk][1];
 				for(int tk=0;tk<n;tk++) {
-					
+					double punkt3X = macierz[tk][0];
+					double punkt3Y = macierz[tk][1];
+					double odcinekA = odleglosc(punkt1X,punkt2X,punkt1Y,punkt2Y);
+					double odcinekB = odleglosc(punkt2X,punkt3X,punkt2Y,punkt3Y);
+					double odcinekC = odleglosc(punkt3X,punkt1X,punkt3Y,punkt1Y);
+					double wyliczonePoleTrojkata = poleWgHerona(odcinekA, odcinekB, odcinekC);
+					if(maxPoleTrojkata<wyliczonePoleTrojkata) {
+						maxPoleTrojkata=wyliczonePoleTrojkata;
+						System.out.println("Szukam najwiekszego pola trojkata:" +maxPoleTrojkata+" tworza je punkty("+ek+", "+rk+", "+tk+")");
+					}
 				}
 			}
 		}
+		System.out.println("Maksymalne pole trojkata: "+maxPoleTrojkata);
 // Ponadto:
 // - uporz¹dkuj zbiór punktów w kolejnoœci rosn¹cych odleg³oœci tych punktów 
 // od pocz¹tku uk³adu wspó³rzêdnych, 
