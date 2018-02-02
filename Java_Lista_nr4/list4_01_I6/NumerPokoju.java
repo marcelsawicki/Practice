@@ -1,28 +1,12 @@
 
 public class NumerPokoju {
 	int pietro;
-	int pokoj;
+	int nrPokoju;
 	Osoba wynajmujacy;
 	
-	// setter
-	void setPokoj(int pokoj) {
-		this.pokoj = pokoj;
-	}
-	
-	void setPietro(int pietro) {
-		this.pietro = pietro;
-	}
-	
-	void setOsoba(Osoba wynajmujacy) {
+	public NumerPokoju(int nrPokoju, Osoba wynajmujacy) {
+		this.nrPokoju = nrPokoju;
 		this.wynajmujacy = wynajmujacy;
-	}
-	// getter
-	int getPokoj() {
-		return this.pokoj;
-	}
-	
-	int getPietro() {
-		return this.pietro;
 	}
 	
 	Osoba getOsoba() {
