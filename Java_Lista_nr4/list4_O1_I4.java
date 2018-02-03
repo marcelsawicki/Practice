@@ -10,13 +10,13 @@
 public class List4_O1_I4{
 
 public static class Liczby{
-	//pola klas
+	// pola klasy
 	int liczba;
 	int kolejna_cyfra;
 	int ile;
 	int max_a;
 	
-	//setters
+	// setters
 	public void ustawLiczbe(int liczba){
 		this.liczba=liczba;	
 	}
@@ -29,7 +29,7 @@ public static class Liczby{
 		this.max_a=max_a;	
 	}
 	
-	//getters
+	// getters
 	public int pokazLiczbe(){
 	return liczba;	
 	}
@@ -46,15 +46,13 @@ public static class Liczby{
 }
 
 	public static void main(String[] args){
-		
-		liczby mojaLiczba = new Liczby();
-		System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
+		Liczby mojaLiczba = new Liczby();
+		System.out.println("Uzywam metody do ustawienia wartosci liczby.");
 		mojaLiczba.ustawLiczbe(1923);
 		mojaLiczba.ustawIle(0);
 		mojaLiczba.ustawMaxA(0);
-		System.out.println("Uzywam metody (getters) do pokazania ustawionej liczby:");
+		System.out.println("Uzywam metody do pokazania ustawionej liczby:");
 		System.out.println(mojaLiczba.pokazLiczbe());
-		System.out.println("*********************************************************");
-		System.out.println("najwieksza cyfra to:" +mojaLiczba.maxCyfr());
+		System.out.println("Najwieksza cyfra to:" +mojaLiczba.maxCyfr());
 	}; //main
 }

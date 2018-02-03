@@ -23,6 +23,5 @@ public class List4_O2{
 		   mojaTablica.wypisz();
 		   mojaTablica.suma();
 		   mojaTablica.maxElement();
-		//moja.SumaElementow();
-	}//main
+	}
 }

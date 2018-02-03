@@ -6,34 +6,30 @@
  * @version 1.00 2014/01/17
  */
 
-public class list4_O1_I8{
+public class List4_O1_I8{
 
-public static class Liczba{
-	//zmienne
-	//int a, b, c;
-	//metody
-	//settery
-	//gettery
-	
-	public static int nwd(int a,int b) {
-		int c;
-					  
+public static class Liczba{	
+	public int nwd(int a,int b) {  
 		while(a!=b)                
 		{ 
 
-		if(a>b){a=a-b;
-		}else{b=b-a;
-		};                    
+			if(a>b)
+			{
+				a=a-b;
+			}
+			else
+			{
+				b=b-a;
+			}                    
 		}//while
 
 		return a;                          
 								
-		}//nwd
+		}// nwd
 	}
 
 	public static void main(String[] args) {
-		liczba Moja = new Liczba();
-		
+		Liczba Moja = new Liczba();
 		System.out.println(Moja.nwd(8,2));
 	} //main
 }

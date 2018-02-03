@@ -6,16 +6,10 @@
  * @version 1.00 2014/01/17
  */
 
-public class list4_O1_I7{
+public class List4_O1_I7{
 
 public static class Liczba{
-		//zmienne
-		//int a, b, c;
-		//metody
-		//settery
-		//gettery
-		
-		public static int nwd(int a,int b) {
+		public int nwd(int a,int b) {
 			int c;                
 			while(b!=0)               
 			{ 
@@ -24,11 +18,12 @@ public static class Liczba{
 				b=c;             
 			}
 			return a;                    	        
-		}//nwd
+		}
 	}
 
 	public static void main(String[] args) {
-		liczba Moja = new Liczba();
-		System.out.println(Moja.nwd(4,2));
-	} //main
+		System.out.println("Najwiekszy wspolny dzielnik podanych liczb.");
+		Liczba Moja = new Liczba();
+		System.out.println(Moja.nwd(64,2));
+	}
 }

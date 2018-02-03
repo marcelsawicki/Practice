@@ -10,7 +10,7 @@
 public class List4_O1_I3{
 
 public static class Liczby{
-	//pola klas
+	//pola klasy
 	int liczba;
 	int kolejna_cyfra;
 	int ile;
@@ -30,24 +30,18 @@ public static class Liczby{
 	}
 	
 	public int znaczaceLiczbe(){
-		// int liczba;
-	    // int kolejna_cyfra;
-	    // int ile=0;
-	    // liczba=1234567890;
 		while(liczba>0)
 		{
 			kolejna_cyfra=liczba % 10;
-			// System.out.println(kolejna_cyfra);
 			liczba/=10;
 			ile++;
     	};
-	    // System.out.println("Suma cyfr:"+ile);
 		return ile;
 	}
 }
 
 	public static void main(String[] args){
-		liczby mojaLiczba = new liczby();
+		Liczby mojaLiczba = new Liczby();
 		System.out.println("Uzywam metody (setters) do ustawienia wartosci liczby.");
 		mojaLiczba.ustawLiczbe(123);
 		mojaLiczba.ustawIle(0);
