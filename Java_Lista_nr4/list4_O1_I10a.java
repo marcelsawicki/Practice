@@ -8,39 +8,32 @@
 
 public class List4_O1_I10a{
 
-public static class Liczba{
-	//zmienne
-	
+public static class Liczba{	
 	double a=1;
 	double f=a;
 	int k=0;
 	double x=3;
 	double epsilon=0.1;
 	
-	//metody
-	//settery
-	//gettery
-	
 	public double eDoX(double x) {
+		System.out.println("x= " +x);
+			do
+			{
+					k++;
+					a*=(x/k);
+					f+=a;	
+			}while(a>epsilon);
+		return f;
+	}
 	
-	do{
-			k++;
-			a*=(x/k);
-			f+=a;
-			
-			
-	}while(a>epsilon);
-	return f;
-	}//eDoX
-
-}//class liczba
+	}
 
 public static void main(String[] args) {
-	liczba Moja = new Liczba();
-//	Moja.ustawRozw(1);
-	System.out.println("Program obliczajacy e do potegi x:");
+	Liczba Moja = new Liczba();
+	System.out.print("Program obliczajacy e do potegi ");
 	
-	System.out.println(Moja.eDoX(3));
+	System.out.println("Wynik: " +Moja.eDoX(3));
+	} 
 
-} //main
 }
+
