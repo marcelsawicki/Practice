@@ -47,7 +47,6 @@ public class ZadanieT3_F4 {
     	for(int k=0;k<=n;k++){
     		System.out.print("a"+k+"= ");
     		a[k] = ak.nextInt();
-			// a[k]=(int)Czytanie.czytajDouble("a"+k+" =");	
     	}
     	ak.close();
     	

@@ -55,7 +55,7 @@ public class Lista3T1b {
 		int[] tabP = new int[ileP];
 		int[] tabNP = new int[ileNP];
 		
-		// dopisuje do tablic liczby parzyste oraz nie parzyste
+		// dopisuje do tablic liczby parzyste oraz nieparzyste
 		ileP=0;
 		ileNP=0;
 		for(int j=0; j<ciag.length; j++){
@@ -79,6 +79,6 @@ public class Lista3T1b {
 		for(int p=0; p<tabNP.length; p++) {
 			System.out.print(tabNP[p]+", ");
 		}
-		System.out.println("\nPowyzej liczby nie parzyste. \n");
+		System.out.println("\nPowyzej liczby nieparzyste. \n");
 	};
 }; 
