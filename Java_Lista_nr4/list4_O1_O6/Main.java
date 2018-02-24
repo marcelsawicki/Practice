@@ -23,36 +23,33 @@ import java.util.List;
 public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Hotel grand = new Hotel(2,3); // liczba pieter, liczba pokoi
-		Osoba osoba1 = new Osoba("Jan", "Abcd"); // imie, nazwisko
-		Osoba osoba2 = new Osoba("Mariusz", "Abcd"); // imie, nazwisko
+		Hotel grand = new Hotel(2,5); // liczba pieter, liczba pokoi
+		Osoba osoba1 = new Osoba("Jan", "Aronia"); 
+		Osoba osoba2 = new Osoba("Mariusz", "Brzoskwinia");
+		Osoba osoba3 = new Osoba("Janina", "Agrest"); 
 		List<Osoba> kolekcjaOsob = new LinkedList<>();
 		kolekcjaOsob.add(osoba1);
 		kolekcjaOsob.add(osoba2);
 		
-		// iterowanie po kolekcji
-		
-		System.out.println("Iterowanie po liscie (foreach)");
-		for(Osoba item : kolekcjaOsob) {
-		    System.out.println(item.imie);
-		    System.out.println(item.nazwisko);
-		}
-		 
-		System.out.println("Iterowanie po liscie (for)");
-		for(int index = 0; index < kolekcjaOsob.size(); index++) {
-		    System.out.println(kolekcjaOsob.get(index).imie);
-		    System.out.println(kolekcjaOsob.get(index).nazwisko);
-		}
-		
-		
 		grand.wynajmijPokoj(1, osoba1);
+		grand.wynajmijPokoj(4, osoba2);
 		
 		grand.informacjePokoj(1);
 		grand.informacjePokoj(2);
 		grand.informacjePokoj(3);
+		grand.informacjePokoj(4);
+		grand.informacjePokoj(5);
 		
 		System.out.println("\nWolne pokoje: ");
 		grand.wolnePokoje();
+		
+		System.out.println("\nWolnych pokoi jest: "+grand.ileJestWolnychPokoi());
+		grand.ktorePokojeWynajmujeOsobaOPodanymNazwisku("Aronia");
+		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Agrest");
+		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Brzoskwinia");
+		grand.zwolnijWszystkiePokojeWynajmowanePrzezOsobeOPodanymNazwisku("Brzoskwinia");
+		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Brzoskwinia");
+		
 	}
 
 }
