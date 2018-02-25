@@ -52,7 +52,7 @@ public class Main {
 		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Brzoskwinia");
 		int zmienna = 0;
 		do {
-			Menu.display(args);;
+			Menu.display(args);
 			Scanner s = new Scanner(System.in);
 			zmienna = s.nextInt();
 			System.out.println("Wprowadzono: "+zmienna);	
