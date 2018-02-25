@@ -20,6 +20,7 @@
  */
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -49,7 +50,30 @@ public class Main {
 		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Brzoskwinia");
 		grand.zwolnijWszystkiePokojeWynajmowanePrzezOsobeOPodanymNazwisku("Brzoskwinia");
 		grand.czyOsobaOPodanymNazwiskuWynajmujePokoj("Brzoskwinia");
-		
+		int zmienna = 0;
+		do {
+			Menu.display(args);;
+			Scanner s = new Scanner(System.in);
+			zmienna = s.nextInt();
+			System.out.println("Wprowadzono: "+zmienna);	
+//			s.close();
+			switch(zmienna) {
+			case 1: { 
+				System.out.println("przypadek 1"); 
+				Osoba osoba4 = new Osoba("Wiktor", "Pomidor");
+				grand.wynajmijPokoj(3, osoba4);
+				break; 
+				}
+			case 2: { System.out.println("przypadek 2"); break; }
+			case 3: { 
+				System.out.println("\nWolnych pokoi jest: "+grand.ileJestWolnychPokoi()); 
+				break; 
+				}
+			case 4: { System.out.println("przypadek 4"); break; }
+			case 5: { System.out.println("przypadek 5"); break; }
+			}
+		}
+		while(zmienna!=6);
 	}
 
 }
