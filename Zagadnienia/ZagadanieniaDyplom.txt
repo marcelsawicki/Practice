@@ -142,14 +142,151 @@ Ad 6. Co to jest asocjacja? Jakie sa rodzaje asocjacji? (**)
 				 
 
 Ad 13. Formularze w HTML 5. (**)
+		Jest 6 typów pól:
+		1) <input type="text"> </input>
+		2) <input type="checkbox"> </input>
+		3) <input type="radio"> </input>
+		4) <input type="file"> </input>
+		5) <textarea> </textarea>
+		6) <input type="hidden"> </input>
+		
+		W HTML5 mamy dodatkowo do dyspozycji:
+		7) <input type="email"> </input>
+		8) <input type="url"> </input>
+		9) <input type="number"> </input>
+		10) <input type="number" min="1" max="120" /> </input>
+		11) <input type="date"> </input>
+		12) <input type="time"> </input>
+		
+Sprawdzanie poprawności danych: 
+Wcześniej mieliśmy jedynie atrybut "maxlength", który służy do ograniczenia
+długości tekstu wprowadzonego w pole tekstowe.
+W HTML5 wprowadzono atrybut "required", dzięki któremu możemy wymóc na użytkowniku
+wypełnienie lub zaznaczenia pola:
+	<input type="email" required />
+	- w ten sposób upewniamy się, że użytkownik poda nam adres e-mail.
+
 Ad 15. Selektory CSS (**)
+
 Ad 16. Pozycjonowanie obiektów w dokumentach HTML z wykorzystaniem CSS3. (**)
+
 Ad 17. Charakterystyka zastosowania JavaScript. (**)
+		JavaScript, JS - skryptowy język programowania stworzony przez firmę Netscape,
+		najczęściej stosowany na stronach intrnetowych (WWW).
+		
+		Skrypty służą najczęściej do zapewnienia interaktywności poprzez reagowanie na zdarzenia.
+		
+		Przykład 1.
+		
+		<!DOCTYPE html>
+		<HTML>
+			<HEAD>
+				<script type="text/javascript">
+					function hello() {
+						var dt = Date();
+						
+						var msg = 'Witaj świecie! Dzisiaj jest ' +dt;
+						alert(msg);
+					}
+				</script>
+			</HEAD>
+			
+			<BODY onload="hello();">
+			</BODY>
+		</HTML>
+		
+	Zastosowanie JavaScript:
+		1) sprawdzenie poprawności pól formularza
+		2) ustalanie i pobieranie cookies
+		3) dynamiczne zmienianie wyglądu strony
+		4) ukrywanie i pokazywanie elementów
+		5) przemieszczanie elementów na stronie
+		6) przechwytywanie zdarzeń użytkownika i dostosowanie do nich strony
+		7) przewijanie zawartości
+		8) połączenie z aplikacją po stronie serwera bez opuszczania strony
+		
 Ad 18. JavaScript - wyrażenia regularne. (**)
+
 Ad 19. JavaScript - rodzaje zdarzeń i schemat ich obsługi. (**)
+		Zdarzenia to czynności, które użykownik wykonuje podczas odwiedzania naszej strony.
+		Przykładowymi zdarzeniami mogą być np. przesunięcie kursora na obrazek,
+		kliknięcie jakiegoś linka, wysłanie formularza, zaznaczenie jakiegoś obiektu,
+		naciśnięcie klawisza.
+		
+		onAbort - gdy zaniechano ładowanie strony
+		onBlur - gdy obiekt przestał być aktywny
+		onDblClick - gdy podwójnie klikamy na obiekt
+		onChanege - gdy obiekt zmienił swoją wartość
+		onClick - gdy obiekt został kliknięty
+		onError - gdy wystąpił błąd w skrypcie
+		onFocus - gdy obiekt stał się aktywny (został wybrany)
+		onKeyDown - występuje naciśnięcie klawisza na klawiaturze
+		onKeyUp - gdy puścimy klawisz na klawiaturze
+		onLoad - gdy obiekt został załadowany
+		onMouseOver - gdy kursor znalazł się na obiekcie
+		onMouseOut - gdy kursor opuścił obiekt
+		onSelect - gdy zawartość obiektu została zaznaczona
+		onSubmit - gdy formularz został wysłany
+		onUnload - gdy zmieniono wyświetlaną stronę
+		
+		Przykład 2.
+		<HTML>
+			<HEAD>
+			<script type="text/javascript">
+			
+			function init() {
+					document.getElementById("id_of_textbox").addEventListener("keyup", function(event) {
+						event.preventDefault();
+						if (event.keyCode === 13) {
+							document.getElementById("id_of_button").click();
+						}
+					});
+			}
+
+				function sayHello() {
+					alert("Hello!");
+				}
+			</script>
+			</HEAD>
+			<BODY onload="init();">
+				<input id="id_of_textbox" type="text"></input>
+				<button id="id_of_button" onclick="sayHello();">Start</button>
+			</BODY>
+		</HTML>
+
 Ad 21. jQuery - wsparcie animacji. (**)
 Ad 23. Dziedziczenie, polimorfizm i interfejsy w języku Java. (**)
 Ad 28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
+		Transakcje są grupami instrukcji języka SQL, traktowanymi z punktu widzenia ich
+	przetwarzania jako jedną całość. Transakcje gwarantują spójność modyfikowanych informacji.
+	
+	Przykład:
+	
+		Typowym przykładem transakcyjnego przetwarzania danych jest przeniesienie pieniędzy zIndex
+	jednego konta bankowego na drugie.
+	
+	Taka operacja przebiega w dwóch etapach:
+		1) zmniejszenie o pewną sumę pieniędzy stanu konta X
+		2) dodanie tej sumy do stanu konta Y
+		
+	Gdyby po wykonia pierwszej operacji wystąpił błąd uniemożliwiający wykonanie drugiej,
+	z systemu zniknęłaby pewna suma pieniędzy. Równie nieprzyjemnym zaskoczeniem dla właściciela
+	byłoby sprawdzenie przez niego stanu obu jego kont już po odjęciu danej sumy z pierwszego
+	konta, ale przed jej dodaniem do drugiego konta.
+	
+	Właściwości ACID transakcji:
+	
+	Zgodnie z zasadą ACID (ang. Atomicity, Consistency, Isolation, Durability) transakcje muszą być:
+	
+	1) Atomicity - niepodzielne
+		Niepodzielność oznacza, że zatwierdzane są wszystkie wchodzące w skład transakcji instrukcje
+		albo nie jest zatwierdzana żadna z nich. Innymi słowy, wszystkie wchodzące w skład transakcje
+		muszą być wykonane poprawnie - jeśli choć jedna z nich zgłosci błąd, wszystkie przeprowadzone
+		w ramach transakcji zmiany zostaną wycofane.
+	
+	2) Consistency - spójne
+	3) Isolation - izolowane
+	4) Durability - trwałe
 Ad 32. Charakterystyka języka SQL. Definiowanie schematu bazy danych w języku SQL. (**)
 Ad 34. Złączenia i zapytania złączeniowe w SQL. Typy złączeń. (**)
 Ad 37. Animacja komputerowa 2d oraz 3d. Zagadnienia związane z umieszczaniem animacji na stronach 
