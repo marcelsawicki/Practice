@@ -1,0 +1,265 @@
+﻿A) .NET i C#
+	1. Co to są typy proste i referencyjne? Jakie są róznice? Gdzie są przechowywane (stos/sterta)?
+	
+	2. Jaka jest różnica między ref a out?
+	
+	3. Co oznacza słowo kluczowe np. sealed, partial?
+		sealed - (ang. sealed - zapieczętowany) - when applied to a class, the sealed modifier prevents other classes from
+		inheriting from it. In the folowing example, calss B inherits from class A, but nop class can inherit from class B.
+		
+		class A {}
+		sealed class B: A {}
+		
+		additional links: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed
+		
+	4. Co to jest boxing i unboxing?
+	
+	5. Co to jest checked i unchecked?
+	
+	6. Garbage Collector zasada dzialania. Kiedy obiekt jest usuwany z pamięci?
+		Garbage Collector - Osoby, które programowały w jezykach obiektowych, takich jak
+		np. C++ czy Object Pascal, zastanawiają się zapewne, jak w C# wygląda destruktor i kiedy
+		zwalniamy pamięć zarezerwowaną dla obiektów. Skoro bowiem operator new pozwala na
+		utworzenie obiektu, a tym samym na zarezerwowanie dla niego pamięci operacyjnej, logicznym
+		założeniem jest, że po jego wykorzystaniu pamięć należy zwolnić. Ponieważ jadnak takiego
+		podejście, tzn. zrzucenie na barki programistów konieczności zwalniania przydzielonej
+		obiektom pamięci, powodowało powstawanie wielu błędów, w nowoczesnych językach
+		programowania stosuje się inne rozwiązanie. Otóż za zwalnianie pamięci odpowiada
+		środowisko uruchomieniowe, a programista praktycznie nie ma nad tym procesem
+		kontroli.
+		
+		Zajmuje się tym tak zwany odśmiecacz (ang. garbage collector), który czuwa nad 
+		optymalnym wykorzystaniem pamięci i uruchami proces jej odzyskiwania w momencie, 
+		kiedy wolna ilość oddana do dyspozycji programu zbytnio się zmniejszy. 
+		Jest to wyjątkowo wygodne podejście dla programisty, zwalnia bowiem z obowiązku
+		zarządzania pamięcią. Zwieksza jednak narzuty czasowe związane z wykorzystaniem 
+		programu, wszak sam proces odśmiecania musi zająć czas procesora. Najmniejsze dzisiaj 
+		środowiska uruchomieniowe są na tyle dopracowane, że w większości przypadków nie
+		ma najmniejszej potrzeby zaprzątania myśli tym problemem.
+		
+		Trzeba jednak zdawać sobie sprawę, żę środowisko .NET jest w stanie automatycznie
+		zarządzać wykorzystaniem pamięci, ale tylko tej, która jest alokowana standardowo,
+		czyli za pomocą operatora new. W nielicznych przypadkach, np. w sytuacji,
+		gdyby stworzony przez nas biek wykorzystwał jakieś specyficzne zasoby, które nie
+		mogą być zwolnione automatycznie, o posprzątanie systemu trzeba zadabać samodzielnie.
+		
+		W C# w tym celu wykorzystuje się destruktory, które są wykonywane zawsze, kiedy obiekt
+		jest niszczony, usuwany z pamięci. Wystarczy więc, jeśli klasa będzie zawierała
+		taki destruktor, a przy niszczeniu jej obiektu zostanie on wykonany. W ciele destruktora
+		można wykonywać dowolne instrukcje sprzątające. Destruktor deklaruje się tak jak
+		konstruktor, z tą różnicą, że nazwy poprzedzamy znakiem tyldy, ogólnie:
+		
+		class nazwa_klasy
+		{
+			~nazwa_klasy()
+			{
+				// kod destruktora
+			}
+		}
+		
+		Destruktor należy jednak używać tylko i wyłącznie w sytuacji, kiedy faktycznie
+		niezbędne jest zwolnienie alokowanych niestandardowo zasobów. Nie należy natomiast
+		umieszczać w kodzie pustych destruktorów, gdyż obniży to wydajność aplikacji.
+		
+		additional links: https://stackoverflow.com/questions/2926869/do-you-need-to-dispose-of-objects-and-set-them-to-null
+		
+	7. Co to są obiekty immutable?
+	
+	8. Wszystko co związane ze stringiem np. konkatencja stringa (StringBuilder)
+	
+	9. Jak działa yield?
+		działąnie yield:
+		
+	10. Co to jest delegat?
+	
+	11. Co to są wyrażenia lambda?
+		Wyrażenia lamda: 
+		W C# 6.0 treść prostych metod może być definiowana w sposób skrócony, za pomocą tzw.
+		wyrażeń lambda (ang. lambda expressions). Chociaż głównym celem tych konstrukcji 
+		programistycznych jest tworzenie bardziej zaawansowanych funkcjonalności
+		takich jak funkcje lokalne (anonimow), ich działanie można pokazać na uproszczonym
+		przykładzie dotyczącym właśnie utworzenia metody.
+		
+		Jeżeli przyjmiemy, że w programie ma postać metoda przyjmująca dwa argumenty i zwracająca
+		wynik ich dodawania, to stosując znane do tej pory techniki należałoby użyć konstrukcji
+		o następującej postaci (zakładając, że metoda ma się nazywać Dodaj i przyjmować dwa argumenty
+		typu Double):
+		
+		public Double Dodaj(Double arg1, Double arg2)
+		{
+			return arg1 + arg2;
+		}
+		
+		Zamiast tego można użyć operatora lambda, który ma postać =>. Po lewej stronie
+		takiego operatora występuje pewien parametr, a po prawej stronie wyrażenie lub blok instrukcji. 
+		Oznacza to, że nasza metoda może wyglądać tak:
+		public Double Dodaj(Double arg1, Double arg2) => arg1 + arg2;
+		
+		Pełny program korzystający z takiej metody mógłby wtedy mieć postać:
+		
+		using Systeml;
+		
+		public class Program
+		{
+			public Double Dodaj(Double arg1, Double arg2) => arg1+ arg2;
+			
+			public static void Main()
+			{
+				int liczba1 = 100, liczba2 = 200;
+				Program pg = new Program();
+				
+				Double wynik = pg.Dodaj(liczba1, liczba2);
+				Console.WriteLine($"wynik = {wynik}");
+			}
+		}
+		
+	12. Co to jest serializacja?
+	
+	13. Co to jest refleksja?
+		Refleksja - 
+		
+	14. Co to jest atrybut?
+	
+	15. Co oznacza słowo kluczowe volatile?
+	volatile - (ang. volatile - zmienny, niestabilny, lotny)
+	
+	16. Co to jest wątek, co to jest pula wątków? Jak tworzyć wątek?
+	
+	17. Do czego służy słowo lock? Co kryje się pod spodem tego słowa?
+		lock - 
+		
+	18. Inne mechanizmy synchronizacji Mutex, Semaphore, MannualResetEvent, Interlocked
+	
+	19. Co to jest extension method?
+	
+	20. Co to jest lazy loading i eager loading?
+		lazy loading -
+		eager loading - 
+		
+	21. Co to jest Weak Reference?
+	
+	22. Co to jest override i overload?
+
+B) OOP i wzorce projektowe
+	23. Co to jest klasa abstrakcyjna?
+			Klasa abstrakcyjna - 
+			
+	24. Co to jest interfejs i czym się różni od klasy abstrakcyjnej?
+			Róźnica między interfejsem a klasą abstrakcyjną: 
+			
+		"Klasy abstrakcyjne
+		W wielu przypadkach podstawowa klasa bazowa jest na tyle ogólna, że nie powinno się tworzyć jej obiektu. Tak jak w poprzednim przykładzie, trudno sobie wyobrazić obiekt klasy Animal, gdyż ta klasa opisuje bardzo ogólny typ, który służy jedynie jako nadklasa dla innych, bardziej wyspecjalizowanych klas. Aby zapobiec tworzenia obiektów klas, które są bardzo ogólne i których obiekty nie powinny być tworzone, wprowadzono w php5 słowo kluczowe abstract.
+
+		abstract class Animal{}
+		$animal = new Animal();//nie działa, błąd
+		Dzięki temu słowu kluczowemu utworzenie egzemplarza klasy Animal nie jest możliwe, służy ona bowiem jedynie jako podstawa dla swoich klas specjalizujących. Klasa abstrakcyjna może zawierać tak jak każda inna klasa atrybuty, metody poprzedzone dowolnymi modyfikatorami. Może również zawierać deklarację (nie definicję) metod abstrakcyjnych.
+
+		abstract class Animal{
+			public function goSleep(){
+				//chrapie
+			}
+
+			abstract public function roar();
+		}
+		Taki zapis wymusza definicję metody roar() w nieabstrakcyjnej podklasie klasy Animal.
+
+		class Cat extends Animal{
+			public function roar(){
+				echo 'miał miał';
+			}
+		}
+		Jeśli klasa bazowa jest abstrakcyjna i posiada metodę abstrakcyjną, to nie musi być ona zdefiniowana w kolejnej klasie w hierarchii, ale w takim wypadku klasa która dziedziczy po tej bazowej klasie abstrakcyjnej, musi również być abstrakcyjna.
+
+		abstract class A{
+			abstract public function method();
+		}
+
+		abstract class B extends A{}//tutaj nie musi być definicja metody A::method()
+
+		class C extends B{//ale tutaj już tak
+			public function method(){}
+		}
+		Modyfikator dostępu w definicji metody abstrakcyjnej nie może być silniejszy od tego pierwotnie zdeklarowanego w klasie abstrakcyjnej, czyli nie można zamienić modyfikatora public na private, ale private na public owszem. Deklaracja metody abstrakcyjnej musi mieć takie same parametry co jej konkretna definicja. Wyjątkiem są parametry z wartością domyślną, nie muszą być one uwzględnione w deklaracji metody abstrakcyjnej, np:
+
+		abstract class A{
+			abstract public function method();
+		}
+
+		class B extends A{
+			public function method($b = false){}//dozwolone
+		}
+
+		class C extends A{
+			public function method($b){}//niedozwolone!
+		}
+		Interfejsy
+		Jeśli pójdziemy o krok dalej z uogólnieniem pierwszej abstrakcyjnej klasy w hierarchii klas, dojdziemy do momentu kiedy ta klasa będzie zawierała tylko deklaracje abstrakcyjnych metod publicznych. Wtedy taką klasę będziemy mogli zastąpić interfejsem.
+
+		interface iAnimal {
+			public function roar();
+			//inne abstrakcyjne metody charakterystyczne dla zwierząt
+		}
+
+		abstract class Animal implements iAnimal{
+			public function goSleep(){
+			}
+		}
+		Jedna klasa może implementować wiele interfejsów, czyli poprawny jest kod:
+
+		interface A {}
+		interface B {}
+		class C implements A, B {}
+		W interfejsie nie musimy korzystać ze słowa kluczowego abstract, aby zdeklarować metodę. Metody, które deklarujemy w interfejsie muszą być publiczne. Pozostałe zasady są takie same jak w metodach abstrakcyjnych.
+		"
+		
+		"Interfejsy wydają się głupie:
+		Po co definiować, jakie metody będzie miała klasa? O ile wygodniej napisać samą klasę i po prostu z niej korzystać?
+		W praktyce robi się jednak trochę ciekawiej.
+		Wyobraź sobie, że masz interfejs ObslugaBazyDanych, a w nim metody "dodajUzytkownika(Uzytkownik) i usunUzytkownik(Uzytkownik).
+		Teraz piszesz sobie klasy: ObslugaBazyDanychWPliku implements ObslugaBazyDanych, ObslugaBazySQL implements ObslugaBazyDanych, ObslugaObiektowejBazyDanych implements ObslugaBazyDanych.
+		Po pierwsze:
+		Jak ktoś kiedyś będzie chciał napisać kolejną wersję obsługi z bazą danych, to od razu narzucisz mu standard, który musi spełnić.
+		Po drugie, możesz w dowolnym miejscu w kodzie zrobić:
+		ObslugaBazyDanych obd = new <któraś obsługa>();
+		obd.dodajUzytkownika(...);
+		Niezależnie od tego, którą obsługę wybierzesz (np. w jakiejś fabryce lub zależnie od parametrów użytkownika), to kompilator spokojnie to przepuści i będzie to śmigać.
+		Jest jeszcze weselej, jak dzielisz kod pomiędzy serwer i klienta (EJB, RMI). Wtedy obie strony muszą wiedzieć, jakie metody można wykonać, ale tylko jedna (serwer) ma ciało tych metod."
+		
+		additional link: https://4programmers.net/Forum/Java/221811-interfejsy_kl_abstrakcyjne_
+			
+	25. Czy klasa abstrakcyjna może zawierać metody nieabstrakcyjne?
+			Odpowiedz: 
+		
+	26. Co to jest metoda wirtualna?
+			Metoda wirtualna - 
+			
+	27. Singleton - jak wygląda deklaracja, wady i zalety, jak wygląda bezpieczny wielowątkowy singleton?
+		Singleton - Singleton to konstrukcyjny wzorzec projektowy. Wyobraź sobie, że w naszym programie potrzebujemy obiektu, który będzie zainicjowany tylko jeden raz. Tak, ograniczamy się tylko do pojedynczej instancji dla danej klasy. Ale po co komu w ogóle taki obiekt? Załóżmy, że będzie on zawierał w sobie bardzo ważne informacje, może zawierać jakieś statystyki bądź ważne ustawienia. Ponowna inicjalizacja mogłaby spowodować przekłamanie oraz nieumyślną zmianę zapisanych ustawień. Otrzymane wyniki będą niespójne. Kolejnym przykładem zastosowania singletona jest oszczędność pamięci przez programistę. Sam użytkownik nawet nie wie, czy owa instancja już istnieje, czy też nie. W programach wielowątkowych istnieje pewne ryzyko błędu, spowodowanego stosowaniem wzorca. Może dojść do sytuacji, że dwa wątki, w tym samym czasie będą chciały zainicjować obiekt, w skutek czego powstają nam dwa singletony w systemie.
+		
+	28. Fabryka, kiedy stosujemy?
+	
+	29. Strategia, adapter, obserwator, dekorator, repozytorium, unit of work.
+		repozytorium - 
+		dekorator - 
+
+C) Wzorce prezentacji MVC, MVP, MVVM
+	30. Co to jest jakie są rodzaje dependency injection?
+		dependency injection - 
+		
+	31. Co to jest inversion of control?
+		inversion of control - 
+
+D) WPF
+	32. Co to jest drzewo prezentacji?
+	
+	33. Co to jest drzwo logiczne?
+
+=================================================================
+	34. Co oznacza static przed nazwa metody?
+	
+=================================================================
+
+JavaScript: 
+	1. Co to jest prototype?
+	
+	2. Jak sprawdzić czy obiekt ma właściwość klasy (property)?

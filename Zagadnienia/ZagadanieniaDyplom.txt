@@ -1,0 +1,168 @@
+Spis treści
+===========
+
+Wprowadzenie do technologii obiektowych
+1. Co to jest model, a co to jest meta-model? (**)
+2. Jak można przedstawiać modele systemów w języku UML?  (**)
+3. Jakich diagramów UML można użyć do przedstawienia statycznych, a jakich do 
+przedstawienia dynamicznych aspektów modelowanego systemu?
+4. Co to jest klasyfikator?
+5. Co to jest klasa? (**)
+6. Co to jest asocjacja? Jakie sa rodzaje asocjacji? (**)
+7. Co jest znaczeniem przypadków użycia?
+8. Co to jest maszyna stanowa i jak można ją przedstawiać w języku UML?
+9. Jakie związki zachodzą pomiędzy diagramami sekwencji a diagramami stanów?
+10. Co charakteryzuje stan obiektu?
+
+Programowanie WWW
+11. Charakterystyka i zastosowanie HTML 5.
+12. Osadzanie treści multimedialnych w dokumentach HTML 4 i HTML 5.
+13. Formularze w HTML 5. (**)
+14. Charakterystyka, zastosowanie i ograniczenia CSS2/CSS3.
+15. Selektory CSS (**)
+16. Pozycjonowanie obiektów w dokumentach HTML z wykorzystaniem CSS3. (**)
+17. Charakterystyka zastosowania JavaScript. (**)
+18. JavaScript - wyrażenia regularne. (**)
+19. JavaScript - rodzaje zdarzeń i schemat ich obsługi. (**)
+20. Funkcjoalność biblioteki jQuery.
+21. jQuery - wsparcie animacji. (**)
+
+Programowanie w języku JavaScript
+22. Klasy i obiekty w języku Java: rola, struktura, użycie w programie.
+23. Dziedziczenie, polimorfizm i interfejsy w języku Java. (**)
+24. Obsługa wejścia/wyjścia w Javie: podejście strumieniowe.
+25. Mechanizm wyjątków w Javie.
+26. Aplety w Javie.
+
+Bazy danych w aplikacjach webowych.
+27. Modele bazy danych. Schemat bazy danych. Więzy w bazach danych.
+28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
+29. System DBMS - podstawowe bloki funkcjonalne i widoki.
+30. Normalizacja schematów baz danych.
+31. Projektowanie i tworzenie baz danych - omówić wybrany designer i modeler.
+32. Charakterystyka języka SQL. Definiowanie schematu bazy danych w języku SQL. (**)
+33. Zapytania wybierające. Zapytania z grupowaniem. Podzapytania.
+34. Złączenia i zapytania złączeniowe w SQL. Typy złączeń. (**)
+
+Internetowe serwisy multimedialne
+35. Rodzaje oraz techniki konstruowania interakcji w multimedialnych serwisach internetowych.
+36. Testowanie multimedialnych komponentów prototypu internetowego serwisu multimedialnego.
+37. Animacja komputerowa 2d oraz 3d. Zagadnienia związane z umieszczaniem animacji na stronach 
+	internetowych. (**)
+38. Etapy konstruowania multimedialnej, interaktywnej aplikacji internetowej.
+
+Bezpieczeństwo sieci i aplikacji webowych
+40. Stos protokołów TCP/IP i jego bezpieczeństwo. (**)
+41. XSS. Ataki i zabezpieczenia.
+42. SQL Injection. Ataki i zabezpieczenia.
+43. Kryptografia symetryczna i asymetryczna - zastosowania. Certyfikacja i PKI.
+44. Mechanizmy bezpieczeństwa w przeglądarkach WWW. (**)
+45. Skanery systemów, sieci i aplikacji webowych - wymienić pięc sposród dziesięciu poznanych i 
+	scharakteryzować dwa. (**)
+46. Polityka bezpieczeństwa i audyt - charakterystyka wybranego narzędzia.
+47. Standardy i dobre praktyki bezpoieczeństwa informacji, systemów i sieci - wymienić cztery i
+	scharakteryzować dwa.
+	
+Serwery i serwisy internetowego
+48. Bezpieczne metody zdalnego dostępu i administrowania serwerami usług internetowych.
+49. Czym jest strefa w usłudze DNS? (**)
+50. Usługa DNS - zapytanie rekursywne vs. zapytanie iteracyjne. (**)
+51. Usługa FTP - tryb aktywny vs. tryb pasywny.
+53. W jaki sposób można skonfigurować serwery (witryny) wirtualne WWW na jednym serwerze fizycznym,
+	tzn. na podstawie jakich parametrów są one rozróżniane przez serwer fizyczny?
+	
+Aplikacje internetowe w środowisku .NET
+54. Kod ukryty (codebehind) - motywacje i zastosowanie.
+55. Bezstanowość protokołu HTTP, rozwiązania w ASP.NET.
+56. Bezpieczeństwo aplikcji ASP.NET.
+57. Sposoby przesyłania informacji między stronami ASP.NET. (**)
+58. Rodzaje i funkcje walidatorów w ASP.NET.
+59. Współpraca aplikacji ASP.NET z bazą danych. (**)
+
+Technologie XML
+60. Rodzaje technologii XML.
+61. XML - dokumenty poprawnie składniowo i strukturalnie.
+62. XML Schema - charakterystyki zastosowanie.
+63. Prezentacja zawartości dokumentów XML z wykorzstaniem CSS i/lub XSLT. (**)
+64. Charakterystyka zastosowania XPath.
+65. Charakterystyka i zastosowania XSLT.
+66. Praca z formatem XML na platformie .NET. (**)
+	(Charakterystyka klas wspierjących programowe przetwarzanie dokumentów XML.)
+	
+Opracowanie
+===========
+
+Ad. 1. Co to jest model, a co to jest meta-model?
+Model to "układ (...) możliwie mało skomplikowany, działający analogicznie do orginału".
+
+Meta-model - model definiujący składnię, semantykę i pragmatykę wprowadzonego modelu, notacji
+			 lub diagramu. Meta-model proponowany przez autorów UML ustala pewne elementy składni
+			 diagramów, ograniczenia typologiczne, klasyfikację pojęć oraz związki pomiędzy pojęciami.
+			 
+UML definiuje dwie podstawowe składowe, notacje poszczególnych elementów używanych na diagramach, a 
+z drugiej strony ich semantykę, czyli tzw. meta-model.
+
+Z punktu widzenia analityka istotniejsze jest czytelne i jednoznaczne opisanie modelu tak, aby inne
+osoby mogły zrozumieć jego znaczenie. Zatem ważniejsza dla niego jest notacja, zaś meta-model powinien
+być zrozumiały intuicyjnie.
+
+Metamodelowanie – analiza, konstrukcja i rozwój ram, reguł, ograniczeń, modeli i teorii, które są użyteczne przy procesie modelowania w pre-definiowanej grupie problemów. Metamodelowanie wraz z metamodelami występuje w wielu dziedzinach wiedzy, np. w metanauce, metafilozofii, metateorii czy też w teorii systemów. Termin ten występuje również w matematyce oraz często spotykany jest w informatyce.
+
+W informatyce i dziedzinach jej pokrewnych metamodelowanie oznacza konstruowanie zbioru "koncepcji" (obiektów, terminów, itp.) w zakresie pewnej dziedziny. Uznając model za abstrakcję pewnego zjawiska ze świata rzeczywistego, to metamodel jest abstrakcją ukazującą właściwości owego modelu. Przykładem takiej zależności może być program komputerowy napisany w pewnym języku programowania oraz gramatyka owego języka programowania.
+
+Metamodele w informatyce najczęściej stosowane są jako:
+
+schematy logiczne dla danych semantycznych, które muszą być wymieniane bądź przechowywane,
+język wspierający określoną metodę bądź proces,
+język służący do ogólnego wyrażania semantyki pewnych informacji.
+
+Ad 2. Jak można przedstawiać modele systemów w języku UML?  (**)
+	Diagramy: przypadków użycia, klas, obiektów, maszyny stanowej, sekwencji.
+
+Ad 5. Co to jest klasa? (**)	
+	Klasy - grupa obiektó o tych samych właściwościach, ograniczeniach i semantyce - deskryptor
+			grupy obiektów o podobnej strukturze, zachowaniu i relacjach. Do własności klasy zaliczamy
+			atrybuty i operacje.
+			
+			Wewnętrzne właściwości klasy:
+			atrybuty - własność typu strukturalnego
+			operacje - własność typu behawioralnego
+			
+	Klasa - opis zbioru (uniwersum) obiektów (instancji) posiadających te same atrybuty, operacje,
+			metody i zachowania.
+			
+	Zewnętrzne właściwości klasy: asocjacje z innymi klasami.
+
+Ad 6. Co to jest asocjacja? Jakie sa rodzaje asocjacji? (**)
+	Asocajacja - wskazuje na trwałe powiązanie pomiędzy obiektami danych klas 
+				 (np. firma zatrudnia pracowników). Na diagrami asocjację oznacza się
+				 za pomocą lini, która może być zakończona strzałką (oznaczającą kierunek
+				 nawigacji między klasami). Nazwę cechy wraz z krotnością umieszcza się w 
+				 punkcie docelowym asocjacji.
+				 
+
+Ad 13. Formularze w HTML 5. (**)
+Ad 15. Selektory CSS (**)
+Ad 16. Pozycjonowanie obiektów w dokumentach HTML z wykorzystaniem CSS3. (**)
+Ad 17. Charakterystyka zastosowania JavaScript. (**)
+Ad 18. JavaScript - wyrażenia regularne. (**)
+Ad 19. JavaScript - rodzaje zdarzeń i schemat ich obsługi. (**)
+Ad 21. jQuery - wsparcie animacji. (**)
+Ad 23. Dziedziczenie, polimorfizm i interfejsy w języku Java. (**)
+Ad 28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
+Ad 32. Charakterystyka języka SQL. Definiowanie schematu bazy danych w języku SQL. (**)
+Ad 34. Złączenia i zapytania złączeniowe w SQL. Typy złączeń. (**)
+Ad 37. Animacja komputerowa 2d oraz 3d. Zagadnienia związane z umieszczaniem animacji na stronach 
+	internetowych. (**)
+	
+Ad 40. Stos protokołów TCP/IP i jego bezpieczeństwo. (**)
+Ad 44. Mechanizmy bezpieczeństwa w przeglądarkach WWW. (**)
+Ad 45. Skanery systemów, sieci i aplikacji webowych - wymienić pięc sposród dziesięciu poznanych i 
+	scharakteryzować dwa. (**)
+Ad 49. Czym jest strefa w usłudze DNS? (**)
+Ad 50. Usługa DNS - zapytanie rekursywne vs. zapytanie iteracyjne. (**)
+Ad 57. Sposoby przesyłania informacji między stronami ASP.NET. (**)
+Ad 59. Współpraca aplikacji ASP.NET z bazą danych. (**)
+Ad 63. Prezentacja zawartości dokumentów XML z wykorzstaniem CSS i/lub XSLT. (**)
+Ad 66. Praca z formatem XML na platformie .NET. (**)
+	(Charakterystyka klas wspierjących programowe przetwarzanie dokumentów XML.)
