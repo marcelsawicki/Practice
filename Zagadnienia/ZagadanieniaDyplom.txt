@@ -255,7 +255,9 @@ Ad 19. JavaScript - rodzaje zdarzeń i schemat ich obsługi. (**)
 		</HTML>
 
 Ad 21. jQuery - wsparcie animacji. (**)
+
 Ad 23. Dziedziczenie, polimorfizm i interfejsy w języku Java. (**)
+
 Ad 28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
 		Transakcje są grupami instrukcji języka SQL, traktowanymi z punktu widzenia ich
 	przetwarzania jako jedną całość. Transakcje gwarantują spójność modyfikowanych informacji.
@@ -285,21 +287,66 @@ Ad 28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
 		w ramach transakcji zmiany zostaną wycofane.
 	
 	2) Consistency - spójne
+		Cehca ta gwarantuje, że ich wykonanie nie doprowadzi, nawet w przypadku awarii serwera,
+		do utraty spójności danych. Wszystkie zmiany danych wykonywane są w ramach transakcji,
+		przechowywane w bazach informacji zawsze będą spójne.
+		
 	3) Isolation - izolowane
+		Izolowanie transakcji wymaga albo zablokowania danych modyfikowanych w ramach jednej z nich,
+		albo utworznia dodatkowej wersji danych.
+		
 	4) Durability - trwałe
+		Trwałośc transakcji gwarantuje, że efekty zatwierdzonych transakcji będą zapisywane w bazie,
+		nawet w przypadku awarii serwera SQL. Do przywrócenia spójności danych serwery bazodanowe
+		z reguły używają jakiejś formy dziennika transakcyjnego.
+		
 Ad 32. Charakterystyka języka SQL. Definiowanie schematu bazy danych w języku SQL. (**)
+		SQL (ang. Structured Query Language) - strukturalny język zapytań używany do tworzenia,
+		modyfikowania baz danych oraz do umieszczania i pobierania danych z baz danych.
+		
+		Przykład 3.
+		
+		CREATE TABLE Pracownicy
+		(
+			Imie VARCHAR(255),
+			Nazwisko VARCHAR(255),
+			Pensja FLOAT,
+			Staz INT
+		);
+
 Ad 34. Złączenia i zapytania złączeniowe w SQL. Typy złączeń. (**)
+
 Ad 37. Animacja komputerowa 2d oraz 3d. Zagadnienia związane z umieszczaniem animacji na stronach 
 	internetowych. (**)
 	
 Ad 40. Stos protokołów TCP/IP i jego bezpieczeństwo. (**)
+	   TCP (ang. Transmission Control Protocol)- jest to połączeniowy, 
+	   niezawodny protokół transportowy. Zapewnia on wiarygodne połączenie realizowane 
+	   za pomocą sum kontrolnych oraz numerów sekwncyjnych pakietów. Jeżeli jakikolwiek 
+	   pakiet został po drodze zniszczony lub zginął, komputer docelowy zgłasza potrzebę 
+	   retransmisji. TCP gwarantuje zatem dostarczenie pakietów.
+	   
+	   #Stos
+	   #Bezpieczeństwo
+	   
 Ad 44. Mechanizmy bezpieczeństwa w przeglądarkach WWW. (**)
+
 Ad 45. Skanery systemów, sieci i aplikacji webowych - wymienić pięc sposród dziesięciu poznanych i 
 	scharakteryzować dwa. (**)
+	
 Ad 49. Czym jest strefa w usłudze DNS? (**)
+
 Ad 50. Usługa DNS - zapytanie rekursywne vs. zapytanie iteracyjne. (**)
+
 Ad 57. Sposoby przesyłania informacji między stronami ASP.NET. (**)
+		GET
+		POST
+		
 Ad 59. Współpraca aplikacji ASP.NET z bazą danych. (**)
+		Entity Framework
+		LINQ
+		
 Ad 63. Prezentacja zawartości dokumentów XML z wykorzstaniem CSS i/lub XSLT. (**)
+
 Ad 66. Praca z formatem XML na platformie .NET. (**)
 	(Charakterystyka klas wspierjących programowe przetwarzanie dokumentów XML.)
