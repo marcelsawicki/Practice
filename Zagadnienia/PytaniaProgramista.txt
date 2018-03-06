@@ -1,4 +1,12 @@
-﻿A) .NET i C#
+﻿Programowanie
+==============
+1. Co to jest iteracja?
+
+
+Framework .NET
+==============
+
+A) .NET i C#
 	1. Co to są typy proste i referencyjne? Jakie są róznice? Gdzie są przechowywane (stos/sterta)?
 	
 	2. Jaka jest różnica między ref a out?
@@ -254,12 +262,25 @@ D) WPF
 	
 	33. Co to jest drzwo logiczne?
 
-=================================================================
 	34. Co oznacza static przed nazwa metody?
+	35. Praca na modelu widoku bazy danych w serwisie, OData oraz autentykacja.
 	
-=================================================================
 
-JavaScript: 
+JavaScript
+==========
 	1. Co to jest prototype?
 	
 	2. Jak sprawdzić czy obiekt ma właściwość klasy (property)?
+	
+	3. Zaawansowany JavaScript 	
+	a) instrukcje warunkowe (if) -> obiekt jest null, undefined - jaka jest roznica?; 
+	b) typeof? typy w JavaScript,
+  	c) pusta tablica i nie zdefiniowana zmienna majaca przechowywac tablice
+	d) iterowanie po danych, funkcja forEach
+
+Analityczne
+===========
+
+1. Mamy 12 kulek, wage szalkową i 3 ważenia. Jedna z kulek ma masę inną od pozostałych kulek. Jak za pomocą wagi i tych 3 ważeń, które mamy do dyspozycji znaleź kulkę która ma inną masę?
+
+2. Jesteśmy w posiadaniu dwóch klepsydr. Jedna przesypuje się w 7 minut, druga 11 minut. Jak odmierzyć dokładnie 15 minut używając wyłącznie tych dwóch klepsydr?
