@@ -168,6 +168,80 @@ wypełnienie lub zaznaczenia pola:
 
 Ad 15. Selektory CSS (**)
 
+	Każda definicja stylu CSS (ang. Cascading Style Sheets) posiada dwa komponenty i selektor
+	(definiuje znaczniki, których dotyczyć będzie styl) oraz właściwości (określają dziłanie stylu).
+	
+	Przykład 4.
+	
+	h1, h2 {
+		font-family: sans-serif;
+		colr: #3366CC;
+	}
+	
+	W przykładzie selektor miał wartość h1, h2 co oznacza, że styl dotyczy wszystkich znaczników
+	<h1> i <h2>. Pozostała część definicji stylu określa atrybuty, które w tym przypadku dotyczyły
+	czcionki i koloru tekstu.
+	
+	Selektor znaczników:
+		Podając nazwę określonego znacznika HTML jako selektor tego znacznika, można zastosować 
+	definicję stylu do każdego wystąpienia tego znacznika w dokumencie. Tę praktykę często stosuje
+	się do zdefiniowana podstawowych stylów wykorzstywanych na całej witrynie. Na przykład poniższy
+	styl może zostać użyty do określenia domyślnej czcionki witryny:
+	
+	Przykład 5.
+	
+	body, p. td, th, div, blockquote, dl, ul, ol {
+		font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+		font-size: 1em;
+		color: #000000;
+	}
+	
+	Stosunkowo długi selektor to lista znaczników, których dotyczyć będzie definicja stylu
+	(krój, rozmiar, kolor czciconki). Teoretycznie wystarczyłby znacznik <body> (ponieważ
+	wszystkie inne znaczniki występują w obrembie tego znacznika, przez co dziedziczą jego
+	właściwości), jednak wiele przeglądarek nie przenosi poprawnie właściwości styli do 
+	tabeli i innych elementów. Dlatego w skład powyższego selektora wchodzą także pozostałe
+	znaczniki.
+	
+	Selektor pseudoklas:
+		Formatowanie znacznika <a> w HTML jest bardziej rozbudowane niż większość innych
+	znaczników. Określając w znaczniku <body> atrybut link, vlink, alink, można zdefiniować
+	zestaw kolorów odpowiadającym poszczególnym stronom łącza na stronie internetowej
+	(odpowiednio: nieodwiedzone, odwiedzone i kliknięte). Również w CSS możliwe jest formatowanie
+	tego znacznika, przy czym dodany został czwarty stan łącza, który odpowiada wskazaniu go 
+	kursorem myszki.
+	
+	Przykład 6.
+	
+	a: link { color: #0000FF; }
+	a: visited { color: #FF00FF; }
+	a: hover { color: #00CCFF; }
+	a: active { color: #FF0000; }
+	
+	Powyższy przykład zawiera cztery definicje stylów CSS. Każdy z selektorów wykorzystuje 
+	tzw. pseudoklasę znacznika <a>.
+	
+	Selektory klas:
+		Jak przypisać różne style do tych samych znaczników pojawiających się w różnych miejscach
+	dokumentu?
+	
+	Można dokonać tego za pomocą klas:
+	
+	Przykład 7.
+	
+	.pasek { color: #FFFFFF; }
+	
+	<p class="pasek"> tekst </p>
+	
+	Selektory id:
+	
+	Przykład 8.
+	
+	#wybrany { color: yellow; }
+	
+	<span id="wybrany"> tekst </span>
+	
+
 Ad 16. Pozycjonowanie obiektów w dokumentach HTML z wykorzystaniem CSS3. (**)
 
 Ad 17. Charakterystyka zastosowania JavaScript. (**)
