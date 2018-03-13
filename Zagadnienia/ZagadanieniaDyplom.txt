@@ -329,8 +329,45 @@ Ad 19. JavaScript - rodzaje zdarzeń i schemat ich obsługi. (**)
 		</HTML>
 
 Ad 21. jQuery - wsparcie animacji. (**)
+	W przypadku animacji jQuery zmieniane są wartości parametrów CSS w krótkich odstępach czasu (przez co
+	uzyskyjemy efekt animacji).
+	
+	jQuery udostępnia kilka ciekawych efektów gotowych do użycia:
+	
+	show(szybkość, funkcja zwrotna) - pokazanie obiektu
+	hide(szybkość, funkcja zwrotna) - ukrywanie obiektu
+	fadeIn(szybkość, funkcja zwrotna) - płynna pojawienie się obiektu
+	
+	toggle() - funkcja pokazuje lub ukrywa obiekt w zależności od danego stanu
+	fadeOut(szybkość, funkcja zwrotna) - płynne ukrywanie obiektu
+	fadeTo(szybkość, przezroczystość, funkcja zwrotna) - płynne ustawienie przezroczystości do poziomu
+														 parametru przezroczystość
+	slideDown(szybkość, funkcja zwrotna) - płynne zsunięcie obiektu w dół
+	slideUp(szybkść, funkcja zwrotna) - płynne zsunięcie obiektu w górę
+	slideToggle(szybkość, funkcja zwrotna) - płynne zsunięcie obiektu w górę lub w dół w zależności od aktualnego
+											 stanu
+	
+	Są to standardowe efekty jQuery i w wiekszości przypadków wystarczają do naszych zastosowań.
+	
+	Chcąc zrobić własną animacje możemy użyć metody animate(animowane właściwości, czas, rodzaj animacji, funkcja
+	zwrotna).
+	
+	Przykład 9.
+	
+	$('#go').click(function() { 
+								$('#block').animate({
+									width: "500px",
+									opacity: 0.4,
+									marginLeft: "0.6in",
+									fontSize: "3em",
+									borderWidth: "10px"
+								}, 1500); 
+							});
 
 Ad 23. Dziedziczenie, polimorfizm i interfejsy w języku Java. (**)
+	Dziedziczenie to podostawowy mechanizm programowania obiektowego. Dzięki niemu możemy utworzyć
+	spójną i łatwą do zrozumienia hierarchię klas, a to uczyni nasz kod bardziej przejrzystym i
+	bardziej podatnym na późniejsze modyfikacje.
 
 Ad 28. Przetworzenie transakcyjne. Właciwości ACID transakcji. (**)
 		Transakcje są grupami instrukcji języka SQL, traktowanymi z punktu widzenia ich
@@ -407,18 +444,37 @@ Ad 44. Mechanizmy bezpieczeństwa w przeglądarkach WWW. (**)
 
 Ad 45. Skanery systemów, sieci i aplikacji webowych - wymienić pięc sposród dziesięciu poznanych i 
 	scharakteryzować dwa. (**)
+	Fiddler
+	Acunetix
+	Nessus
+	Netsparker
+	Webcruser
+	Milescan
+	Skipfish
 	
 Ad 49. Czym jest strefa w usłudze DNS? (**)
+	Strefa jest miejscem w drzewie DNS, do którego można się odwołać (delegator point). Zawiera wszystkie
+	nazwy począwszy od pewnego węzła i dalej idąc w dół drzewa, za wyjątkiem tych węzłów które już są w 
+	innej strefie.
+	
+	Strefa może dać się mapować do dokładnie jednej domeny, może też zawierać tylko jej wycinek. Prowadzi to
+	do stwierdzenia, że każda nazwa w drzewie DNS jest poddomeną, nawet jeżeli ona sama nie posiada poddomeny.
 
 Ad 50. Usługa DNS - zapytanie rekursywne vs. zapytanie iteracyjne. (**)
+	Rekursywnie - tj. rekurencyjnie, zmusza serwer do znalezienia wymaganej informacji lub zwrócenia wiadomości
+				  o błędzie.
 
 Ad 57. Sposoby przesyłania informacji między stronami ASP.NET. (**)
-		GET
-		POST
+		GET - przesyłanie informacji w adresie, możliwośc podlinkowania. 
+			- małe porcje danych widoczne dla użytkownika
+			- adres strony jest "zaśmiecony"
+		POST - nie wyświetla danych w adrsie
+			 - niemal nieograniczony rozmiar pakietu (nawet całe pliki)
+			 - brak możliwości podlinkowania
 		
 Ad 59. Współpraca aplikacji ASP.NET z bazą danych. (**)
 		Entity Framework
-		LINQ
+		język zapytań LINQ
 		
 Ad 63. Prezentacja zawartości dokumentów XML z wykorzstaniem CSS i/lub XSLT. (**)
 
