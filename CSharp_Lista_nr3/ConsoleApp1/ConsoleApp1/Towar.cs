@@ -33,7 +33,7 @@ namespace ConsoleApp1
         }
         public override string ToString()
         {
-            return nazwa + "\t\t|" + ilosc + "\t|" + cenaNetto + "\t\t|" + typ;
+            return "| nazwa:" + nazwa + "| iosc:" + ilosc + "| cena netto:" + cenaNetto + "| typ:" + typ;
         }
     }
 }
