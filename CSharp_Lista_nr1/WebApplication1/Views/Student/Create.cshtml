@@ -13,12 +13,12 @@
     <div class="form-horizontal">
         <h4>Student</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "Proszę wypełnić pola.", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Nazwisko, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Nazwisko, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nazwisko, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Nazwisko, "Nazwisko jest wymagane", new { @class = "text-danger" })
             </div>
         </div>
 
