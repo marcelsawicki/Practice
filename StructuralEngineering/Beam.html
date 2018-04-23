@@ -3,91 +3,98 @@
 <head>
 </head>
 <body>
-<input id='bla'></input>
-<button id="abc" onclick="rysuj();"> Rysuj</button>
+<input id='wprowadzanieDanych'></input>
+<button id="przycisk1" onclick="rysuj();"> Rysuj</button>
 <canvas id="p³ótno" width="400" height="400"></canvas>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script>
 function rysuj(){
-console.log('rysuje');
-var zmienna = document.getElementById('bla').value;
-console.log('co dostalem z inputa: ' +zmienna)
-var p³ótno = document.getElementById("p³ótno");
-var kontekst = p³ótno.getContext("2d");
-var szerokoœæ = p³ótno.width;
-var wysokoœæ = p³ótno.height;
+	console.log('rysuje');
+	var zmienna = document.getElementById('wprowadzanieDanych').value;
+	console.log('co dostalem z inputa: ' +zmienna)
+	var p³ótno = document.getElementById("p³ótno");
+	var kontekst = p³ótno.getContext("2d");
+	var szerokoœæ = p³ótno.width;
+	var wysokoœæ = p³ótno.height;
 
-var sciezka = function(x){
-kontekst.beginPath();
-kontekst.moveTo(35,10); //rysowanie zaczynamy od punktów 35,10 - tam wiêc przesuwamy nasze piórko
-kontekst.lineTo(60,40);
-kontekst.lineTo(x,x);
-kontekst.lineTo(35,10);
-kontekst.stroke();
+	var sciezka = function(x){
+	kontekst.beginPath();
+	kontekst.moveTo(35,10); //rysowanie zaczynamy od punktów 35,10 - tam wiêc przesuwamy nasze piórko
+	kontekst.lineTo(60,40);
+	kontekst.lineTo(x,x);
+	kontekst.lineTo(35,10);
+	kontekst.stroke();
 
-kontekst.fillText('a',30,60);
-kontekst.fillText('c',110,60);
-kontekst.fillText('b',70,130);
+	kontekst.fillText('a',30,60);
+	kontekst.fillText('c',110,60);
+	kontekst.fillText('b',70,130);
 }
 
 var okr¹g = function (x, y, promieñ, wype³nijOkr¹g){
-kontekst.beginPath();
-kontekst.arc(x, y, promieñ, 0, Math.PI*2, false);
-if(wype³nijOkr¹g){
-kontekst.fill();
-} else {
-kontekst.stroke();
-}
+	kontekst.beginPath();
+	kontekst.arc(x, y, promieñ, 0, Math.PI*2, false);
+	if(wype³nijOkr¹g){
+	kontekst.fill();
+	} else {
+	kontekst.stroke();
+	}
 };
 
 //Konstruktor Pi³ka
 var Pi³ka = function() {
-this.x = szerokoœæ/2;
-this.y = wysokoœæ/2;
-this.xSzybkoœæ=5;
-this.ySzybkoœæ=0;
+	this.x = szerokoœæ/2;
+	this.y = wysokoœæ/2;
+	this.xSzybkoœæ=5;
+	this.ySzybkoœæ=0;
 };
 
 //Aktualizuj pozycjê pi³ki na podstawie jej szybkoœci
 Pi³ka.prototype.przesuwaj = function(){
-this.x += this.xSzybkoœæ;
-this.y += this.ySzybkoœæ;
+	this.x += this.xSzybkoœæ;
+	this.y += this.ySzybkoœæ;
 
-if(this.x<0){
-this.x = szerokoœæ;
-}else if(this.x > szerokoœæ){
-this.x = 0;
-}else if (this.y < 0){
-this.y = wysokoœæ;
-}else if (this.y > wysokoœæ){
-this.y = 0;
-}
+	if(this.x<0)
+	{
+		this.x = szerokoœæ;
+	}
+	else if(this.x > szerokoœæ)
+	{
+		this.x = 0;
+	}
+	else if (this.y < 0)
+	{
+		this.y = wysokoœæ;
+	}
+	else if (this.y > wysokoœæ)
+	{
+		this.y = 0;
+	}
 };
 
 //Narysuj pi³kê w jej bie¿¹cej pozycji
 Pi³ka.prototype.rysuj = function(){
-okr¹g(this.x, this.y, 10, true);
-sciezka(zmienna);
+	okr¹g(this.x, this.y, 10, true);
+	sciezka(zmienna);
 };
 
 //Ustaw kierunek pi³ki na podstawie ³añcucha
 Pi³ka.prototype.ustawKierunek = function(kierunek) {
-if (kierunek === "góra"){
-	this.xSzybkoœæ = 0;
-	this.ySzybkoœæ = -5;
-}else if(kierunek === "dó³"){
-	this.xSzybkoœæ = 0;
-	this.ySzybkoœæ = 5;
-}else if(kierunek === "lewa"){
-	this.xSzybkoœæ = -5;
-	this.ySzybkoœæ = 0;
-}else if(kierunek === "prawa"){
-	this.xSzybkoœæ = 5;
-	this.ySzybkoœæ = 0;
-}else if(kierunek === "stop"){
-	this.xSzybkoœæ = 0;
-	this.ySzybkoœæ = 0;
-}
+	if (kierunek === "góra"){
+		this.xSzybkoœæ = 0;
+		this.ySzybkoœæ = -5;
+	}else if(kierunek === "dó³"){
+		this.xSzybkoœæ = 0;
+		this.ySzybkoœæ = 5;
+	}else if(kierunek === "lewa"){
+		this.xSzybkoœæ = -5;
+		this.ySzybkoœæ = 0;
+	}else if(kierunek === "prawa"){
+		this.xSzybkoœæ = 5;
+		this.ySzybkoœæ = 0;
+	}else if(kierunek === "stop"){
+		this.xSzybkoœæ = 0;
+		this.ySzybkoœæ = 0;
+	}
 };
 
 //Utwórz obiekt pi³ka
@@ -96,28 +103,28 @@ var pi³ka = new Pi³ka();
 //Obiekt do przekszta³cania kodów i klawiszy na nazwy dzia³añ
 
 var dzia³aniaKlawiszy = {
-32: "stop",
-37: "lewa",
-38: "góra",
-39: "prawa",
-40: "dó³"
+	32: "stop",
+	37: "lewa",
+	38: "góra",
+	39: "prawa",
+	40: "dó³"
 };
 
 //Funkcja obs³ugi zdarzenia keydown,
 //wywo³ana dla ka¿dego naciœniêcia klawisza
 
 $("body").keydown(function (zdarzenie) {
-var kierunek = dzia³aniaKlawiszy[zdarzenie.keyCode];
-pi³ka.ustawKierunek(kierunek);
+	var kierunek = dzia³aniaKlawiszy[zdarzenie.keyCode];
+	pi³ka.ustawKierunek(kierunek);
 });
 
 //Funkcja odpowiedzialna za animacje, wywo³ywana co 30 ms
 setInterval(function() {
-kontekst.clearRect(0, 0, szerokoœæ, wysokoœæ);
-pi³ka.rysuj();
-// pi³ka.przesuwaj();
+	kontekst.clearRect(0, 0, szerokoœæ, wysokoœæ);
+	pi³ka.rysuj();
+	// pi³ka.przesuwaj();
 
-kontekst.strokeRect(0, 0, szerokoœæ, wysokoœæ);
+	kontekst.strokeRect(0, 0, szerokoœæ, wysokoœæ);
 }, 30);
 
 } // end of function rysuje
