@@ -1,8 +1,7 @@
-import { Promise } from "core-js";
-import {MemberEntity} from "./model";
+import { MessageEntity } from "./model";
 
 class GitHubAPI {
-getListOfMembers(): Promise<Array<MemberEntity>> {
+getListOfMembers(): Promise<Array<MessageEntity>> {
     return fetch("http://jsonplaceholder.typicode.com/posts")
       .then((response) => this.checkStatus(response))
       .then((response) => this.parseJSON(response)
@@ -26,20 +25,14 @@ private checkStatus(response : Response): Promise<Response> {
 
   private mapGitHubMembersToMemberEntityCollection(data)
   {
-    var members : Array<MemberEntity>;
+    var members : Array<MessageEntity>;
 
     members = data.map((gitHubMember) => {
-      var member : MemberEntity = new MemberEntity();
+      var member : MessageEntity = new MessageEntity();
       member.userId = gitHubMember.userId;
       member.id = gitHubMember.id;
       member.title = gitHubMember.title;
       member.body = gitHubMember.body;
-
-      /* This sentence will provoke an error */
-      // if (member.id=1457912){
-      //   let error = new Error(`<p>${member.id} shouldn't be in the response...</p>`);
-      //   throw error;
-      // }
 
       return member;
     });
