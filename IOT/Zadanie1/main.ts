@@ -1,9 +1,9 @@
-import {MemberEntity} from "./model";
+import { MessageEntity } from "./model";
 import {gitHubAPI} from "./api";
 
 gitHubAPI.getListOfMembers()
   .then(
-  (members: Array<MemberEntity>) => {
+  (members: Array<MessageEntity>) => {
       displayMembers(members);
     }
   )
@@ -11,7 +11,7 @@ gitHubAPI.getListOfMembers()
     document.write("Server error");
   });
   
-function displayMembers(members:Array<MemberEntity>)
+function displayMembers(members:Array<MessageEntity>)
 {
   document.write("<span>Zadanie 1: pobrac dane (JSON), wyswietlic i renderowac za pomoca Mustache </span>");
   document.write("<p><b>Got this data from JSON:</b></p>")
