@@ -25,10 +25,10 @@ private checkStatus(response : Response): Promise<Response> {
 
   private mapGitHubMembersToMemberEntityCollection(data)
   {
-    var members : Array<MessageEntity>;
+    let members : Array<MessageEntity>;
 
     members = data.map((gitHubMember) => {
-      var member : MessageEntity = new MessageEntity();
+      let member : MessageEntity = new MessageEntity();
       member.userId = gitHubMember.userId;
       member.id = gitHubMember.id;
       member.title = gitHubMember.title;

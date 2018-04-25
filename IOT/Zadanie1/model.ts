@@ -5,5 +5,6 @@ export class MessageEntity {
   body: string;
 
   constructor() {
+    
   }
 }
