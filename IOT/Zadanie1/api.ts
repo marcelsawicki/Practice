@@ -28,12 +28,7 @@ private checkStatus(response : Response): Promise<Response> {
     let members : Array<MessageEntity>;
 
     members = data.map((gitHubMember) => {
-      let member : MessageEntity = new MessageEntity();
-      member.userId = gitHubMember.userId;
-      member.id = gitHubMember.id;
-      member.title = gitHubMember.title;
-      member.body = gitHubMember.body;
-
+      let member : MessageEntity = new MessageEntity(gitHubMember);
       return member;
     });
 
