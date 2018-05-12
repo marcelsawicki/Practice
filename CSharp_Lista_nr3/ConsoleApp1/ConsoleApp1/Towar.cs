@@ -18,20 +18,34 @@ namespace ConsoleApp1
 
         // Stworzyć własność cena brutto, która w działaniu przelicza się na cenę netto
         // (ale bez tworzenie pola do ceny netto, zakładamy jedną stawkę VAT)
-        public double cenaBruttoWlasnosc
-        {
-          get
-            {
-                return cenaNetto * 1.23;
-            }
-          set
-            {
-                cenaBruttoWlasnosc = cenaNetto * 1.23;
-            }
-    }
 
-        // konstruktor0
-        public Towar()
+	// do poprawienia bylo to:
+    //    public double cenaBruttoWlasnosc
+    //    {
+    //      get
+    //        {
+    //            return cenaNetto * 1.23;
+    //        }
+    //      set
+    //        {
+    //            cenaBruttoWlasnosc = cenaNetto * 1.23;
+    //        }
+    //}
+	// poprawiono na:
+
+		public double CenaNetto
+		{
+			get { return cenaNetto; }
+			set { cenaNetto = value; }
+
+		}
+		public virtual double CenaBrutto
+		{
+			get { return cenaNetto * 1.23; }
+			set { CenaNetto = value / 1.23; }
+		}
+		// konstruktor0
+		public Towar()
         {
 
         }
@@ -53,7 +67,7 @@ namespace ConsoleApp1
         {
             string komunikat;
             komunikat = "Nazwa: " + nazwa + ", Ilosc: " + ilosc + ", Cena netto: ";
-            komunikat += cenaNetto + " zl, Typ: " + typ + ", Cena brutto: " + this.cenaBruttoWlasnosc +" zl \n";
+            komunikat += cenaNetto + " zl, Typ: " + typ + ", Cena brutto: " + CenaBrutto +" zl \n";
             return komunikat;
         }
 
@@ -66,7 +80,7 @@ namespace ConsoleApp1
             liczbaA = zmiennaPomocnicza;
         }
 
-        public void average(params double[] tab)
+        public double average(params double[] tab)
         {
             double suma=0;
             int ilosc=0;
@@ -78,10 +92,10 @@ namespace ConsoleApp1
                 System.Console.Write(tab[k]+"; ");
                 suma = suma + tab[k];
                 ilosc++;
+				
             }
-            
-            srednia = suma / ilosc;
-            System.Console.WriteLine("\nSrednia z liczb przekazanych do metody average: " + srednia.ToString());
+			System.Console.WriteLine("\nSrednia z liczb przekazanych do metody average: " + srednia.ToString());
+			return srednia = suma / ilosc; 	
         }
     }
 }

@@ -4,6 +4,10 @@ export class MessageEntity {
   title: string;
   body: string;
 
-  constructor() {
+  constructor(gitHubMember) {
+    this.userId = gitHubMember.userId;
+    this.id = gitHubMember.id;
+    this.title = gitHubMember.title;
+    this.body = gitHubMember.body;
   }
 }

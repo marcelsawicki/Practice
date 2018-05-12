@@ -6,17 +6,19 @@ var basePath = __dirname;
 
 module.exports = {
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(ts)$/,
         exclude: /node_modules/,
-        loader: 'ts-loader'
+        use: [{
+          loader: 'ts-loader'
+        }]
       }
     ]
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.js', '.ts']
   },
   entry: {
     app: "./main.ts"
