@@ -274,16 +274,14 @@
     <Content Include="Views\Towars\Details.cshtml" />
     <Content Include="Views\Towars\Edit.cshtml" />
     <Content Include="Views\Towars\Index.cshtml" />
+    <Content Include="Views\TowarWybranyKoszyk\Index.cshtml" />
     <Content Include="Views\Kategorias\Create.cshtml" />
     <Content Include="Views\Kategorias\Delete.cshtml" />
     <Content Include="Views\Kategorias\Details.cshtml" />
     <Content Include="Views\Kategorias\Edit.cshtml" />
     <Content Include="Views\Kategorias\Index.cshtml" />
-    <Content Include="Views\TowarWybranyKoszyk\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

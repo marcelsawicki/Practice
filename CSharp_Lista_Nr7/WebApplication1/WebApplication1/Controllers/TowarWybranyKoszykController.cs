@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -11,7 +12,7 @@ namespace WebApplication1.Controllers
         // GET: TowarWybranyKoszyk
         public ActionResult Index()
         {
-            return View();
+            return View(GetKoszyk());
         }
 
         // GET: TowarWybranyKoszyk/Details/5
@@ -84,6 +85,24 @@ namespace WebApplication1.Controllers
             {
                 return View();
             }
+        }
+        
+        // pobranie koszyka to wzorzec Singleton
+        // tworzenie tylko wtedy, gdy jest to potrzebne i tylko raz
+        public TowarWybranyKoszyk GetKoszyk()
+        {
+            if (Session["Koszyk"] == null)
+            {
+                Session["Koszyk"] = new TowarWybranyKoszyk();
+            }
+
+            return Session["Koszyk"] as TowarWybranyKoszyk;
+
+        }
+
+        public void UpdateKoszyk(TowarWybranyKoszyk koszyk)
+        {
+            Session["Koszyk"] = koszyk;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
         // GET: Kategorias/Create
         public ActionResult Create()
         {
-            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Id");
+            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Nazwa");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Id", kategoria.NadKategoriaId);
+            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Nazwa", kategoria.NadKategoriaId);
             return View(kategoria);
         }
 
@@ -73,7 +73,7 @@ namespace WebApplication1.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Id", kategoria.NadKategoriaId);
+            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Nazwa", kategoria.NadKategoriaId);
             return View(kategoria);
         }
 
@@ -90,7 +90,7 @@ namespace WebApplication1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Id", kategoria.NadKategoriaId);
+            ViewBag.NadKategoriaId = new SelectList(db.Kategorias, "Id", "Nazwa", kategoria.NadKategoriaId);
             return View(kategoria);
         }
 

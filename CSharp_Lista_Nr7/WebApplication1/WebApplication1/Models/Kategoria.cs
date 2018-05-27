@@ -11,7 +11,7 @@ namespace WebApplication1.Models
     {
         [Key]
         public int Id { get; set; }
-        public int Nazwa { get; set; }
+        public string Nazwa { get; set; }
         public int? NadKategoriaId { get; set; }
         [ForeignKey("NadKategoriaId")]
         public virtual Kategoria NadKategoria { get; set; }

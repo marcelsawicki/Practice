@@ -128,5 +128,31 @@ namespace WebApplication1.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult DodajDoKoszyka(int id)
+        {
+            TowarWybranyKoszyk koszyk = GetKoszyk();
+            bool ret = koszyk.Add(db.Towars.Find(id));
+            UpdateKoszyk(koszyk);
+            return RedirectToAction("Index");
+        }
+
+        // pobranie koszyka to wzorzec Singleton
+        // tworzenie tylko wtedy, gdy jest to potrzebne i tylko raz
+        public TowarWybranyKoszyk GetKoszyk()
+        {
+            if (Session["Koszyk"] == null)
+            {
+                Session["Koszyk"] = new TowarWybranyKoszyk();
+            }
+
+            return Session["Koszyk"] as TowarWybranyKoszyk;
+
+        }
+
+        public void UpdateKoszyk(TowarWybranyKoszyk koszyk)
+        {
+            Session["Koszyk"] = koszyk;
+        }
     }
 }
