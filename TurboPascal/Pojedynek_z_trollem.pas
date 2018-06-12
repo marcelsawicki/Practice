@@ -25,7 +25,7 @@ bohater = record
 const 
 	hero: bohater = ( wytrzymalosc: 4; sila: 4; bagaz: []; zloto: 0);
 	swiat: array[1..ile_zdarzen] of zdarzenie = (
-	(opis:'nic'; prawdo:40; rodzaj:wrog; sila:7),
+	(opis:'nic'; prawdo:40; rodzaj:wrog; sila:1),
 	(opis:'oblesny gnom'; prawdo:10; rodzaj:wrog; sila:2),
 	(opis:'wielki smok'; prawdo:5; rodzaj:wrog; sila:7),
     (opis:'straszny troll'; prawdo:10; rodzaj:wrog; sila:3),
@@ -50,8 +50,8 @@ Procedure opisz_bohatera;
 var	przed: r_przedmiotu;
 begin
 	clrscr;
-	writeln('wytrzymalosc: ', hero.wytrzymalosc, 'sila: ', hero.sila, 'zloto: ', hero.zloto);
-	write('bagaz: ');
+	writeln('Wtrzymalosc: ', hero.wytrzymalosc, ', Sila: ', hero.sila, ', Zloto: ', hero.zloto);
+	write('Bagaz: ');
 	for przed:=miecz to trucizna do
 		if przed in hero.bagaz then
 			write(nazwa_p[przed],' ');
@@ -69,7 +69,7 @@ var
 begin
 	ekwipunek:=0;
 	sila:=random(6)+kto.sila;
-	writeln('Zza krzkow wyskoczyl', kto.opis, ' o sile ', sila);
+	writeln('Zza krzkow wyskoczyl ', kto.opis, ' o sile ', sila);
 	writeln('W]alczysz, U]ciekasz, N]egocjujesz?');
 	decyz:=upcase(readkey);
 	walka:=true;
@@ -78,27 +78,26 @@ begin
 		begin
 			if hero.sila>random(6) then
 				begin
-					writeln('Udalo ci sie ujsc z zyciem');
+					writeln('Udalo ci sie ujsc z zyciem.');
 					walka:=false;
 				end
 			else
-				writeln('Zostales zlapany');
-		end
-		else
-		if decyz='N' then
-			begin
-				write('Ile zlota proponujesz za uwolnienie?');
-				readln(pieniadz);
-				if(pieniadz > (sila+random(5))*5)and(pieniadz<hero.zloto) then
-					begin
-						writeln('Twoja propozycja zostala przyjeta.');
-						walka:=false;
-						hero.zloto:=hero.zloto-pieniadz;
-					end
-			end
-		else
-			writeln('Propozycja zostala odrzucona. Czeka cie walka.');
-		
+				writeln('Zostales zlapany.');
+		end;
+
+	if decyz='N' then
+				begin
+					write('Ile zlota proponujesz za uwolnienie?');
+					readln(pieniadz);
+					if(pieniadz > (sila+random(5))*5)and(pieniadz<hero.zloto) then
+						begin
+							writeln('Twoja propozycja zostala przyjeta.');
+							walka:=false;
+							hero.zloto:=hero.zloto-pieniadz;
+						end
+					else writeln('Propozycja zostala odrzucona. Czeka cie walka.');
+				end;
+				
 		if walka then
 			begin
 				writeln('Atakujesz...');
@@ -108,7 +107,7 @@ begin
 					begin
 					writeln('Przegrywasz');
 					if (zbroja in hero.bagaz) and (random(6)>3) then
-						writeln('Jednak zbroja chroni cie')
+						writeln('Jednak chroni Cie zbroja.')
 					else
 						begin
 							hero.wytrzymalosc:=hero.wytrzymalosc-1;
@@ -141,7 +140,7 @@ procedure znajdz_przedmiot(co: zdarzenie);
 var	
 	los: integer;
 begin
-	writeln('znalazles ', co.opis);
+	writeln('Znalazles ', co.opis);
 	los:=random(20)+20;
 	
 	case co.rzecz of
@@ -184,6 +183,6 @@ begin
 		end;
 	writeln('Koniec gry');
 	if hero.zloto>1000 then
-		writeln('wygrales');
+		writeln('Wygrales');
 	klawisz:=readkey;
 end.
