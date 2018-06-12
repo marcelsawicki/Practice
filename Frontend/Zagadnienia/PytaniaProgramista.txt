@@ -156,10 +156,10 @@ B) OOP i wzorce projektowe
 			Róźnica między interfejsem a klasą abstrakcyjną: 
 			
 		"Klasy abstrakcyjne
-		W wielu przypadkach podstawowa klasa bazowa jest na tyle ogólna, że nie powinno się tworzyć jej obiektu. Tak jak w poprzednim przykładzie, trudno sobie wyobrazić obiekt klasy Animal, gdyż ta klasa opisuje bardzo ogólny typ, który służy jedynie jako nadklasa dla innych, bardziej wyspecjalizowanych klas. Aby zapobiec tworzenia obiektów klas, które są bardzo ogólne i których obiekty nie powinny być tworzone, wprowadzono w php5 słowo kluczowe abstract.
+		W wielu przypadkach podstawowa klasa bazowa jest na tyle ogólna, że nie powinno się tworzyć jej obiektu. Tak jak w poprzednim przykładzie, trudno sobie wyobrazić obiekt klasy Animal, gdyż ta klasa opisuje bardzo ogólny typ, który służy jedynie jako nadklasa dla innych, bardziej wyspecjalizowanych klas. Aby zapobiec tworzenia obiektów klas, które są bardzo ogólne i których obiekty nie powinny być tworzone, wprowadzono słowo kluczowe abstract.
 
 		abstract class Animal{}
-		$animal = new Animal();//nie działa, błąd
+		var animal = new Animal(); // nie działa, błąd
 		Dzięki temu słowu kluczowemu utworzenie egzemplarza klasy Animal nie jest możliwe, służy ona bowiem jedynie jako podstawa dla swoich klas specjalizujących. Klasa abstrakcyjna może zawierać tak jak każda inna klasa atrybuty, metody poprzedzone dowolnymi modyfikatorami. Może również zawierać deklarację (nie definicję) metod abstrakcyjnych.
 
 		abstract class Animal{
@@ -220,7 +220,7 @@ B) OOP i wzorce projektowe
 		W interfejsie nie musimy korzystać ze słowa kluczowego abstract, aby zdeklarować metodę. Metody, które deklarujemy w interfejsie muszą być publiczne. Pozostałe zasady są takie same jak w metodach abstrakcyjnych.
 		"
 		
-		"Interfejsy wydają się głupie:
+		"Interfejsy po co one są?
 		Po co definiować, jakie metody będzie miała klasa? O ile wygodniej napisać samą klasę i po prostu z niej korzystać?
 		W praktyce robi się jednak trochę ciekawiej.
 		Wyobraź sobie, że masz interfejs ObslugaBazyDanych, a w nim metody "dodajUzytkownika(Uzytkownik) i usunUzytkownik(Uzytkownik).
@@ -230,8 +230,8 @@ B) OOP i wzorce projektowe
 		Po drugie, możesz w dowolnym miejscu w kodzie zrobić:
 		ObslugaBazyDanych obd = new <któraś obsługa>();
 		obd.dodajUzytkownika(...);
-		Niezależnie od tego, którą obsługę wybierzesz (np. w jakiejś fabryce lub zależnie od parametrów użytkownika), to kompilator spokojnie to przepuści i będzie to śmigać.
-		Jest jeszcze weselej, jak dzielisz kod pomiędzy serwer i klienta (EJB, RMI). Wtedy obie strony muszą wiedzieć, jakie metody można wykonać, ale tylko jedna (serwer) ma ciało tych metod."
+		Niezależnie od tego, którą obsługę wybierzesz (np. w jakiejś fabryce lub zależnie od parametrów użytkownika), to kompilator spokojnie to przepuści i będzie to działać.
+		Jeśli dzielisz kod pomiędzy serwer i klienta (EJB, RMI). Wtedy obie strony muszą wiedzieć, jakie metody można wykonać, ale tylko jedna (serwer) ma ciało tych metod.
 		
 		additional link: https://4programmers.net/Forum/Java/221811-interfejsy_kl_abstrakcyjne_
 			
