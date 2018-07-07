@@ -1,17 +1,19 @@
-﻿Programowanie
-==============
+﻿Rozdzial 1.
+-----------
+
+
+Programowanie:
 1. Co to jest iteracja?
 
 
-Framework .NET
-==============
+Framework .NET:
+.NET i C#
 
-A) .NET i C#
-	1. Co to są typy proste i referencyjne? Jakie są róznice? Gdzie są przechowywane (stos/sterta)?
+2. Co to są typy proste i referencyjne? Jakie są róznice? Gdzie są przechowywane (stos/sterta)?
 	
-	2. Jaka jest różnica między ref a out?
+3. Jaka jest różnica między ref a out?
 	
-	3. Co oznacza słowo kluczowe np. sealed, partial?
+4. Co oznacza słowo kluczowe np. sealed, partial?
 		sealed - (ang. sealed - zapieczętowany) - when applied to a class, the sealed modifier prevents other classes from
 		inheriting from it. In the folowing example, calss B inherits from class A, but nop class can inherit from class B.
 		
@@ -20,11 +22,11 @@ A) .NET i C#
 		
 		additional links: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed
 		
-	4. Co to jest boxing i unboxing?
+5. Co to jest boxing i unboxing?
 	
-	5. Co to jest checked i unchecked?
+6. Co to jest checked i unchecked?
 	
-	6. Garbage Collector zasada dzialania. Kiedy obiekt jest usuwany z pamięci?
+7. Garbage Collector zasada dzialania. Kiedy obiekt jest usuwany z pamięci?
 		Garbage Collector - Osoby, które programowały w jezykach obiektowych, takich jak
 		np. C++ czy Object Pascal, zastanawiają się zapewne, jak w C# wygląda destruktor i kiedy
 		zwalniamy pamięć zarezerwowaną dla obiektów. Skoro bowiem operator new pozwala na
@@ -71,16 +73,16 @@ A) .NET i C#
 		
 		additional links: https://stackoverflow.com/questions/2926869/do-you-need-to-dispose-of-objects-and-set-them-to-null
 		
-	7. Co to są obiekty immutable?
+8. Co to są obiekty immutable?
 	
-	8. Wszystko co związane ze stringiem np. konkatencja stringa (StringBuilder)
+9. Wszystko co związane ze stringiem np. konkatencja stringa (StringBuilder)
 	
-	9. Jak działa yield?
+10. Jak działa yield?
 		działąnie yield:
 		
-	10. Co to jest delegat?
+11. Co to jest delegat?
 	
-	11. Co to są wyrażenia lambda?
+12. Co to są wyrażenia lambda?
 		Wyrażenia lamda: 
 		W C# 6.0 treść prostych metod może być definiowana w sposób skrócony, za pomocą tzw.
 		wyrażeń lambda (ang. lambda expressions). Chociaż głównym celem tych konstrukcji 
@@ -121,38 +123,39 @@ A) .NET i C#
 			}
 		}
 		
-	12. Co to jest serializacja?
+13. Co to jest serializacja?
 	
-	13. Co to jest refleksja?
+14. Co to jest refleksja?
 		Refleksja - 
 		
-	14. Co to jest atrybut?
+15. Co to jest atrybut?
 	
-	15. Co oznacza słowo kluczowe volatile?
+16. Co oznacza słowo kluczowe volatile?
 	volatile - (ang. volatile - zmienny, niestabilny, lotny)
 	
-	16. Co to jest wątek, co to jest pula wątków? Jak tworzyć wątek?
+17. Co to jest wątek, co to jest pula wątków? Jak tworzyć wątek?
 	
-	17. Do czego służy słowo lock? Co kryje się pod spodem tego słowa?
+18. Do czego służy słowo lock? Co kryje się pod spodem tego słowa?
 		lock - 
 		
-	18. Inne mechanizmy synchronizacji Mutex, Semaphore, MannualResetEvent, Interlocked
+19. Inne mechanizmy synchronizacji Mutex, Semaphore, MannualResetEvent, Interlocked
 	
-	19. Co to jest extension method?
+20. Co to jest extension method?
 	
-	20. Co to jest lazy loading i eager loading?
+21. Co to jest lazy loading i eager loading?
 		lazy loading -
 		eager loading - 
 		
-	21. Co to jest Weak Reference?
+22. Co to jest Weak Reference?
 	
-	22. Co to jest override i overload?
+23. Co to jest override i overload?
 
-B) OOP i wzorce projektowe
-	23. Co to jest klasa abstrakcyjna?
+OOP i wzorce projektowe:
+
+24. Co to jest klasa abstrakcyjna?
 			Klasa abstrakcyjna - 
 			
-	24. Co to jest interfejs i czym się różni od klasy abstrakcyjnej?
+25. Co to jest interfejs i czym się różni od klasy abstrakcyjnej?
 			Róźnica między interfejsem a klasą abstrakcyjną: 
 			
 		"Klasy abstrakcyjne
@@ -235,52 +238,121 @@ B) OOP i wzorce projektowe
 		
 		additional link: https://4programmers.net/Forum/Java/221811-interfejsy_kl_abstrakcyjne_
 			
-	25. Czy klasa abstrakcyjna może zawierać metody nieabstrakcyjne?
-			Odpowiedz: 
+26. Czy klasa abstrakcyjna może zawierać metody nieabstrakcyjne?
 		
-	26. Co to jest metoda wirtualna?
-			Metoda wirtualna - 
+27. Co to jest metoda wirtualna?
 			
-	27. Singleton - jak wygląda deklaracja, wady i zalety, jak wygląda bezpieczny wielowątkowy singleton?
-		Singleton - Singleton to konstrukcyjny wzorzec projektowy. Wyobraź sobie, że w naszym programie potrzebujemy obiektu, który będzie zainicjowany tylko jeden raz. Tak, ograniczamy się tylko do pojedynczej instancji dla danej klasy. Ale po co komu w ogóle taki obiekt? Załóżmy, że będzie on zawierał w sobie bardzo ważne informacje, może zawierać jakieś statystyki bądź ważne ustawienia. Ponowna inicjalizacja mogłaby spowodować przekłamanie oraz nieumyślną zmianę zapisanych ustawień. Otrzymane wyniki będą niespójne. Kolejnym przykładem zastosowania singletona jest oszczędność pamięci przez programistę. Sam użytkownik nawet nie wie, czy owa instancja już istnieje, czy też nie. W programach wielowątkowych istnieje pewne ryzyko błędu, spowodowanego stosowaniem wzorca. Może dojść do sytuacji, że dwa wątki, w tym samym czasie będą chciały zainicjować obiekt, w skutek czego powstają nam dwa singletony w systemie.
+28. Singleton - jak wygląda deklaracja, wady i zalety, jak wygląda bezpieczny wielowątkowy singleton?
+		Singleton - Singleton to konstrukcyjny wzorzec projektowy. 
+		Wyobraź sobie, że w naszym programie potrzebujemy obiektu, 
+		który będzie zainicjowany tylko jeden raz. 
+		Tak, ograniczamy się tylko do pojedynczej instancji dla danej klasy. 
+		Ale po co komu w ogóle taki obiekt? 
+		Załóżmy, że będzie on zawierał w sobie bardzo ważne informacje, 
+		może zawierać jakieś statystyki bądź ważne ustawienia. 
+		Ponowna inicjalizacja mogłaby spowodować przekłamanie oraz nieumyślną zmianę 
+		zapisanych ustawień. Otrzymane wyniki będą niespójne. 
+		Kolejnym przykładem zastosowania singletona jest oszczędność pamięci przez programistę. 
+		Sam użytkownik nawet nie wie, czy owa instancja już istnieje, czy też nie. 
+		W programach wielowątkowych istnieje pewne ryzyko błędu, spowodowanego stosowaniem wzorca. 
+		Może dojść do sytuacji, że dwa wątki, w tym samym czasie będą chciały zainicjować obiekt, 
+		w skutek czego powstają nam dwa singletony w systemie.
 		
-	28. Fabryka, kiedy stosujemy?
+29. Fabryka, kiedy stosujemy?
 	
-	29. Strategia, adapter, obserwator, dekorator, repozytorium, unit of work.
-		repozytorium - 
-		dekorator - 
+30. Strategia, adapter, obserwator, dekorator, 
+	
+31. repozytorium, unit of work.
 
-C) Wzorce prezentacji MVC, MVP, MVVM
-	30. Co to jest jakie są rodzaje dependency injection?
-		dependency injection - 
+Wzorce prezentacji MVC, MVP, MVVM:
+
+32. Co to jest jakie są rodzaje dependency injection? 
 		
-	31. Co to jest inversion of control?
-		inversion of control - 
+33. Co to jest inversion of control?
 
-D) WPF
-	32. Co to jest drzewo prezentacji?
-	
-	33. Co to jest drzwo logiczne?
 
-	34. Co oznacza static przed nazwa metody?
-	35. Praca na modelu widoku bazy danych w serwisie, OData oraz autentykacja.
-	
+WPF:
 
-JavaScript
-==========
-	1. Co to jest prototype?
+34. Co to jest drzewo prezentacji?
 	
-	2. Jak sprawdzić czy obiekt ma właściwość klasy (property)?
+35. Co to jest drzwo logiczne?
+
+36. Co oznacza static przed nazwa metody?
+37. Praca na modelu widoku bazy danych w serwisie, OData oraz autentykacja.
+
 	
-	3. Zaawansowany JavaScript 	
+JavaScript:
+
+38. Co to jest prototype?
+39. Jak sprawdzić czy obiekt ma właściwość klasy (property)?
+40. Zaawansowany JavaScript 	
 	a) instrukcje warunkowe (if) -> obiekt jest null, undefined - jaka jest roznica?; 
 	b) typeof? typy w JavaScript,
   	c) pusta tablica i nie zdefiniowana zmienna majaca przechowywac tablice
 	d) iterowanie po danych, funkcja forEach
 
-Analityczne
-===========
+Analityczne:
+41. Mamy 12 kulek, wage szalkową i 3 ważenia. Jedna z kulek ma masę inną od pozostałych kulek. Jak za pomocą wagi i tych 3 ważeń, które mamy do dyspozycji znaleź kulkę która ma inną masę?
+42. Jesteśmy w posiadaniu dwóch klepsydr. Jedna przesypuje się w 7 minut, druga 11 minut. Jak odmierzyć dokładnie 15 minut używając wyłącznie tych dwóch klepsydr?
 
-1. Mamy 12 kulek, wage szalkową i 3 ważenia. Jedna z kulek ma masę inną od pozostałych kulek. Jak za pomocą wagi i tych 3 ważeń, które mamy do dyspozycji znaleź kulkę która ma inną masę?
 
-2. Jesteśmy w posiadaniu dwóch klepsydr. Jedna przesypuje się w 7 minut, druga 11 minut. Jak odmierzyć dokładnie 15 minut używając wyłącznie tych dwóch klepsydr?
+Rozdzial 2.
+-----------
+
+1. Co to jest klasa generyczna?
+2. Wzorzec projektowy 'Obserwator'.
+3. Co to jest 'klucz obcy'?
+4. Co to jest 'selektor'?
+5. Rozproszone bazy danych, bazy danych Oracle.
+6. Czy klasa moze dziedziczyc po wielu klasach?
+7. Czy klasa moze implementowac wiele interfejsow?
+8. Co oznacza 'sealed'? Nie mozna dziedziczy po tej klasie.
+9. Napisac JOIN w SQL.
+	SELECT C.Name, P.Name
+	FROM [SalesLT].[ProductCategory] AS C
+	JOIN [SalesLT].[Product] AS P
+	ON P.ProductCategoryID=C.ProductCategoryID;
+	
+10. Napisac JOIN i wyswietlic 3 rekordy
+11. Napisac metode ktora sformatuje zadany string np. 'ZACB' tak zeby byl wyswietlany
+	w kolejnosci alfabetycznej.
+12. dana jest tablica liczb, napisac metode ktora znajdzie liczbe np. '514'.
+13. JavaScript - jak sprawdzic, ze zmienna jest tablica.
+14. JavaScript - co daje dopisanie 'use script'.
+15. Opisac 'Routing' w ASP.NET MVC i ASP.NET.
+16. Blok try, catch - co przechwytuje exception. (catch)
+17. Git - do czego sluzy 'rebase'.
+18. Klasa abstrakcyjna - wskazac klase ktorej instancji nie mozna utworzyc.
+19. Opisac GET i POST.
+20. JavaScript - roznica miedzy '==' a '==='.
+
+Rozdzial 3.
+-----------
+
+1. Debugowanie warunkowe kodu.
+2. SOLID:
+	Single responsibility principle (Zasada jednej odpowiedzialności):
+	Klasa powinna mieć tylko jedną odpowiedzialność 
+	(nigdy nie powinien istnieć więcej niż jeden powód do modyfikacji klasy).
+	
+	Open/closed principle (Zasada otwarte-zamknięte)
+	Klasy (encje) powinny być otwarte na rozszerzenia i zamknięte na modyfikacje.
+	
+	Liskov substitution principle (Zasada podstawienia Liskov)
+	Funkcje które używają wskaźników lub referencji do klas bazowych, 
+	muszą być w stanie używać również obiektów klas dziedziczących po klasach bazowych, 
+	bez dokładnej znajomości tych obiektów.
+	
+	Interface segregation principle (Zasada segregacji interfejsów)
+	Wiele dedykowanych interfejsów jest lepsze niż jeden ogólny.
+	
+	Dependency inversion principle (Zasada odwrócenia zależności)
+	Wysokopoziomowe moduły nie powinny zależeć od modułów niskopoziomowych 
+	- zależności między nimi powinny wynikać z abstrakcji.
+	
+3. Rekurencja, Rekursja. Jakie jest zagrozenie podczas stosowania rekurencji? StackOverFlow.
+	Rekurencja, zwana także rekursją (ang. recursion, z łac. recurrere, przybiec z powrotem) 
+	– odwoływanie się np. funkcji lub definicji do samej siebie.
+	
+4. ref, out
+5. 'scope' - np. obiekt tworzony w metodzie, jaki jest zasieg?
