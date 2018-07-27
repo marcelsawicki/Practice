@@ -550,3 +550,6 @@ Output:
 0.6
 -1.2
 */
+
+GIT - konsola, push i założenie merge request na Gitlabie
+SQL i mechanizmy relacyjnej bazy danych - co znaczy “join”, “left join”, “group by”, “having”, indeksy i procedury składowane
