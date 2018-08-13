@@ -17,8 +17,9 @@ namespace dependency_injection_1
 
         public void ResetPassword()
         {
-            IEmailSender mySender = new MyEmailSender();
-            mySender.SendEmail();
+            emailSender.SendEmail();
+            // IEmailSender mySender = new MyEmailSender();
+            // mySender.SendEmail();
         }
         
     }
