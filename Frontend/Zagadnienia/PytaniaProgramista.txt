@@ -1,7 +1,6 @@
 ﻿Rozdzial 1.
 -----------
 
-
 Programowanie:
 1. Co to jest iteracja?
 	Pętla iteracyjna (pętla licznikowa) w programowaniu, 
@@ -301,18 +300,23 @@ Framework .NET:
 OOP i wzorce projektowe:
 
 24. Co to jest klasa abstrakcyjna?
+	Nie mozna utworzyc instancji klasy abstrakcyjnej, nie pownno sie tworzyc jej obiektu.
  			
 25. Co to jest interfejs i czym się różni od klasy abstrakcyjnej?
 	Róźnica między interfejsem a klasą abstrakcyjną: 
 		
 	"Klasy abstrakcyjne
-	W wielu przypadkach podstawowa klasa bazowa jest na tyle ogólna, że nie powinno się tworzyć jej obiektu. Tak jak w poprzednim przykładzie, trudno sobie wyobrazić obiekt klasy Animal, gdyż ta klasa opisuje bardzo ogólny typ, który służy jedynie jako nadklasa dla innych, bardziej wyspecjalizowanych klas. Aby zapobiec tworzenia obiektów klas, które są bardzo ogólne i których obiekty nie powinny być tworzone, wprowadzono słowo kluczowe abstract.
+	W wielu przypadkach podstawowa klasa bazowa jest na tyle ogólna, że nie powinno się tworzyć jej obiektu. 
+	Tak jak w poprzednim przykładzie, trudno sobie wyobrazić obiekt klasy Animal, gdyż ta klasa opisuje bardzo ogólny typ, 
+	który służy jedynie jako nadklasa dla innych, bardziej wyspecjalizowanych klas. Aby zapobiec tworzenia obiektów klas, 
+	które są bardzo ogólne i których obiekty nie powinny być tworzone, wprowadzono słowo kluczowe abstract.
 
 	abstract class Animal{}
 	var animal = new Animal(); // nie działa, błąd
 	Dzięki temu słowu kluczowemu utworzenie egzemplarza klasy Animal nie jest możliwe, służy ona bowiem jedynie jako podstawa dla swoich klas specjalizujących. Klasa abstrakcyjna może zawierać tak jak każda inna klasa atrybuty, metody poprzedzone dowolnymi modyfikatorami. Może również zawierać deklarację (nie definicję) metod abstrakcyjnych.
 
-	abstract class Animal{
+	abstract class Animal
+	{
 		public function goSleep(){
 			//chrapie
 		}
@@ -321,45 +325,56 @@ OOP i wzorce projektowe:
 	}
 	Taki zapis wymusza definicję metody roar() w nieabstrakcyjnej podklasie klasy Animal.
 
-	class Cat extends Animal{
+	class Cat extends Animal
+	{
 		public function roar(){
 			echo 'miał miał';
 		}
 	}
+	
 	Jeśli klasa bazowa jest abstrakcyjna i posiada metodę abstrakcyjną, to nie musi być ona zdefiniowana w kolejnej klasie w hierarchii, ale w takim wypadku klasa która dziedziczy po tej bazowej klasie abstrakcyjnej, musi również być abstrakcyjna.
 
-	abstract class A{
+	abstract class A
+	{
 		abstract public function method();
 	}
 
 	abstract class B extends A{}//tutaj nie musi być definicja metody A::method()
 
-	class C extends B{//ale tutaj już tak
+	class C extends B
+	{
+		// ale tutaj już tak
 		public function method(){}
 	}
 	Modyfikator dostępu w definicji metody abstrakcyjnej nie może być silniejszy od tego pierwotnie zdeklarowanego w klasie abstrakcyjnej, czyli nie można zamienić modyfikatora public na private, ale private na public owszem. Deklaracja metody abstrakcyjnej musi mieć takie same parametry co jej konkretna definicja. Wyjątkiem są parametry z wartością domyślną, nie muszą być one uwzględnione w deklaracji metody abstrakcyjnej, np:
 
-	abstract class A{
+	abstract class A
+	{
 		abstract public function method();
 	}
 
-	class B extends A{
+	class B extends A
+	{
 		public function method($b = false){}//dozwolone
 	}
 
-	class C extends A{
+	class C extends A
+	{
 		public function method($b){}//niedozwolone!
 	}
 	Interfejsy
 	Jeśli pójdziemy o krok dalej z uogólnieniem pierwszej abstrakcyjnej klasy w hierarchii klas, dojdziemy do momentu kiedy ta klasa będzie zawierała tylko deklaracje abstrakcyjnych metod publicznych. Wtedy taką klasę będziemy mogli zastąpić interfejsem.
 
-	interface iAnimal {
+	interface iAnimal 
+	{
 		public function roar();
 		//inne abstrakcyjne metody charakterystyczne dla zwierząt
 	}
 
-	abstract class Animal implements iAnimal{
-		public function goSleep(){
+	abstract class Animal implements iAnimal
+	{
+		public function goSleep()
+		{
 		}
 	}
 	Jedna klasa może implementować wiele interfejsów, czyli poprawny jest kod:
@@ -553,3 +568,54 @@ Output:
 
 GIT - konsola, push i założenie merge request na Gitlabie
 SQL i mechanizmy relacyjnej bazy danych - co znaczy “join”, “left join”, “group by”, “having”, indeksy i procedury składowane
+
+Rozdzial 4.
+-----------
+1. Co to jest HashTable?
+	Kolejnym czesto uzywanym dwuwymiarowym typem tablicowym jest obiekt klasy HashTable, nalezacy do przestrzeni nazw System.Collects.
+	
+	Poszczegolne elementy tablicy HashTbale sa indeksowane kluczem alfanumerycznym (a nie numerycznym jak w tablicy ArrayList).
+	Cecha klucza alfanumerycznego jest to, ze pozwala na ideksowanie elementow tablicy nie tylko wedlug wartosci liczbowych, 
+	ale takze dowolnych wyrazow zbudowanych z dowolnej kolejnosci cyfr i liter.
+	
+	Gdy pracujemy z klasa HashTable, to kolejnosc elementow kolekcji jest niezalezna od kolejnosci ich wprowadzania - elementy kolekcji
+	sa posortowane w zaleznosci od wartosci haszujacego klucza, ktorego wartosc musi byc unikatowa.
+	
+	Podczas dodawania nowego elementu wywolywana jest metoda zwiazana z kluczem o nazwie GetHashCode. Dostarcza kod haszujacy, na
+	podstawie ktorego nastepuje sortowanie. Mozna rowniez samemu zaimplementowac wlasna funkcje haszujaca, nadpisujaca GetHashCode.
+	Wydajnosc kolekcji HashTable jest doza, ze wzgledu na staly i niewielki rozmiar kodu haszujacego, np. 32 lub 64 bity.
+	
+	Kod haszujacy jest unikatowa wartoscia o stalej dlugosci, ktorej zadaniem jest reprezentowanie struktur, zawierajaca bardzo duza
+	liczbe danych. Kazdemu kodowi haszujacemu odpowiada tylko jedna struktura danych i na odwrot. Kazda, nawet niewielka zmiana
+	zawartosci danych powoduje zmiane kodu haszujacego.
+	
+	
+2. Co to jest indeksowanie w bazach danych?
+	http://th-www.if.uj.edu.pl/zfs/gora/bazy11/wyklad09.pdf
+	
+	Wyszukanie wybranego wiersza w posortowanej tabeli o długosci N wymaga
+	dokonania O(log2 N) porównan i, typowo, tylu z dostepów do dysku, co samo
+	w sobie moze byc kosztowne. Jednak tabele SQL nie sa posortowane, a co za
+	tym idzie, pliki, w których zapisywane sa tabele na dysku, tez nie sa posortowane
+	— dotyczy to zwłaszcza tabel, w których dane sa czesto zmieniane (dodawane,
+	usuwane, dodawane itd). Wymóg zapisywania za kazdym razem posortowanej
+	wersji pliku spowodowałby dramatyczne spowolnienie działania bazy.
+	Dodatkowym problemem moze byc to, ze czesto w tabelach definiujemy wiele
+	“porzadków”: ta sama tabela mogłaby byc sortowana w kolejnosci numerów
+	operacji (klucz główny), nazwisk klientów (moga sie powtarzac), daty operacji
+	(moga sie powtarzac) itp. 
+	
+	Dlatego tez uzywa sie indeksów, specjalnych struktur danych, przechowujacych
+	tylko atrybuty, wzgledem których sortujemy; atrybuty te nie musza byc kluczami
+	tabeli (mylaca terminologia). Milczaco zakładamy, ze wraz z kluczem przechowywany
+	jest fizyczny adres odpowiedniej krotki na dysku. Indeksy musza byc
+	tak zaprojektowane, aby wyszukiwanie elementów było szybkie, a dodawanie
+	nowych i usuwanie istniejacych niezbyt skomplikowane.
+	
+3. Algorytmy i struktury danych
+	a) rekursja
+	b) wyszukiwanie binarne
+	c) sortowanie przez wybieranie
+	d) sortowanie przez wstawianie
+	e) sortowanie przez scalanie
+	f) sortowanie szybkie
