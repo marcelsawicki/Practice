@@ -12,6 +12,7 @@ import '../assets/css/styles.css';
 export class ExampleComponent { 
   goBack(){
         console.log('Button is pushed.');
+        console.log('Button is pushed.');
   };
       master: string = 'I am sending this prop to master component.';
 }
