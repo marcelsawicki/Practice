@@ -8,8 +8,6 @@ import { Quiz } from './components/quiz/quiz';
         el: '#app-main',
         components: 
         {
-            'galeria': Galeria,
-            'game': Game,
             'quiz': Quiz
         }
     });
