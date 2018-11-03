@@ -7,7 +7,18 @@
 <script>
 	window.onload = function()
 	{
-		draw();
+	var fia = 45;
+		draw(fia);
+		
+		window.addEventListener('click', handleClick, false);
+		
+		function handleClick()
+		{
+		fia=fia+10;
+		draw(fia);
+		}
+		
+		setInterval(handleClick,100);
 	}
 </script>
 </body>

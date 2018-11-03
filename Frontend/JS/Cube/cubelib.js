@@ -1,6 +1,6 @@
 function przeliczX(xa, ya, za)
 {
-	var fi=45;
+	var fi=fia;
 	var teta=45;
 	var wsp_x=100;
 	var wsp_y=100;
@@ -32,10 +32,14 @@ function przeliczY(xa, ya, za)
 	return y;
 }
 
-function draw()
+function draw(fia)
 {
+	window.fia = fia;
 		var canvas = document.getElementById('kanwa');
-	var context = canvas.getContext('2d');	
+	var context = canvas.getContext('2d');
+	context.clearRect(0, 0, 320, 240);	
+	    // clear path
+    context.beginPath();
 	context.fillStyle = "blue";
 
 	context.fillRect(0, 0, canvas.width, canvas.height);
