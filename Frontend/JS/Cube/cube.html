@@ -14,8 +14,15 @@
 		
 		function handleClick()
 		{
-		fia=fia+10;
-		draw(fia);
+			if(fia<360)
+			{
+			    fia=fia+10;
+				draw(fia);
+			}
+			else
+			{
+			fia=0;
+			}
 		}
 		
 		setInterval(handleClick,100);

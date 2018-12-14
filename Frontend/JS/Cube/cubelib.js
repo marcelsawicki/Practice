@@ -1,35 +1,38 @@
 function przeliczX(xa, ya, za)
 {
 	var fi=fia;
-	var teta=45;
-	var wsp_x=100;
-	var wsp_y=100;
-	var skala=500;
-	var dist=100;
+	var teta=fia;
+	var wsp_x=160;
+	var wsp_y=120;
+	var skala=5;
+	var dist=25;
 	
 	var xn=-Math.sin(fi*Math.PI/180)*xa+Math.cos(fi*Math.PI/180)*ya;
-	var yn=-Math.cos(fi*Math.PI/180)*xa-Math.sin(fi*Math.PI/180)*Math.cos(teta*Math.PI/180)*ya+Math.sin(teta*Math.PI/180)*za;
+	var yn=-Math.cos(fi*Math.PI/180)*xa-Math.sin(fi*Math.PI/180)*ya+Math.sin(teta*Math.PI/180)*za;
 	var zn=-Math.cos(fi*Math.PI/180)*Math.sin(teta*Math.PI/180)*ya-Math.cos(teta*Math.PI/180)*za+dist;
 	 var x=skala*xn/(zn+dist)+wsp_x;
 	 var y=skala*yn/(zn+dist)+wsp_y;
-	return x;
+	 
+	 xp = xa + za*(Math.cos((teta*Math.PI/180))*0.5);
+	return xp*skala;
 }
 
 function przeliczY(xa, ya, za)
 {
-	var fi=45;
-	var teta=45;
-	var wsp_x=100;
-	var wsp_y=100;
-	var skala=500;
-	var dist=100;
+	var fi=fia;
+	var teta=fia;
+	var wsp_x=160;
+	var wsp_y=120;
+	var skala=5;
+	var dist=25;
 	
 	var xn=-Math.sin(fi*Math.PI/180)*xa+Math.cos(fi*Math.PI/180)*ya;
-	var yn=-Math.cos(fi*Math.PI/180)*xa-Math.sin(fi*Math.PI/180)*Math.cos(teta*Math.PI/180)*ya+Math.sin(teta*Math.PI/180)*za;
+	var yn=-Math.cos(fi*Math.PI/180)*xa-Math.sin(fi*Math.PI/180)*ya+Math.sin(teta*Math.PI/180)*za;
 	var zn=-Math.cos(fi*Math.PI/180)*Math.sin(teta*Math.PI/180)*ya-Math.cos(teta*Math.PI/180)*za+dist;
 	 var x=skala*xn/(zn+dist)+wsp_x;
 	 var y=skala*yn/(zn+dist)+wsp_y;
-	return y;
+	 yp = ya + za *(Math.sin((teta*Math.PI/180))*0.5);
+	return yp*skala;
 }
 
 function draw(fia)
