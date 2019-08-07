@@ -1,1 +1,1 @@
-C#, Java, Turbo Pascal, TypeScript, C++, PowerShell
+C#, PowerShell, TypeScript, C++, Java, Turbo Pascal, JavaScript
