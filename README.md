@@ -1,1 +1,1 @@
-The examples in C#, Java, Turbo Pascal, TypeScript, C++.
+C#, Java, Turbo Pascal, TypeScript, C++, PowerShell
