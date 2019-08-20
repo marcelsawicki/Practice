@@ -138,7 +138,7 @@ class Zdarzenie {
 
     spotkajWroga(kogo: number) {
         // description
-        this.element.innerHTML += "Spotkales: " + swiat[kogo].opis + " , rodzaj: " + swiat[kogo].rodzaj + " , sila: " + swiat[kogo].sila;
+        this.element.innerHTML = "Spotkales: " + swiat[kogo].opis + " , rodzaj: " + swiat[kogo].rodzaj + " , sila: " + swiat[kogo].sila;
         this.span = document.createElement('span');
         this.element.appendChild(this.span);
     }
@@ -153,7 +153,7 @@ class Zdarzenie {
 
     fight(): void {
         alert('fight');
-        this.spotkajWroga(5);
+        this.spotkajWroga(Math.floor(Math.random() * 14));
     }
 
     flee(): void {
