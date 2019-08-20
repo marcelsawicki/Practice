@@ -1,4 +1,4 @@
-﻿export class Greeter {
+﻿class Greeter {
     element: HTMLElement;
     span: HTMLElement;
     timerToken: number;
@@ -9,6 +9,7 @@
         this.span = document.createElement('span');
         this.element.appendChild(this.span);
         this.span.innerText = new Date().toUTCString();
+        this.timerToken = 0;
     }
 
     start() {
@@ -21,7 +22,7 @@
 
 }
 
-export class Hafn {
+class Hafn {
     element: HTMLElement;
     span: HTMLElement;
     timerToken: number;
@@ -34,6 +35,7 @@ export class Hafn {
         this.element.innerHTML += "Losuje jakas wartosc od 0 do 100: " + Math.floor(Math.random() * 100);
         this.span = document.createElement('span');
         this.element.appendChild(this.span);
+        this.timerToken = 0;
         // this.span.innerText = new Date().toUTCString();
     }
     start() {
@@ -50,10 +52,10 @@ let r_nieznajomego: string[] = ['zlodziej', 'dobry_d', 'zly_d', 'czarodziej'];
 let r_przedmiotu: string[] = ['miecz', 'zbroja', 'eliksir', 'mieso', 'zloto', 'trucizna'];
 
 class OpisSwiata {
-    opis: string;
-    prawdo: number;
-    rodzaj: number[];
-    sila: number;
+    opis: string = '';
+    prawdo: number = 0;
+    rodzaj: number[] = [1];
+    sila: number = 0;
 }
 
 let swiat: Array<OpisSwiata> = [
@@ -73,7 +75,7 @@ let swiat: Array<OpisSwiata> = [
     { opis: 'trucizne', prawdo: 3, rodzaj: [3], sila: 1 }
     ];
 
-export class Bohater {
+class Bohater {
     wytrzymalosc: number;
     sila: number;
     bagaz: Array<number>; // bagaz: number[];
@@ -88,38 +90,50 @@ export class Bohater {
         this.sila = sila;
         this.bagaz = bagaz;
         this.zloto = zloto;
+        this.span = document.createElement('span');
     }
 
     opiszBohatera() {
         // description
         this.element.innerHTML += "Bohater: wytrzymalosc:" + this.wytrzymalosc + " , bagaz: " + this.bagaz + " , zloto: " + this.zloto;
-        this.span = document.createElement('span');
         this.element.appendChild(this.span);
     }
 
 };
 
-export class Zdarzenie {
-    opis: string;
-    prawdo: number;
-    rodzaj: Array<number>; // rodzaj: number[];
+class Zdarzenie {
+    opis: string = '';
+    prawdo: number = 0;
+    rodzaj: Array<number> = [1]; // rodzaj: number[];
     // potrzebne do edycji strony
     element: HTMLElement;
     span: HTMLElement;
 
     constructor(element: HTMLElement) {
         this.element = element;
+        this.span = document.createElement('span');
         //this.element.innerHTML += "Zdarzenie: ";
         //this.span = document.createElement('span');
         //this.element.appendChild(this.span);
         let btnFight = document.getElementById("fight");
-        btnFight.addEventListener("click", (e: Event) => this.fight());
+        if(btnFight!=null)
+        {
+            btnFight.addEventListener("click", (e: Event) => this.fight());
+        }
+        
 
         let btnFlee = document.getElementById("flee");
-        btnFlee.addEventListener("click", (e: Event) => this.flee());
+        if(btnFlee!=null)
+        {
+            btnFlee.addEventListener("click", (e: Event) => this.flee());
+        }
+        
 
         let btnTalk = document.getElementById("talk");
-        btnTalk.addEventListener("click", (e: Event) => this.talk());
+        if(btnTalk!=null)
+        {
+            btnTalk.addEventListener("click", (e: Event) => this.talk());
+        }
     }
 
     spotkajWroga(kogo: number) {
@@ -139,6 +153,7 @@ export class Zdarzenie {
 
     fight(): void {
         alert('fight');
+        this.spotkajWroga(5);
     }
 
     flee(): void {
@@ -148,4 +163,35 @@ export class Zdarzenie {
     talk(): void {
     alert('talk');
     }
+};
+
+window.onload = () => {
+  var el = document.getElementById('content');
+  var tbl = document.getElementById('tablica');
+  var ekran = document.getElementById('ekran');
+  var statystyki = document.getElementById('stat');
+
+  // if(el!=null)
+  // {
+  //   var greeter = new Greeter(el);
+  //   greeter.start();
+  // }
+
+  if(tbl!=null)
+  {
+
+    if(statystyki!=null)
+    {
+      var bohater = new Bohater(statystyki,1,1,[1],1);
+      bohater.opiszBohatera();
+    }
+    var hafn = new Hafn(tbl);
+  }
+  
+  if(ekran!=null)
+  {
+    var zdarzenie = new Zdarzenie(ekran);
+    var losowanie = Math.floor(Math.random() * 14);
+    zdarzenie.spotkajWroga(losowanie);
+  }
 };
