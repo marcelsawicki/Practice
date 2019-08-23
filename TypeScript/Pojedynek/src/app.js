@@ -133,11 +133,14 @@ var Zdarzenie = /** @class */ (function () {
     return Zdarzenie;
 }());
 ;
+// Main
 window.onload = function () {
     var el = document.getElementById('content');
     var tbl = document.getElementById('tablica');
     var ekran = document.getElementById('ekran');
     var statystyki = document.getElementById('stat');
+    //   let infoHelper : InfoHelper  = new InfoHelper();
+    //   InfoHelper.WyswietlInfo();
     // if(el!=null)
     // {
     //   var greeter = new Greeter(el);
