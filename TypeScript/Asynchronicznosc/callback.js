@@ -10,8 +10,8 @@ function callDelayedAndWait() {
     function afterWait() {
         console.log('afterWait');
     }
-    console.log("przed wywo\u0142aniem funkcji delayedResponseWithCallback");
+    console.log(`przed wywołaniem funkcji delayedResponseWithCallback`);
     delayedResponseWithCallback(afterWait);
-    console.log("po wywo\u0142aniu funkcji calling delayedResponseWithCallback");
+    console.log(`po wywołaniu funkcji calling delayedResponseWithCallback`);
 }
 callDelayedAndWait();
