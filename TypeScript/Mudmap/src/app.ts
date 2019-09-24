@@ -95,9 +95,9 @@ class Keyboard {
 
 }
 
-
 // Main
 window.onload = () => {
+    let arrayMap:number[][] = [[0,4,0],[5,3,0],[0,2,1]];
         let container = document.getElementById('mudmap');
         if(container!=null)
         {

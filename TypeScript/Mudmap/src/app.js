@@ -75,6 +75,7 @@ var Keyboard = /** @class */ (function () {
 }());
 // Main
 window.onload = function () {
+    var arrayMap = [[0, 4, 0], [5, 3, 0], [0, 2, 1]];
     var container = document.getElementById('mudmap');
     if (container != null) {
         var display = new Display(container);
