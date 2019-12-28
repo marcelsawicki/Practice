@@ -1,3 +1,0 @@
-# Arduino
-
-Simple Arduino examples.
