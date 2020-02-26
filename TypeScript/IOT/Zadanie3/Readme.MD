@@ -1,12 +1,14 @@
 Jak zalozyc projekt Webpack + TypeScript?
-------------------------------------------
-npm install -g typescript
-npm install webpack webpack-cli webpack-dev-server --save-dev
-npm install typescript ts-loader --save-dev
+------------------------------------------  
+
+npm init  
+tsc init  
+npm install -g typescript  
+npm install webpack webpack-cli webpack-dev-server --save-dev  
+npm install typescript ts-loader --save-dev  
 
 
-npm init
-tsc init
+
 
 skopiować do pliku webpack.config.js
 -------------------------------------
@@ -40,7 +42,7 @@ module.exports = {
 
 ---------------------------------------------
 
-dodac do package.json
+dodac do package.json  
 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
