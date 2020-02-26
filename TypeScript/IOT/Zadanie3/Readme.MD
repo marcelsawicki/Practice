@@ -47,3 +47,7 @@ dodac do package.json
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development"
   },
+  
+  
+  linki:
+  https://appdividend.com/2018/03/18/how-to-setup-typescript-with-webpack-4/#Step_4_Install_webpack_and_ts_dependencies
