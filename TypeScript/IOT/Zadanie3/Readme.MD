@@ -1,0 +1,49 @@
+Jak zalozyc projekt Webpack + TypeScript?
+------------------------------------------
+npm install -g typescript
+npm install webpack webpack-cli webpack-dev-server --save-dev
+npm install typescript ts-loader --save-dev
+
+
+npm init
+tsc init
+
+skopiować do pliku webpack.config.js
+-------------------------------------
+
+const path = require('path');
+
+const ROOT = path.resolve( __dirname, 'src' );
+const DEST = path.resolve( __dirname, 'dist' );
+
+module.exports = {
+
+    entry: path.join(ROOT, '/app.ts'),
+    output: {
+        filename: 'app.js',
+        path: DEST
+        //path: __dirname
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ]
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
+    },
+};
+
+---------------------------------------------
+
+dodac do package.json
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode development"
+  },
