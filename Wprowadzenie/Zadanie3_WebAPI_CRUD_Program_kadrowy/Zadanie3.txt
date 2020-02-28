@@ -1,0 +1,10 @@
+Zadanie 3
+
+Napisać program w języku C#.
+
+Utworzyć bazę danych w Azure.
+
+
+(poczytać na temat: dependency injection)
+Odpytac serwis programem Postman.
+Dla przedstawionego diagramu klas napisać CRUD w języku C#, następnie wdrożyć ten serwis do Azure jako Web Service.

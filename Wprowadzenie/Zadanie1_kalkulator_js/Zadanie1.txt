@@ -1,0 +1,14 @@
+Zadanie dodatkowe 1:
+              Utworzenie na własnym tenancie SharePoint aplikacje ‘Kalkulator’ na siteCollection kalulator.
+Utworzyc ‘Page’ sharepoint oraz osadzic na nim webpart z kodem JavaScript. Kod będzie umieszczony w pliku calculator.js.
+Plik ten wdrożony będzie do styli sharepoint, do katalogu JS.
+
+Zadanie  polega na utworzeniu trzech list sharepoint, pierwsza lista będzie zawierala kolekcje liczb. 
+Druga lista będzie zawierala kolekcje liczb. Trzecia lista wynik, na początku będzie pusta, ale aplikacja będzie zapisywala do niej wyniki.
+
+Aplikacje po kliknieciu przycisku „Pobierz liczbe1” pobierze i wyświetli na stronie SharePoint ta liczbe. 
+Po ponownym kliknieciu „Pobierz liczbe1” pobierze i wyświetli nastepna w kolejności na liscie 
+SharePoint liczbe. Podobnie będzie działał przycisk „Pobierz liczbe2”, ale będzie  pobieral z drugiej listy liczb.
+
+Dodatkowo będą dwa przyciski. Pierwszy przycisk ‘Sumuj’ zsumuje wyświetlone liczby, drugi przycisk ‘Zapisz’ zapisze wynik na liscie SharePoint.
+

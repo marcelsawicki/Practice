@@ -1,0 +1,17 @@
+Visual Studio 2019
+Visual Studio Code
+Notepad ++
+
+7 Zip
+GIT SCM
+Tortoise GIT
+
+Microsoft Teams
+Microsoft SQL Sever (Basic)
+Microsoft SQL Server Management Studio
+SharePoint Online Management Shell
+
+Node.js
+
+Microsoft System Center 2016 Virtual Machine Manager
+Forticlient VPN

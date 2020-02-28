@@ -1,0 +1,38 @@
+Zadanie 10:
+
+1.	Ze strony http://jsonplaceholder.typicode.com/posts pobieramy dane. (można też użyć własnego serwisu)
+2.	Na podstawie pobranych danych tworzymy stronę przedstawioną poniżej: 
+
+ [Obrazek1.png]
+
+Legenda:
+1.	"userId" – nazwa użytkownika
+	"title" – tytuł postu
+	"body" – treść postu
+	"id" – id obiektu w json
+	
+2.	Nagłówek strony (dowolny)
+3.	Treść postu
+
+4.	Nie w tej iteracji zadania.
+	
+Wykonamy dwa zapytania do tej samej strony. 
+Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
+
+Jeśli dane przyjdą dopiero renderujemy zawartość strony. 
+Proszę pamiętać o  SOLID i przechwytywaniu błędów 
+(defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
+
+Dodatkowe wymagania:
+- Cały project piszemy w TypeScript
+
+- Dzielimy pliki na Klasy/Funkcjonalności czyli w jednym pliku ma znajdować się jedna klasa która jest odpowiedzialna za jedną 
+  rzecz (single responsibility principle) np. klasa która jest odpowiedzialna za pobranie danych, 
+  plik  w którym będziemy przechowywać konfigurację tj. Url, templates HTML
+
+- Funkcję która pobiera dane owijamy w Promise, w resolve przekazujemy otrzymane dane.
+
+- Wykonujemy Commit do repozytorium (najlepiej wlasne repo na github.com)
+- W main.ts ma znajdować się tylko i wyłącznie funkcja inicjalizująca cały program która przyjmuje konfigurację
+
+- Pamiętamy o typowaniu
