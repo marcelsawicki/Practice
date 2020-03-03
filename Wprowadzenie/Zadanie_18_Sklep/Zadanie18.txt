@@ -1,0 +1,10 @@
+Zadanie 18. Sklep
+
+	Zadanie w TypeScript oraz C#.
+
+Napisac aplikacje sklep internetowy. Dane o wybranych towarach przechowywane w koszyku za pomoca SessionStorage.
+Logowanie i dane uzytkownika na podstawie danych o uzytkowniku SharePoint.
+
+Zlozenie zamówienia odbywa sie przy uzyciu Azure function.
+
+Dane o artykulach oferowanych przez sklep znajduja sie na liscie SharePoint.
