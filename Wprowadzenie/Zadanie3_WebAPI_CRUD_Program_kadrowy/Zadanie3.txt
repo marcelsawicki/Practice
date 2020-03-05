@@ -1,10 +1,15 @@
-Zadanie 3
+Zadanie 3.
 
-Napisać program w języku C#.
+Program w języku C#. Projekt w .NET Core - (ASP.NET Core Web Application, template: API) 
 
-Utworzyć bazę danych w Azure.
+(uwaga! domyslnie uzywany jest ASP.NET Core 3.1)
 
+Docelowo program bedzie wdrozony do Azure jako: "Web App + SQL". 
+Dla ułatwienia można rozpocząć pisanie programu używając bazy danych na localhost.
 
+[diagram-klas-zad3.jpg]
+
+Dla przedstawionego diagramu klas napisać CRUD w języku C#, następnie wdrożyć ten serwis do Azure.
 (poczytać na temat: dependency injection)
-Odpytac serwis programem Postman.
-Dla przedstawionego diagramu klas napisać CRUD w języku C#, następnie wdrożyć ten serwis do Azure jako Web Service.
+
+Odpytac serwis programem Postman i używając biblioteki MSTest przetestowac jedna dowolna metode kontrolera.
