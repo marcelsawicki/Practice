@@ -1,4 +1,4 @@
-Zadanie 20.
+Zadanie 23.
 
 Wykonaj algorytm MinMaxRek dla zbioru liczb {1, 4, 3, 2, 4, 9, 5, 7} w jezyku JavaScript.
 
