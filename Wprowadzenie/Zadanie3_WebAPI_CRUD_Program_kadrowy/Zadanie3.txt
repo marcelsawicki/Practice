@@ -13,3 +13,6 @@ Dla przedstawionego diagramu klas napisać CRUD w języku C#, następnie wdroży
 (poczytać na temat: dependency injection)
 
 Odpytac serwis programem Postman i używając biblioteki MSTest przetestowac jedna dowolna metode kontrolera.
+
+Materiały:
+https://docs.microsoft.com/pl-pl/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
