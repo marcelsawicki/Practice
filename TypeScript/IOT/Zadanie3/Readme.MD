@@ -3,7 +3,7 @@ Jak zalozyc projekt Webpack + TypeScript?
 
 npm init  
 npm install -g typescript  
-tsc init  
+tsc --init  
 npm install webpack webpack-cli webpack-dev-server --save-dev  
 npm install typescript ts-loader --save-dev  
 
