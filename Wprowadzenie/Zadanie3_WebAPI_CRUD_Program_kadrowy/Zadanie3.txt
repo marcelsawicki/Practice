@@ -16,3 +16,7 @@ Odpytac serwis programem Postman i używając biblioteki MSTest przetestowac jed
 
 Materiały:
 https://docs.microsoft.com/pl-pl/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
+
+Wykonać migracje do bazy danych (Code First).
+Dopisac wlasna metode kontrolera która zwróci dane o pracowniku bez danych o departamencie.
+Dopisać wlasna metodę kontrolera która obliczy ilosc dni urlopu wypisanych  przez pracownika.
