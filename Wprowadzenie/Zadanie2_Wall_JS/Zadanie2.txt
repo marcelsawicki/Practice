@@ -3,7 +3,11 @@ Zadanie dodatkowe 2:
 Utworzyc ‘Page’ sharepoint oraz osadzic na nim webpart z kodem JavaScript. Kod będzie umieszczony w pliku wall.js.
 Plik ten wdrożony będzie do styli sharepoint, do katalogu JS.
 
-Aplikacja daje możliwość dodawania wpisów na stronie przez użytkowników – przy wpisach jest możliwe polubienie lub odwołanie polubienia (polubienia sa zliczane i wyswietlane), można także usunąć wpis. 
-Dodatkowo pod wpisem powinien znaleźć się przycisk z możliwością zapisu. Po kliknięciu ‘Zapisz’ wpis zapisze się na liście SharePoint.
+Aplikacja daje możliwość dodawania wpisów na stronie przez użytkowników – przy wpisach jest możliwe polubienie lub odwołanie polubienia 
+(polubienia sa zliczane i wyswietlane), można także usunąć wpis.
+
+Dodatkowo po dodaniu wpisu, zapisuje sie on na liscie SharePoint.
+
+Po uruchomeniu aplikacj, jesli sa juz jakies wpisy na liscie SharePoint to zostana one pobrane i wyrenderowane na stronie.
 
  
