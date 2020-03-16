@@ -5,8 +5,8 @@ Zadanie 4
 Faktura ma cztery stany: (stan 1) "Do opisu", (stan 2) "Do zatwierdzenia", (stan 3) "Do księgowania", (4) "Zaksięgowana".
 
 
-| Nazwa faktury | Kontrahent | Kwota netto | Kwota brutto |
------------------------------------------------------------
+| Nazwa faktury | Kontrahent | Kwota netto | Kwota brutto | Stan |
++----------------------------------------------------------------+
 1; Abc; 10,20; 0,00
 2; Cdd; 12,50; 0,00
 3; Fgc; 5,36; 0,00
