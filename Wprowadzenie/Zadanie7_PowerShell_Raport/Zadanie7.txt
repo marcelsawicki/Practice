@@ -1,4 +1,4 @@
-Zadanie 7.
+Zadanie 7. (tresc zadania wymaga poprawy)
 
 Pobrac template listy SharePoint i utworzyc na jej podstawie druga liste do archiwizacji itemow o nazwie Explorer1Archive.
 
