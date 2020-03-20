@@ -1,7 +1,4 @@
-Zadanie 6.
-
-Utworzyc site collection, na utworzone site collection utworzyc listę sharepoint o nazwie Explorer1 na ktorej za pomoca skrypty PowerShell umiescic 100 itemow o tytule:
-Test_[x] - gdzie x kolejny numer.
+Zadanie 7.
 
 Pobrac template listy SharePoint i utworzyc na jej podstawie druga liste do archiwizacji itemow o nazwie Explorer1Archive.
 

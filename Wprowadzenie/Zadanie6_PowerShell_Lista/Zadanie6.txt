@@ -1,0 +1,8 @@
+Zadanie 6.
+
+Utworzyc site collection, na utworzone site collection utworzyc listę sharepoint o nazwie Explorer1 i dodac na niej 10 itemow. 
+Dodatkowo utworzyć liste Explorer1_Archive
+
+(a) Napisać skrypt który pobierze i wyswietli te 10 itemow w konsoli.
+(b) Dopisać funkcjonalność dodawania itemu do listy
+(c) Napisać archiwizację itemów z listy Explorer1 tzn. przenieść zadaną liczbę itemów (np. 10 najstarszych itemów) na listę Explorer1_Archive
