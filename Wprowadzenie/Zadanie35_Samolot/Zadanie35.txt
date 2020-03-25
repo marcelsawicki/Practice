@@ -1,0 +1,13 @@
+Zadanie 35.
+
+Aplikacja losuje zajete miejsca w samolocie i zaznacza je na schemacie kolorem czerwonym.
+
+Uzytkownik klikajac na wolne miejsce, wybiera je i uzyskuje o nim informacje w Kendo Grid:
+Nr miejsca; Strefa; Czy dostępne; Cena;
+
+Informacje o miejscach sa umieszczone na liscie SharePoint.
+
+Dodatkowo uzytkownik ma mozliwosc wyboru z DropDownList:
+Bagaż; Bagaż podręczny, Bez bagażu
+
+Po dokonaniu wyboru miejsca oraz bagażu wylicza się cena biletu.
