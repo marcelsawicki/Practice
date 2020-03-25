@@ -1,0 +1,7 @@
+Zadanie 31.
+
+Aplikacja - Katalog części samochodowych.
+
+Aplikacja wyrenderuje interfejs uzytkownika zgodny ze schematem na rysunku [GUI-Katalog-czesci-samochodowych.png].
+Dane o markach, modelach i dostepnych częściach samochodowych przechowywane są na listach SharePoint.
+Zdjęcia lub schematy samochodów przechowywane sa w 'Picture Library'.
