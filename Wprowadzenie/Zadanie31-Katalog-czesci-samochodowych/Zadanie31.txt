@@ -7,3 +7,7 @@ Dane o markach, modelach i dostepnych częściach samochodowych przechowywane s�
 Zdjęcia lub schematy samochodów przechowywane sa w 'Picture Library'.
 
 Ilosc wszystkich czesci jest podliczna i renderowana na obrazku (tak jak na przykadzie - czerwona liczba 17).
+
+Do wyrenderowania kontrolki DropDownList i Grid powinna zostać użyta biblioteka Telerik Kendo.
+Dwie powiazane ze soba kontroli DropDownList umożliwą wybor marki i modelu samochodu.
+Kontrolka Grid bedzie wyswietlała odpowiednie części w zależności od dokonanego wyboru.
