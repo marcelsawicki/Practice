@@ -23,3 +23,5 @@ Dopisać wlasna metodę kontrolera która obliczy ilosc dni urlopu wypisanych  p
 
 Dodanie kodu JS:
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-3.1
+
+Wyświetlić dane otrzymane z serwisu w tabeli za pomoca kodu w JavaScript i zapytania AJAX z biblioteki jQuery.
