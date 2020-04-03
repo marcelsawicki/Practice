@@ -1,3 +1,0 @@
-Zadanie 21.
-
-	Napisać dwa powiązane DropDownList na formularzy dodawania itema w SharePoint do listy.
