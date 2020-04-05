@@ -2,6 +2,7 @@
 <CharakterystykaUpraw>
 	<RoslinaUprawna>
 		<Nazwa> Banan </Nazwa>
+		<Opis> zastosowanie: owoce. maka, alkohol </Opis>
 		<Producenci>
 			<Producent>
 				<Kraj> Indie </Kraj>
@@ -36,6 +37,7 @@
 
 	<RoslinaUprawna>
 		<Nazwa> Ziemniak </Nazwa>
+		<Opis> zastosowanie: bulwy, maka, pasza, alkohol </Opis>
 		<Producenci>
 			<Producent>
 				<Kraj> Chiny </Kraj>

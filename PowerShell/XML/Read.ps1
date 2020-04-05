@@ -4,16 +4,17 @@ $b = $prod.CharakterystykaUpraw.ChildNodes | Format-Table -Property Nazwa, Produ
      
 foreach($p in $prod.CharakterystykaUpraw.ChildNodes)
 {
-Write-Host $p.Nazwa
+Write-Host -ForegroundColor Green $p.Nazwa
+Write-Host -ForegroundColor Yellow $p.Opis
 $p.Producenci.ChildNodes | Format-Table
+
+$enumeratorProducenci = $p.Producenci.ChildNodes.GetEnumerator()
+while($enumeratorProducenci.moveNext())
+{
+    $currentProducent = $enumeratorProducenci.Current
+    Write-Host -ForegroundColor DarkCyan $currentProducent.Kraj $currentProducent.Udzial
+}
 
 }
 
-#
-#$enumer = $prod.RoslinaUprawna.Producenci.ChildNodes.GetEnumerator()
-#while($enumer.moveNext())
-#{
-#    $curr = $enumer.Current
-#    Write-Host $curr.Kraj
-#    Write-Host $curr.Udzial
-#}
+
