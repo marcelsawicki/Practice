@@ -1,4 +1,4 @@
-Zadanie 22.
+Zadanie 13.
 
 Na liscie SharePoint 'Cases' przechowywane sa numery cases (spraw) oraz linki do utworzonych dla cases sitecollections.
 

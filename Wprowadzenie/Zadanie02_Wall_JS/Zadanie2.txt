@@ -1,4 +1,4 @@
-Zadanie dodatkowe 2:
+Zadanie 2.
               Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection o nazwie 'wall'.
 Utworzyc ‘Page’ SharePoint oraz osadzic na nim webpart z kodem JavaScript. 
 Kod będzie umieszczony w pliku wall.js.

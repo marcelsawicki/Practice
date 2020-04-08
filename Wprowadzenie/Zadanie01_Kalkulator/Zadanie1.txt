@@ -1,4 +1,4 @@
-Zadanie dodatkowe 1:
+Zadanie 1.
 (TypeScript)
 
               Utworzenie na własnym tenancie SharePoint aplikacje ‘Kalkulator’ na siteCollection kalulator.

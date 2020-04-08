@@ -1,4 +1,4 @@
-Zadanie 31.
+Zadanie 3.
 
 Aplikacja - Katalog części samochodowych w języku JavaScript.
 
