@@ -2,8 +2,20 @@ Zadanie 30.
 
 Napisac aplikacje w ktorej uzytkownik moze w wybrac nazwe pomieszczenia z DropDownList (nazwy pomieszczen sa pobierane z listy SharePoint).
 Po dokonaniu wyboru na obrazku [buildingScheme.jpg] (obrazek zostanie pobrany z SharePoint Picture Library) 
-zaznaczony zostanie kolorem czerwonym obrys pomieszczenia. Zaznaczanie obrysu mozna zrealizowac poporzez uzycie 'Canvas' w HTML5.
+zaznaczony zostanie kolorem czerwonym obrys pomieszczenia. 
+Zaznaczanie obrysu mozna zrealizowac poporzez uzycie 'Canvas' w HTML5.
 
 W kontrolce Kendo Grid wyrenderowane zostana informacje na temat pomieszczenia (te informacje takze sa pobierane z listy SharePoint):
 
 Nazwa pomieszczenia; Powierzchnia; Ilosc okien; Ilosc drzwi;
+
+Dodatkowo zostaną wyrenderowane dwa przyciski z następującymi funkcjonalnościami.
+
+(a) 'Znajdź ścieżkę'
+Zaimplementować algorytm wyszukiwania najkrótszej ścieżki. 
+Ścieżka będzie wyliczana i narysowana na planie budynku.
+Punkt startowy i koncowy będzie wybierany przez uzytkownika po naciśnięciu przycisku 'Znajdz ścieżkę'.
+
+(b) 'Przeszukaj budynek'
+Zaimplementować algorytm który wyśle do budynku robota ratownika, który przeszuka wszystkie pomieszczenia w celu znalezienia rannych w wyniku trzęsienia ziemii.
+
