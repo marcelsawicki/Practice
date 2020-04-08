@@ -1,4 +1,4 @@
-Zadanie 35.
+Zadanie 14.
 
 Aplikacja losuje zajete miejsca w samolocie i zaznacza je na schemacie kolorem czerwonym.
 
