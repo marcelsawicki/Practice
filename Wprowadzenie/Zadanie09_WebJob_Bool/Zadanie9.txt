@@ -7,17 +7,17 @@ pola typu boolean (pole o nazwie "Zmiana").
 
 Przykładowo na liscie SharePoint są takie dane:
 
-Title; Zmiana;
-Tak;	[+]
-Nie;	[-]
-Tak;	[-]
-Nie;	[+]
+Title; Modify;
+Good;	[+]
+Bad;	[-]
+Good;	[-]
+Bad;	[+]
 
 Po uruchomieniu WebJoba powinno to być ustawine w ten sposob:
-Title; Zmiana;
-Tak;	[+]
-Nie;	[-]
-Tak;	[+]
-Nie;	[-]
+Title; Modify;
+Good;	[+]
+Bad;	[-]
+Bad;	[-]
+Good;	[+]
 
 Przykład WebJoba znajduje się w lokalizacji:
