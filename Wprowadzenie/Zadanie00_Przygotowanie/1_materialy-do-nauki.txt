@@ -1,0 +1,27 @@
+JavaScript i JSOM: 
+http://www.migee.com/2016/03/20/sharepoint-online-jsom-examples/
+
+C# i CSOM:
+https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code
+
+
+1.	Język TypeScript. Tajniki kodu – Nathan Rozentals (Helion 2018)
+2.	JavaScript Wzorce – Stoyan Stefanov (Helion, O’Reilly 2012)
+3.	Praktyczny kurs SQL – Danuta Mandrala, Marcin Szeliga (Helion 2015)
+
+Zagadnienia do egzaminów Microsoft:
+a) ExamRef 70-484: Programming in C#
+b) Exam AZ-203: Developing Solutions for Microsoft Azure
+
+PowerShell:
+http://ss64.com/
+
+JavaScript:
+http://codecademy.com - Introduction to JavaScript
+https://kursjs.pl/
+https://www.codewars.com
+
+Telerik Kendo UI:
+https://www.telerik.com/kendo-ui
+
+
