@@ -1,16 +1,27 @@
-Zadanie 4
+Zadanie 7.
+(C#, TypeScript)
 
-Napisac obieg faktur w języku C#. Dane o fakturach znajdują się na liście SharePoint.
+Napisac obieg faktur, w tym celu zaimplementować WebAPI które będzie zmieniało stan faktur.
+Dane o fakturach znajdują się na listach SharePoint.
 
-Faktura ma cztery stany: (stan 1) "Do opisu", (stan 2) "Do zatwierdzenia", (stan 3) "Do księgowania", (4) "Zaksięgowana".
+Faktury maja 4 stany: 
+(stan 1) Do weryfikacji
+(stan 2) Do opisu
+(stan 3) Do zatwierdzenia opisu
+(stan 4) Do księgowania
+
+Dla każdego stanu faktur utworzona jest strona na której wyrenderowany jest Kendo Grid z informacjami o fakturze.
+Użytkownik może przechodzić do kolejnych do stron przez boczne menu nawigacyjne.
 
 
-| Nazwa faktury | Kontrahent | Kwota netto | Kwota brutto | Stan |
-+----------------------------------------------------------------+
-1; Abc; 10,20; 0,00; 1;
-2; Cdd; 12,50; 0,00; 2;
-3; Fgc; 5,36; 0,00; 3;
+ LP | Nazwa faktury | Kontrahent | Kwota netto | Kwota brutto | Stan | Akcja |
+:--:|:-------------:|:----------:|:-----------:|:------------:|-----:|:-----:|
+1 :|: Invoice 1 :|: 10,20 :|: 0,00 :|: 1 :|: [Skieruj do opisu]
+2 :|: Invoice 2 :|: 12,50; 0,00 :|: 1 :|: [Skieruj do opisu]
+3 :|: Invoice 3 :|: 5,36; 0,00 :|: 1 :|: [Skieruj do opisu]
 
-Uruchomienie programu w konsoli z parametrem np.
-przenies.exe 2 3 
-przeniesie wszystkie faktury ze stanu 2 na stan 3.
+Naciśnięcie przycisku w wierszu danej faktury w kolumnie z akcja spowoduje wyrenderowanie okna z upewnienem sie co do wyboru użytkownika.
+Jeśli użytkownik potwierdzi dokonany wybór poprzez naciśnięcie przycisku 'OK' to faktura zmieni stan za pośrednictwem WebAPI.
+
+Dodatkowo WebAPI przy zmianie stanu sprawdzi wyliczoną kwotę brutto zakładając podatek VAT dla wszystkich kwot netto 23%, jeśli wartość 
+w polu kwota brutto będzie niepoprawna to przeliczy i uzupełni w bazie danych poprawną wartość.
