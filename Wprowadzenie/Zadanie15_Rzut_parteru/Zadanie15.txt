@@ -1,4 +1,4 @@
-Zadanie 30.
+Zadanie 15.
 
 Napisac aplikacje w ktorej uzytkownik moze w wybrac nazwe pomieszczenia z DropDownList (nazwy pomieszczen sa pobierane z listy SharePoint).
 Po dokonaniu wyboru na obrazku [buildingScheme.jpg] (obrazek zostanie pobrany z SharePoint Picture Library) 
@@ -16,8 +16,16 @@ Zaimplementować algorytm wyszukiwania najkrótszej ścieżki.
 Ścieżka będzie wyliczana i narysowana na planie budynku.
 Punkt startowy i koncowy będzie wybierany przez uzytkownika po naciśnięciu przycisku 'Znajdz ścieżkę'.
 
-(b) 'Przeszukaj budynek'
+(b) 'Przeszukaj budynek robotem ratownikiem'
 Zaimplementować algorytm który wyśle do budynku robota ratownika, który przeszuka wszystkie pomieszczenia 
 w celu znalezienia rannych w wyniku trzęsienia Ziemii.
+Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru.
+
+(c) 'Przeszukaj budynek oddziałem ratowniczym'
+Zaimplementować algorytm który wyśle do budynku oddział ratowniczy składający się określonej liczby robotów,
+który przeszuka wszystkie pomieszczenia w celu znalezienia rannych w wyniku trzęsienia Ziemii.
+
+Liczbę ratowników określa użytkownik systemu wpisując dowolną liczbę większą od 1. 
+ 
 Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru.
 
