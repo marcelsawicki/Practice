@@ -14,4 +14,4 @@ Po dodaniu list oraz itemów napisać w języku PowerShell:
 (d) dane pobrane z pliku XML dodać do listy SharePoint (plik CharakterystykaUpraw.XML)
 (e*) dane uzyskane ze strony internetowej umieścić na liście SharePoint - może to być na przykład kurs dolara, pogoda we wrocławiu
 
-
+* zadanie dodatkowe, dla chętnych
