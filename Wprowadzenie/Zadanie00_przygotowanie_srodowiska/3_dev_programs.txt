@@ -1,6 +1,4 @@
-
 https://developer.microsoft.com/en-us/office/dev-program
-
     tutaj mozna sie zapisac
     do Microsoft SharePoint Developer Program
     najlepiej jak bys mial swoje windows ID prywatne
@@ -8,14 +6,13 @@ https://developer.microsoft.com/en-us/office/dev-program
     po dolaczeniu do tego programu dostaniesz swojego 'tenata' SharePoint
     na którym bedziemy mogli cwiczyc
     skrypty PowerShell np. kopiujace, zmieniajace properties itede
-    jutro rano mozemy do tego usiasc
 
 
 https://visualstudio.microsoft.com/pl/dev-essentials/
     jak dalaczysz do programu 
     dev essentials
     (swoim prywatnym windowsID tj. email na hotmail, outlook)
-    to dostaniesz na rok 25 Euro na Azure
+    to dostaniesz subskrypcje Azure z 180 Euro (jest to opcjonalne, ze wzgledu na ryzyko zwiazane z podawaniem danych karty kredytowej)
     bedziemy mogli cwiczyc wdrazanie, pisanie serwisow, webjobow i azure function
     jak dolaczysz do dev-essentials
     to dostaniesz dodatkowo dostep do platformy Pluralsight
