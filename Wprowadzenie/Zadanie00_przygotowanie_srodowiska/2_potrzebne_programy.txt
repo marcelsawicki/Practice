@@ -2,16 +2,19 @@ Visual Studio 2019
 Visual Studio Code
 Notepad ++
 
+
 7 Zip
+Node.js
 GIT SCM
 Tortoise GIT
+Forticlient VPN
+
 
 Microsoft Teams
 Microsoft SQL Sever (Basic)
 Microsoft SQL Server Management Studio
 SharePoint Online Management Shell
 
-Node.js
 
+Opcjonalnie:
 Microsoft System Center 2016 Virtual Machine Manager
-Forticlient VPN
