@@ -1,4 +1,4 @@
-Zadanie 9
+Zadanie 4
 
 WebJob na podstawie danych w polu [Title], [Copy sent] i [Expiration date] uzupełni pola [Message] i [Days to expiration].
 
