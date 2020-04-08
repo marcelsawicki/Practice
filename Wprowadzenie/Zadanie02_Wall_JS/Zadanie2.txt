@@ -1,7 +1,9 @@
 Zadanie dodatkowe 2:
-              Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection wall.
-Utworzyc ‘Page’ sharepoint oraz osadzic na nim webpart z kodem JavaScript. Kod będzie umieszczony w pliku wall.js.
-Plik ten wdrożony będzie do styli sharepoint, do katalogu JS.
+              Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection o nazwie 'wall'.
+Utworzyc ‘Page’ SharePoint oraz osadzic na nim webpart z kodem JavaScript. 
+Kod będzie umieszczony w pliku wall.js.
+
+Plik ten wdrożony będzie do 'Style Library' SharePoint, do katalogu ITDev\JS.
 
 Aplikacja daje możliwość dodawania wpisów na stronie przez użytkowników – przy wpisach jest możliwe polubienie lub odwołanie polubienia 
 (polubienia sa zliczane i wyswietlane), można także usunąć wpis.
@@ -10,4 +12,4 @@ Dodatkowo po dodaniu wpisu, zapisuje sie on na liscie SharePoint.
 
 Po uruchomeniu aplikacj, jesli sa juz jakies wpisy na liscie SharePoint to zostana one pobrane i wyrenderowane na stronie.
 
- 
+Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementów na liście.
