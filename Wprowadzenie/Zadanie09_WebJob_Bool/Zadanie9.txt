@@ -19,3 +19,5 @@ Tak;	[+]
 Nie;	[-]
 Tak;	[+]
 Nie;	[-]
+
+Przykład WebJoba znajduje się w lokalizacji:
