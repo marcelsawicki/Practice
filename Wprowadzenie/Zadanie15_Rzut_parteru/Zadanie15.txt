@@ -19,7 +19,7 @@ Punkt startowy i koncowy będzie wybierany przez uzytkownika po naciśnięciu pr
 (b) 'Przeszukaj budynek robotem ratownikiem'
 Zaimplementować algorytm który wyśle do budynku robota ratownika, który przeszuka wszystkie pomieszczenia 
 w celu znalezienia rannych w wyniku trzęsienia Ziemii.
-Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru.
+Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru oraz czas poświęcony na poszukiwania.
 
 (c) 'Przeszukaj budynek oddziałem ratowniczym'
 Zaimplementować algorytm który wyśle do budynku oddział ratowniczy składający się określonej liczby robotów,
@@ -27,5 +27,5 @@ który przeszuka wszystkie pomieszczenia w celu znalezienia rannych w wyniku trz
 
 Liczbę ratowników określa użytkownik systemu wpisując dowolną liczbę większą od 1. 
  
-Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru.
+Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru oraz czas poświęcony na poszukiwania.
 
