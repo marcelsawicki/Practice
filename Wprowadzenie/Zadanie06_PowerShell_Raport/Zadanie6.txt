@@ -11,7 +11,7 @@ Po dodaniu list oraz itemów napisać w języku PowerShell:
 (c) archiwizację itemów z listy Explorer1 tzn. przenieść zadaną liczbę itemów (np. 10 najstarszych itemów) na listę Explorer1_Archive
 	Po wykonanen archiwizacji skrypt wygeneruje plik CSV z raportem na temat przeniesionych itemow:
 	id, title, data, lista z ktorej archiwizowano, lista na ktora archiwizowano
-(d*) dane pobrane z pliku XML dodać do listy SharePoint (plik CharakterystykaUpraw.XML)
+(d) dane pobrane z pliku XML dodać do listy SharePoint (plik CharakterystykaUpraw.XML)
 (e*) dane uzyskane ze strony internetowej umieścić na liście SharePoint - może to być na przykład kurs dolara, pogoda we wrocławiu
 
 * dodatkowe, dla chętnych
