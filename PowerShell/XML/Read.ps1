@@ -1,6 +1,6 @@
 $XMLfile = 'D:\Repozytorium\Practice\PowerShell\XML\CharakterystykaUpraw.XML'
 [XML]$prod = Get-Content $XMLfile
-$b = $prod.CharakterystykaUpraw.ChildNodes | Format-Table -Property Nazwa, Producenc
+$b = $prod.CharakterystykaUpraw.ChildNodes | Format-Table -Property Nazwa, Producent
      
 foreach($p in $prod.CharakterystykaUpraw.ChildNodes)
 {
