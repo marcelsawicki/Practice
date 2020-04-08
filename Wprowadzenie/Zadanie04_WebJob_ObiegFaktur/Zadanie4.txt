@@ -1,6 +1,6 @@
 Zadanie 4
 
-	Napisac obieg faktur w języku C#. Dane o fakturach znajdują się na liście SharePoint.
+Napisac obieg faktur w języku C#. Dane o fakturach znajdują się na liście SharePoint.
 
 Faktura ma cztery stany: (stan 1) "Do opisu", (stan 2) "Do zatwierdzenia", (stan 3) "Do księgowania", (4) "Zaksięgowana".
 
