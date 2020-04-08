@@ -18,4 +18,5 @@ Punkt startowy i koncowy będzie wybierany przez uzytkownika po naciśnięciu pr
 
 (b) 'Przeszukaj budynek'
 Zaimplementować algorytm który wyśle do budynku robota ratownika, który przeszuka wszystkie pomieszczenia w celu znalezienia rannych w wyniku trzęsienia ziemii.
+Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru.
 
