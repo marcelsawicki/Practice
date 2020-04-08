@@ -1,21 +1,21 @@
 Zadanie 9
 
-	Napisać WebJob (w języku C#) oraz wdrożyć do Azure.
+	WebJob napisany w języku C# dodatkowo powinien być wdrożony do Azure.
 
-WebJob co 15 minunt obejdzie wszystkie itemy na liście SharePoint i zmieni im tytuł na "Tak" lub "Nie" w zależności od ustawienia
+WebJob co 15 minut obejdzie wszystkie itemy na liście SharePoint i zmieni im tytuł na "Tak" lub "Nie" w zależności od ustawienia
 pola typu boolean (pole o nazwie "Zmiana").
 
 Przykładowo na liscie SharePoint są takie dane:
 
 Title; Zmiana;
-Tak;[+]
-Nie;[-]
-Tak;[-]
-Nie;[+]
+Tak;	[+]
+Nie;	[-]
+Tak;	[-]
+Nie;	[+]
 
 Po uruchomieniu WebJoba powinno to być ustawine w ten sposob:
 Title; Zmiana;
-Tak;[+]
-Nie;[-]
-Tak;[+]
-Nie;[-]
+Tak;	[+]
+Nie;	[-]
+Tak;	[+]
+Nie;	[-]
