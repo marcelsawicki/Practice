@@ -6,6 +6,9 @@ https://developer.microsoft.com/en-us/office/dev-program
     po dolaczeniu do tego programu dostaniesz swojego 'tenata' SharePoint
     na którym bedziemy mogli cwiczyc
     skrypty PowerShell np. kopiujace, zmieniajace properties itede
+	
+	ewentualnie:
+	info o tenantach o365 trialowych np https://www.microsoft.com/pl-pl/microsoft-365/business/office-365-enterprise-e5-business-software
 
 
 https://visualstudio.microsoft.com/pl/dev-essentials/
