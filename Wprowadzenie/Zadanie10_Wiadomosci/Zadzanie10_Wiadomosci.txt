@@ -26,7 +26,9 @@ Proszę pamiętać o  SOLID i przechwytywaniu błędów
 (defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
 
 Dodatkowe wymagania:
-- testy wybranych dwóch funkcjonalnosci za pomocą Jasmine
+- testy wybranych dwóch wybranych funkcjonalnosci za pomocą Jasmine
+
+- zastosowanie wzorców projektowych
 
 - Dzielimy pliki na Klasy/Funkcjonalności czyli w jednym pliku ma znajdować się jedna klasa która jest odpowiedzialna za jedną 
   rzecz (single responsibility principle) np. klasa która jest odpowiedzialna za pobranie danych, 
@@ -38,4 +40,4 @@ Dodatkowe wymagania:
 
 - do tworzenia bundle JS uzywamy Webpack'a
 
-- program wdrażamy na własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn' a sama aplikacja na site collection 'wiadomosci'
+- program wdrażamy do własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn' a sama aplikacja na site collection 'wiadomosci'
