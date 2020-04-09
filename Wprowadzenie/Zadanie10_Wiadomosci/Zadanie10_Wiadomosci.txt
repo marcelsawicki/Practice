@@ -10,12 +10,12 @@ Legenda:
 1.	"userId" – nazwa użytkownika
 	"title" – tytuł postu
 	"body" – treść postu
-	"id" – id obiektu w json
+	"id" – id obiektu
 	
-2.	Nagłówek strony (dowolny)
+2.	Nagłówek strony
 3.	Treść postu
 
-4.	Przycisk 'Like' którego nacisnięcie powoduje przekazanie do metody id obiektu do metody ktora jest wywoływana po wciśnięciu.
+4.	Przycisk 'Like' którego nacisnięcie powoduje przekazanie do metody id obiektu
 	
 Wykonamy dwa zapytania do tej samej strony. 
 Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
