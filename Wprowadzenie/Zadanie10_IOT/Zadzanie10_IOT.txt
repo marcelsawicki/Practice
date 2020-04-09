@@ -1,4 +1,5 @@
 Zadanie 10:
+(TypeScript)
 
 1.	Ze strony http://jsonplaceholder.typicode.com/posts pobieramy dane. (można też użyć własnego serwisu)
 2.	Na podstawie pobranych danych tworzymy stronę przedstawioną poniżej: 
@@ -14,25 +15,27 @@ Legenda:
 2.	Nagłówek strony (dowolny)
 3.	Treść postu
 
-4.	Nie w tej iteracji zadania.
+4.	Przycisk 'Like' którego nacisnięcie powoduje przekazanie do metody id obiektu do metody ktora jest wywoływana po wciśnięciu.
 	
 Wykonamy dwa zapytania do tej samej strony. 
 Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
 
-Jeśli dane przyjdą dopiero renderujemy zawartość strony. 
+Jeśli dane przyjdą wtedy dopiero renderujemy zawartość strony. 
+
 Proszę pamiętać o  SOLID i przechwytywaniu błędów 
 (defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
 
 Dodatkowe wymagania:
-- Cały project piszemy w TypeScript
+- testy wybranych dwóch funkcjonalnosci za pomocą Jasmine
 
 - Dzielimy pliki na Klasy/Funkcjonalności czyli w jednym pliku ma znajdować się jedna klasa która jest odpowiedzialna za jedną 
   rzecz (single responsibility principle) np. klasa która jest odpowiedzialna za pobranie danych, 
   plik  w którym będziemy przechowywać konfigurację tj. Url, templates HTML
 
-- Funkcję która pobiera dane owijamy w Promise, w resolve przekazujemy otrzymane dane.
+- Funkcję która pobiera dane to Promise.
 
-- Wykonujemy Commit do repozytorium (najlepiej wlasne repo na github.com)
-- W main.ts ma znajdować się tylko i wyłącznie funkcja inicjalizująca cały program która przyjmuje konfigurację
+- W main.ts powinna znajdować się tylko i wyłącznie funkcja inicjalizująca cały program która przyjmuje konfigurację.
 
-- Pamiętamy o typowaniu
+- do tworzenia bundle JS uzywamy Webpack'a
+
+- program wdrażamy na własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn' a sama aplikacja na site collection 'wiadomosci'
