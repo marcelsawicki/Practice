@@ -17,10 +17,9 @@ Legenda:
 
 4.	Przycisk 'Like' którego nacisnięcie powoduje przekazanie do metody id obiektu
 	
-Wykonamy dwa zapytania do tej samej strony. 
-Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
+Wykonujemy dwa zapytania do serwisu. 
 
-Jeśli dane przyjdą wtedy dopiero renderujemy zawartość strony. 
+Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
 
 Proszę pamiętać o  SOLID i przechwytywaniu błędów 
 (defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
