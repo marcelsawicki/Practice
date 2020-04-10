@@ -2,7 +2,7 @@ Zadanie 13.
 
 Na liscie SharePoint 'Cases' przechowywane sa numery cases (spraw) oraz linki do utworzonych dla cases sitecollections.
 
-Napisać Azure Function, które utworzy sitecollectio (zbiór witryn) po nacisnięciu przycisku 'Create Case Site'.
+Napisać Azure Function, które utworzy sitecollection (zbiór witryn) po nacisnięciu przycisku 'Create Case Site'.
 
 Nazwa sitecollection zostanie wygenerowana na podstawie listy 'Cases' i bedzie miała format: 
 Case-[XXXX] 
