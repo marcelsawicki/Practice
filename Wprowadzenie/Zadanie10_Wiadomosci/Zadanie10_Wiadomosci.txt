@@ -25,7 +25,7 @@ Proszę pamiętać o  SOLID i przechwytywaniu błędów
 (defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
 
 Dodatkowe wymagania:
-- testy wybranych dwóch wybranych funkcjonalnosci za pomocą Jasmine
+- testy dwóch wybranych funkcjonalnosci za pomocą Jasmine
 
 - zastosowanie wzorców projektowych
 
