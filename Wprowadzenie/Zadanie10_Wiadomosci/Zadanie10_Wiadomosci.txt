@@ -39,4 +39,5 @@ Dodatkowe wymagania:
 
 - do tworzenia bundle JS uzywamy Webpack'a
 
-- program wdrażamy do własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn' a sama aplikacja na site collection 'wiadomosci'
+- program wdrażamy do własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn',
+  a sama aplikacja na site collection 'wiadomosci'
