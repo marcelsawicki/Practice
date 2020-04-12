@@ -67,8 +67,8 @@ public class ClockShield
 	public void drawHands(Graphics gDC)
 	{
 		double hVal = hour * 60 + minute;
-		int xH = (int) (centerX + (r * 0.6) * Math.cos(Maths.PI/360 * (hVal - 180)));
-		int yH = (int) (centerX + (r * 0.6) * Math.sin(Maths.PI/360 * (hVal - 180)));
+		int xH = (int) (centerX + (r * 0.6) * Math.cos(Math.PI/360 * (hVal - 180)));
+		int yH = (int) (centerX + (r * 0.6) * Math.sin(Math.PI/360 * (hVal - 180)));
 		
 		int xM = (int) (centerX + (r * 0.65) * Math.cos(Math.PI / 30 * (minute - 15)));
 		int yM = (int) (centerY + (r * 0.65) * Math.sin(Math.PI / 30 * (minute - 15)));
