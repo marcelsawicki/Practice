@@ -1,3 +1,6 @@
+![Image of Clock](https://github.com/marcelsawicki/Practice/blob/master/TypeScript/ClockShield/ClockDemo.png)  
+
+
 Jak zalozyc projekt Webpack + TypeScript?
 ------------------------------------------  
 
