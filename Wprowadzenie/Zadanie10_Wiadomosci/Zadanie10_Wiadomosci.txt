@@ -19,7 +19,7 @@ Legenda:
 	
 Wykonujemy dwa zapytania do serwisu. 
 
-Treści dla pierwszego usera pobierzemy z pierwszego zapytania, a treści dla drugiego usera z drugiego zapytania.
+Informacje o users pobieramy pierwszym zapytanie, a informacje o posts pobieramy drugim zapytaniem.
 
 Proszę pamiętać o  SOLID i przechwytywaniu błędów 
 (defensive programming, np. wyświetlić odpowiedni komunikat że nie udało się pobrać żadnych danych).
