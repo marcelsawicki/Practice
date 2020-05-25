@@ -1,4 +1,4 @@
-Jak zalozyc projekt Webpack + TypeScript?
+Jak zalozyc projekt Webpack + TypeScript  
 ------------------------------------------  
 
 npm init  
@@ -44,12 +44,12 @@ module.exports = {
 
 dodac do package.json  
 
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
-  },
+  "scripts": {  
+    "test": "echo \"Error: no test specified\" && exit 1",  
+    "start": "webpack-dev-server --mode development",  
+    "build": "webpack --mode development"  
+  },  
   
-  
-  linki:
+utworzyc plik: index.html    
+  linki:  
   https://appdividend.com/2018/03/18/how-to-setup-typescript-with-webpack-4/#Step_4_Install_webpack_and_ts_dependencies
