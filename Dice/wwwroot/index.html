@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <script src="lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="onLoad()">
+    <div id="view_login" class="view">
+        <input id="username" name="username" />
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="view_room" class="view">
+        <div class="side">
+            <button onclick="logout()">Logout</button>
+            <button onclick="roll()">Roll</button>
+            <br />
+            <br />
+            Dice <input id="dice_size" value="10" size="5" />
+            <br />
+            <br />
+            <div id="users">
+            </div>
+        </div>
+        <div id="content" class="content">
+
+        </div>
+    </div>
+</body>
+</html>
