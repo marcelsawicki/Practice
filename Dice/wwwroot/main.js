@@ -68,7 +68,7 @@ function onRolled({ username, time, diceSize, value }) {
     messageElement.innerHTML = `<span class="date">${new Date(time).toLocaleTimeString()}</span> <b></b> rolled d${diceSize} <b class="value">${value}</b>`;
     messageElement.querySelector('b').innerText = username;
     content.appendChild(messageElement);
-    content.scrollTop = content.scrollHeight;
+    messageElement.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 function onAlert(message) {
