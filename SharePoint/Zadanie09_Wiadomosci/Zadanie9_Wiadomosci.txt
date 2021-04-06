@@ -1,4 +1,4 @@
-Zadanie 10:
+Zadanie 9:
 (TypeScript)
 
 1.	Ze strony http://jsonplaceholder.typicode.com/posts pobieramy dane. (można też użyć własnego serwisu)
