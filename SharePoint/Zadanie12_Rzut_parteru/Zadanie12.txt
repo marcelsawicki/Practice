@@ -1,4 +1,4 @@
-Zadanie 15.
+Zadanie 12.
 
 Napisac aplikacje w ktorej uzytkownik moze w wybrac nazwe pomieszczenia z DropDownList (nazwy pomieszczen sa pobierane z listy SharePoint).
 Po dokonaniu wyboru na obrazku [buildingScheme.jpg] (obrazek zostanie pobrany z SharePoint Picture Library) 
