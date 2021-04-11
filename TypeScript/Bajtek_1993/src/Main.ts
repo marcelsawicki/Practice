@@ -1,14 +1,23 @@
-import { Message } from "./Message";
+import { Engine } from "./Engine";
 
+window.onload = () => {
+	let engine: Engine = new Engine(1);
 
-function showMessage(message: Message)
-{
-	let container = document.getElementById('main');
-	let childContainer = document.createElement('div');
-	childContainer.innerText = message.body;
-
-	container?.appendChild(childContainer);
+	let end:boolean = false;
+	let ile: number = 0;
+	
+	while(end!=true)
+	{
+		ile++;
+		
+		if(ile>24)
+		{
+			end=true;
+		}
+		else
+		{
+			engine.showMessage('hello world');
+		}
+	}
+	
 }
-
-let initMessage: Message = new Message(1, 1, "Project template", "Project template body");
-showMessage(initMessage);

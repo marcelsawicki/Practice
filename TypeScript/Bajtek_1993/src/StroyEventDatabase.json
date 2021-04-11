@@ -1,0 +1,86 @@
+[{
+        "storyEventId": 1,
+        "description": "nic",
+        "probability": 40,
+        "typeOfEvent": "wrog",
+        "strength": 1
+    }, {
+        "storyEventId": 2,
+        "description": "oblesny gnom",
+        "probability": 10,
+        "typeOfEvent": "wrog",
+        "strength": 2
+    }, {
+        "storyEventId": 3,
+        "description": "wielki smok",
+        "probability": 5,
+        "typeOfEvent": "wrog",
+        "strength": 7
+    }, {
+        "storyEventId": 4,
+        "description": "straszny troll",
+        "probability": 40,
+        "typeOfEvent": "wrog",
+        "strength": 3
+    }, {
+        "storyEventId": 5,
+        "description": "zlodziej",
+        "probability": 1,
+        "typeOfEvent": "nieznajomy",
+        "strength": 1
+    }, {
+        "storyEventId": 6,
+        "description": "czarodziej",
+        "probability": 6,
+        "typeOfEvent": "nieznajomy",
+        "strength": 1
+    }, {
+        "storyEventId": 7,
+        "description": "dobrego duszka",
+        "probability": 5,
+        "typeOfEvent": "nieznajomy",
+        "strength": 1
+    }, {
+        "storyEventId": 8,
+        "description": "zlego ducha",
+        "probability": 5,
+        "typeOfEvent": "nieznajomy",
+        "strength": 1
+    }, {
+        "storyEventId": 9,
+        "description": "miecz",
+        "probability": 2,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }, {
+        "storyEventId": 10,
+        "description": "zbroja",
+        "probability": 2,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }, {
+        "storyEventId": 11,
+        "description": "magiczny eliksir",
+        "probability": 4,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }, {
+        "storyEventId": 12,
+        "description": "sztuka miesa",
+        "probability": 4,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }, {
+        "storyEventId": 13,
+        "description": "zloto",
+        "probability": 5,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }, {
+        "storyEventId": 14,
+        "description": "trucizna",
+        "probability": 3,
+        "typeOfEvent": "przedmiot",
+        "strength": 1
+    }
+]
