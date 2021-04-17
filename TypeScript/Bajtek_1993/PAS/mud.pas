@@ -69,7 +69,7 @@ var
 begin
 	ekwipunek:=0;
 	sila:=random(6)+kto.sila;
-	writeln('Zza krzkow wyskoczyl ', kto.opis, ' o sile ', sila);
+	writeln('Zza krzkow wyskoczyl ', kto.opis, ' o sile ', kto.sila);
 	writeln('W]alczysz, U]ciekasz, N]egocjujesz?');
 	decyz:=upcase(readkey);
 	walka:=true;
