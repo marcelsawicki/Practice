@@ -1,5 +1,6 @@
 import { Hero } from "./Hero";
 import { IStoryEventData} from "./IStoryEventData"
+import { StoryEvent } from "./StoryEvent";
 import StoryEventDatabase from './StoryEventDatabase.json';
 
 export class Engine {
@@ -34,23 +35,46 @@ export class Engine {
         container?.appendChild(childContainer4);
     }
     
-    dispatchEvent(){
-        let randomNumber = Math.floor(Math.random()*this.storyEventData.length);
-        let randomEvent = this.storyEventData[randomNumber];
+    dispatchEvent(hero: Hero){
+        let randomNumber:number = 0;
+        let randomEvent:IStoryEventData = this.storyEventData[0];
+        let searchForEvent = true;
+        while(searchForEvent)
+        {
+            randomNumber = Math.floor(Math.random()*this.storyEventData.length);
+            randomEvent = this.storyEventData[randomNumber];
+            if(randomEvent.probability<Math.floor(Math.random()*100))
+            {
+                searchForEvent = false;
+            }
+        }
+        
+        
+        if(hero.toughness<0)
+        {
+            this.showMessage('Koniec gry.');
+            return;
+        }
+
+        if(hero.gold>1000)
+        {
+            this.showMessage('Wygrales.');
+            return;
+        }
 
         switch(randomEvent.typeOfEvent) { 
             case "wrog": { 
                //statements; 
-               this.meetEnemy(randomNumber)
+               this.meetEnemy(randomNumber, hero)
                break; 
             } 
             case "nieznajomy": { 
                //statements; 
-               this.meetStranger(randomNumber);
+               this.meetStranger(randomNumber, hero);
                break; 
             } 
             case "przedmiot": { 
-                this.findItem(randomNumber);
+                this.findItem(randomNumber, hero);
                 //statements; 
                 break; 
              } 
@@ -61,33 +85,107 @@ export class Engine {
          }
     }
 
-    meetEnemy(randomNumber: number){
-        // meet enemy
+    meetEnemy(randomNumber: number, hero: Hero){
+
         let enemyDescription = this.storyEventData[randomNumber].description;
         let enemyStrength = this.storyEventData[randomNumber].strength;
-        let container = document.getElementById('content');
-        let childContainer = document.createElement('div');
-        childContainer.innerText = 'Zza krzkow wyskoczyl ' + enemyDescription + ' o sile: ' + enemyStrength + '.';
-        container?.appendChild(childContainer);
-        childContainer.scrollIntoView({ behavior: "smooth", block: "end" });
+        if(enemyDescription=="nic")
+        {
+            this.showMessage("Nic nie spotkales.");
+        }
+        else
+        {
+            let button2 = <HTMLInputElement> document.getElementById('go-button');
+            button2.disabled = true;
+            let container = document.getElementById('content');
+            let childContainer = document.createElement('div');
+            childContainer.innerText = 'Zza krzkow wyskoczyl ' + enemyDescription + ' o sile: ' + enemyStrength + '.';
+            container?.appendChild(childContainer);
+            childContainer.scrollIntoView({ behavior: "smooth", block: "end" });
+        }
+
     }
 
-    meetStranger(randomNumber: number){
-        // meet stranger
-        let message = this.storyEventData[randomNumber].description;
+    meetStranger(randomNumber: number, hero: Hero){
+        let stranger = this.storyEventData[randomNumber].description;
         let container = document.getElementById('content');
         let childContainer = document.createElement('div');
-        childContainer.innerText = 'Spotkales ' + message + '.';
+        childContainer.innerText = 'Spotkales ' + stranger + '.';
+        container?.appendChild(childContainer);
+        switch(stranger) { 
+            case "zlodziej": {  
+               hero.gold=0;
+               hero.luggage=[];
+               break; 
+            } 
+            case "czarodziej": { 
+               hero.toughness+=1;
+               break; 
+            } 
+            case "dobrego duszka": { 
+                hero.strength+=1;
+                break; 
+             } 
+             case "zlego ducha": { 
+                hero.strength>0?hero.strength-=1:null;
+                break; 
+             } 
+            default: { 
+               break; 
+            } 
+         }
+    }
+
+    findItem(randomNumber: number, hero: Hero){
+        let item = this.storyEventData[randomNumber].description;
+        let container = document.getElementById('content');
+        let childContainer = document.createElement('div');
+        childContainer.innerText = 'Znalazles ' + item + '.';
+        switch(item) { 
+            case "trucizna": {  
+               hero.toughness-=1;
+               break; 
+            } 
+            case "magiczny eliksir": { 
+               hero.toughness+=1;
+               break; 
+            } 
+            case "zloto": { 
+                hero.gold+=1;
+                break; 
+             } 
+             case "sztuka miesa": { 
+                hero.strength+=1;
+                break; 
+             } 
+            default: { 
+               hero.luggage.push(item); 
+               break; 
+            } 
+         }
+        
         container?.appendChild(childContainer);
     }
 
-    findItem(randomNumber: number){
-        // find item
-        let message = this.storyEventData[randomNumber].description;
-        let container = document.getElementById('content');
-        let childContainer = document.createElement('div');
-        childContainer.innerText = 'Znalazles ' + message + '.';
-        container?.appendChild(childContainer);
+    fight(hero: Hero)
+    {
+        this.showMessage("Walczysz.");
+        let button2 = <HTMLInputElement> document.getElementById('go-button');
+        button2.disabled = false;
+    }
+
+    flee(hero: Hero)
+    {
+        this.showMessage("Uciekasz.");
+        let button2 = <HTMLInputElement> document.getElementById('go-button');
+        button2.disabled = false;
+    }
+
+    negotiate(hero: Hero)
+    {
+        this.showMessage("Negocjujesz.");
+        let button2 = <HTMLInputElement> document.getElementById('go-button');
+        button2.disabled = false;
     }
 
     showMessage(message: string)

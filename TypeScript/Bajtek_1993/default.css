@@ -14,3 +14,7 @@ body {
     height: 100vh;
     overflow-y: scroll;
 }
+.game-button {
+    padding: 5px;
+    margin: 5px;
+}
