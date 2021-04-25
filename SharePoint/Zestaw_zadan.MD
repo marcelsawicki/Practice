@@ -13,7 +13,7 @@ Po ponownym kliknieciu „Pobierz liczbe1” pobierze i wyświetli nastepna w ko
 SharePoint liczbe. Podobnie będzie działał przycisk „Pobierz liczbe2”, ale będzie  pobieral z drugiej listy liczb.  
 
 Dodatkowo będą dwa przyciski. Pierwszy przycisk ‘Sumuj’ zsumuje wyświetlone liczby, drugi przycisk ‘Zapisz’ zapisze wynik na liscie SharePoint.  
-![Zadanie 1 GUI](./images/Zadanie1-GUI.PNG)
+![Zadanie 1 GUI](./images/Zadanie1-GUI.png)
 
 # Zadanie 2.
 Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection o nazwie 'wall'.
@@ -31,7 +31,7 @@ Po uruchomeniu aplikacj, jesli sa juz jakies wpisy na liscie SharePoint to zosta
 
 Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementów na liście.  
 
-![Zadanie 2 GUI](./images/Zadanie2-GUI.PNG)
+![Zadanie 2 GUI](./images/Zadanie2-GUI.png)
 
 # Zadanie 3.
 
