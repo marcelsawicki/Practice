@@ -1,5 +1,7 @@
-# Zadanie 1.  
+# Zadanie 1.
+## Kalkulator z logowaniem operacji  
 (TypeScript)
+SPFx, app_catalog  
 
 Utworzenie na własnym tenancie SharePoint aplikacje ‘Kalkulator’ na siteCollection kalulator.  
 Utworzyc ‘Page’ sharepoint oraz osadzic na nim webpart z kodem JavaScript. Kod będzie umieszczony w pliku calculator.js.  
@@ -16,6 +18,8 @@ Dodatkowo będą dwa przyciski. Pierwszy przycisk ‘Sumuj’ zsumuje wyświetlo
 ![Zadanie 1 GUI](./images/Zadanie1-GUI.png)
 
 # Zadanie 2.
+## Facebook z zapisem postów na liście  
+SPFx, app_catalog  
 Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection o nazwie 'wall'.
 Utworzyc ‘Page’ SharePoint oraz osadzic na nim webpart z kodem JavaScript. 
 Kod będzie umieszczony w pliku wall.js.
@@ -34,7 +38,8 @@ Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementó
 ![Zadanie 2 GUI](./images/zadanie2-GUI.png)
 
 # Zadanie 3.
-
+## Wyszukiwarka czesci samochodowych  
+SPFx, app_catalog  
 Aplikacja - Katalog części samochodowych w języku JavaScript.
 
 Aplikacja wyrenderuje interfejs uzytkownika zgodny ze schematem na rysunku  
@@ -49,7 +54,7 @@ Dwie powiazane ze soba kontroli DropDownList umożliwą wybor marki i modelu sam
 Kontrolka Grid bedzie wyswietlała odpowiednie części w zależności od dokonanego wyboru.
 
 # Zadanie 4
-
+PnP Framework  
 WebJob na podstawie danych w polu [Title], [Copy sent] i [Expiration date] uzupełni pola [Message] i [Days to expiration].
 
 Pole Message bedzie miało treść: "[Title] expired/not expired and copy was sent/not sent"
@@ -79,7 +84,8 @@ Ostatnim etapem zadania jest wdrożenie WebJob'a do Azure i konfiguracja w taki 
 Przykład WebJoba znajduje się w lokalizacji:
 
 # Zadanie 5.
-
+## Program kadrowy + dane o users  
+PnP Framework  
 Program w języku C#. Projekt w .NET Core - (ASP.NET Core Web Application, template: API) 
 
 (uwaga! domyslnie uzywany jest ASP.NET Core 3.1)
@@ -109,6 +115,7 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=a
 Wyświetlić dane otrzymane z serwisu w tabeli za pomoca kodu w JavaScript i zapytania AJAX z biblioteki jQuery.
 
 # Zadanie 6.
+## Podstawy PowerShell  
 (PowerShell)
 
 Utworzyc site collection o dowolnej nazwie, na utworzonym site collection utworzyc listę sharepoint o nazwie Explorer1 i dodac na niej 10 itemow. 
@@ -127,6 +134,8 @@ Po dodaniu list oraz itemów napisać w języku PowerShell:
 * dodatkowe, dla chętnych
 
 # Zadanie 7.
+## Obieg faktur
+aplikacja zarejestrowana w SharePoint
 (C#, TypeScript)
 
 Napisac obieg faktur, w tym celu zaimplementować WebAPI które będzie zmieniało stan faktur.
@@ -156,13 +165,14 @@ w polu kwota brutto będzie niepoprawna to przeliczy i uzupełni w bazie danych 
 
 
 # Zadanie 8
-Sklep internetowy
+## Sklep internetowy
 
 Napisać sklep internetowy z możliwością dodawania artykułów do koszyka.
 
 Zaproponować sposób autentykacji i rejestracji nowych użytkowników.
 
 # Zadanie 9:
+## Pobieranie i wyrenderowanie danych z WebAPI  
 (TypeScript)
 
 1.	Ze strony http://jsonplaceholder.typicode.com/posts pobieramy dane. (można też użyć własnego serwisu)
@@ -279,3 +289,6 @@ Liczbę ratowników określa użytkownik systemu wpisując dowolną liczbę wię
  
 Podczas przeszukiwania budynku będzie widzoczny procentoway pasek postepu obrazujący ilość przeszukanego obszaru oraz czas poświęcony na poszukiwania.
 
+# Zadanie 13
+## Aplikacja OCR
+Po przekazaniu skanu w formacie *.pdf aplikacja rozpozna i przepisze metadane.  
