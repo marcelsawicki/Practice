@@ -1,4 +1,4 @@
-Zadanie 1.  
+# Zadanie 1.  
 (TypeScript)
 
 Utworzenie na własnym tenancie SharePoint aplikacje ‘Kalkulator’ na siteCollection kalulator.  
@@ -13,8 +13,9 @@ Po ponownym kliknieciu „Pobierz liczbe1” pobierze i wyświetli nastepna w ko
 SharePoint liczbe. Podobnie będzie działał przycisk „Pobierz liczbe2”, ale będzie  pobieral z drugiej listy liczb.  
 
 Dodatkowo będą dwa przyciski. Pierwszy przycisk ‘Sumuj’ zsumuje wyświetlone liczby, drugi przycisk ‘Zapisz’ zapisze wynik na liscie SharePoint.  
+![Zadanie 1 GUI](./images/Zadanie1-GUI.PNG)
 
-Zadanie 2.
+# Zadanie 2.
 Utworzenie na własnym tenancie SharePoint aplikacje ‘Wall’ na siteCollection o nazwie 'wall'.
 Utworzyc ‘Page’ SharePoint oraz osadzic na nim webpart z kodem JavaScript. 
 Kod będzie umieszczony w pliku wall.js.
@@ -28,13 +29,16 @@ Dodatkowo po dodaniu wpisu, zapisuje sie on na liscie SharePoint.
 
 Po uruchomeniu aplikacj, jesli sa juz jakies wpisy na liscie SharePoint to zostana one pobrane i wyrenderowane na stronie.
 
-Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementów na liście.
+Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementów na liście.  
 
-Zadanie 3.
+![Zadanie 2 GUI](./images/Zadanie2-GUI.PNG)
+
+# Zadanie 3.
 
 Aplikacja - Katalog części samochodowych w języku JavaScript.
 
-Aplikacja wyrenderuje interfejs uzytkownika zgodny ze schematem na rysunku [GUI-Katalog-czesci-samochodowych.png].
+Aplikacja wyrenderuje interfejs uzytkownika zgodny ze schematem na rysunku  
+![GUI-Katalog-czesci-samochodowych.png](./images/GUI-Katalog-czesci-samochodowych.png)
 Dane o markach, modelach i dostepnych częściach samochodowych przechowywane są na listach SharePoint.
 Zdjęcia lub schematy samochodów przechowywane sa w 'Picture Library'.
 
@@ -44,7 +48,7 @@ Do wyrenderowania kontrolki DropDownList i Grid powinna zostać użyta bibliotek
 Dwie powiazane ze soba kontroli DropDownList umożliwą wybor marki i modelu samochodu.
 Kontrolka Grid bedzie wyswietlała odpowiednie części w zależności od dokonanego wyboru.
 
-Zadanie 4.
+# Zadanie 4.
 
 WebJob na podstawie danych w polu [Title], [Copy sent] i [Expiration date] uzupełni pola [Message] i [Days to expiration].
 
@@ -78,14 +82,15 @@ Ostatnim etapem zadania jest wdrożenie WebJob'a do Azure i konfiguracja w taki 
 
 Przykład WebJoba znajduje się w lokalizacji:
 
-Zadanie 5.
+# Zadanie 5.
 
 Program w języku C#. Projekt w .NET Core - (ASP.NET Core Web Application, template: API) 
 
 (uwaga! domyslnie uzywany jest ASP.NET Core 3.1)
 
 Docelowo program bedzie wdrozony do Azure jako: "Web App + SQL". 
-Dla ułatwienia można rozpocząć pisanie programu używając bazy danych na localhost.
+Dla ułatwienia można rozpocząć pisanie programu używając bazy danych na localhost.  
+![Zadanie 5 Diagram klas](./images/diagram-klas-zad5.jpg)
 
 [diagram-klas-zad3.jpg]
 
@@ -107,7 +112,7 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=a
 
 Wyświetlić dane otrzymane z serwisu w tabeli za pomoca kodu w JavaScript i zapytania AJAX z biblioteki jQuery.
 
-Zadanie 6.
+# Zadanie 6.
 (PowerShell)
 
 Utworzyc site collection o dowolnej nazwie, na utworzonym site collection utworzyc listę sharepoint o nazwie Explorer1 i dodac na niej 10 itemow. 
@@ -125,7 +130,7 @@ Po dodaniu list oraz itemów napisać w języku PowerShell:
 
 * dodatkowe, dla chętnych
 
-Zadanie 7.
+# Zadanie 7.
 (C#, TypeScript)
 
 Napisac obieg faktur, w tym celu zaimplementować WebAPI które będzie zmieniało stan faktur.
@@ -155,13 +160,13 @@ w polu kwota brutto będzie niepoprawna to przeliczy i uzupełni w bazie danych 
 
 
 # Zadanie 8
-# Sklep internetowy
+Sklep internetowy
 
 Napisać sklep internetowy z możliwością dodawania artykułów do koszyka.
 
 Zaproponować sposób autentykacji i rejestracji nowych użytkowników.
 
-Zadanie 9:
+# Zadanie 9:
 (TypeScript)
 
 1.	Ze strony http://jsonplaceholder.typicode.com/posts pobieramy dane. (można też użyć własnego serwisu)
@@ -205,7 +210,7 @@ Dodatkowe wymagania:
 - program wdrażamy do własnego tenanta SharePoint, kod powinien znajdować się na site collection 'cdn',
   a sama aplikacja na site collection 'wiadomosci'
 
-  Zadanie 10.
+# Zadanie 10.
 
 Na liscie SharePoint 'Cases' przechowywane sa numery cases (spraw) oraz linki do utworzonych dla cases sitecollections.
 
@@ -216,7 +221,7 @@ Case-[XXXX]
 
 np. Case-0001, Case-0002
  
- Zadanie 11.
+# Zadanie 11.
 
 Aplikacja losuje zajete miejsca w samolocie i zaznacza je na schemacie kolorem czerwonym.
 
@@ -245,7 +250,7 @@ Naciśnięcie 'OK' umożliwi ponowne wprowadzenie danych.
 Historia wcześniej dokonanych wyborów zostanie wyświetlona i wyrenderowana po naciśnięciu przycisku 'Historia'.
 Kasowanie historii następuje po naciśnięciu przycisku 'Usuń historię'.
 
-Zadanie 12.
+# Zadanie 12.
 
 Napisac aplikacje w ktorej uzytkownik moze w wybrac nazwe pomieszczenia z DropDownList (nazwy pomieszczen sa pobierane z listy SharePoint).
 Po dokonaniu wyboru na obrazku [buildingScheme.jpg] (obrazek zostanie pobrany z SharePoint Picture Library) 
