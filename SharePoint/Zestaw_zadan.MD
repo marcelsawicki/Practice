@@ -31,7 +31,7 @@ Po uruchomeniu aplikacj, jesli sa juz jakies wpisy na liscie SharePoint to zosta
 
 Dodatkowo uwzglęniamy obsługę błędów jeśli np. brak listy, brak elementów na liście.  
 
-![Zadanie 2 GUI](./images/Zadanie2-GUI.png)
+![Zadanie 2 GUI](./images/zadanie2-GUI.png)
 
 # Zadanie 3.
 
