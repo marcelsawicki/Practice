@@ -4,7 +4,7 @@
 
 Short summary on functionality and used technologies.
 
-[picture of the solution in action, if possible]
+![helloworld](https://github.com/marcelsawicki/Practice/tree/master/SharePoint/SPFx/helloworld-webpart/helloworld-webpart.png)
 
 ## Used SharePoint Framework Version
 
