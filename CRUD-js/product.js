@@ -1,9 +1,9 @@
-var URL = "https://localhost:5000/api/Products"
+var URL = "https://localhost:44330/api/product"
 
 function getProduct(productId) {
     let req = new XMLHttpRequest();
     req.onreadystatechange = function() {
-        if(this.readyState === XMLHttoRequest.DONE && this.status===200) {
+        if(this.readyState === XMLHttpRequest.DONE && this.status===200) {
             setInput(JSON.parse(this.response));
             displayDetail();
         }
@@ -16,6 +16,6 @@ function displayDetail() {
     console.log("Not implemented!");
 }
 
-function setInput() {
-    console.log("Not implemented!");
+function setInput(response) {
+    console.log(response);
 }
