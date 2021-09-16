@@ -11,6 +11,7 @@ using ContosoTeamStats.Models;
 using StackExchange.Redis;
 using System.Diagnostics;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace ContosoTeamStats.Controllers
 {
@@ -18,13 +19,13 @@ namespace ContosoTeamStats.Controllers
     {
         private TeamContext db = new TeamContext();
 
-        // GET: Teams
+        ////GET: Teams
         //public ActionResult Index()
         //{
         //    return View(db.Teams.ToList());
         //}
 
-        public ActionResult Index(string actionType, string resultType)
+        public async Task<ActionResult> Index(string actionType, string resultType)
         {
             List<Team> teams = null;
             switch (actionType)
@@ -56,7 +57,7 @@ namespace ContosoTeamStats.Controllers
                     break;
 
                 case "teamsList": // Retrieve teams from the cached List<Team>.
-                    teams = GetFromList();
+                    teams = await GetFromList();
                     break;
 
                 case "fromDB": // Retrieve results from the database.
@@ -245,13 +246,15 @@ namespace ContosoTeamStats.Controllers
             return results.ToList<Team>();
         }
 
-        List<Team> GetFromList()
+        public async Task<List<Team>> GetFromList()
         {
             List<Team> teams = null;
 
             IDatabase cache = Connection.GetDatabase();
-            string serializedTeams = cache.StringGet("teamsList");
-            if (!String.IsNullOrEmpty(serializedTeams))
+            //string serializedTeams = cache.StringGet("teamsList");
+            RedisValue serializedTeams = await cache.StringGetAsync("teamsList");
+            //if (!String.IsNullOrEmpty(serializedTeams))
+            if(!serializedTeams.IsNullOrEmpty)
             {
                 teams = JsonConvert.DeserializeObject<List<Team>>(serializedTeams);
 
