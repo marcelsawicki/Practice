@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Trantor.Domain\Trantor.Domain.csproj" />
+    <ProjectReference Include="..\Trantor.Infrastructure\Trantor.Infrastructure.csproj" />
+    <ProjectReference Include="..\Trantor.Interface\Trantor.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
