@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Trantor.Domain\Trantor.Domain.csproj" />
+    <ProjectReference Include="..\Trantor.Dto\Trantor.Dto.csproj" />
     <ProjectReference Include="..\Trantor.Infrastructure\Trantor.Infrastructure.csproj" />
     <ProjectReference Include="..\Trantor.Interface\Trantor.Interface.csproj" />
   </ItemGroup>
