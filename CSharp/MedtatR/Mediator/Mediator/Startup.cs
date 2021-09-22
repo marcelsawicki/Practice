@@ -54,8 +54,8 @@ namespace Mediator
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
-                endpoints.MapControllerRoute(name:"api", pattern: "{controller}/{id?}");
+                //endpoints.MapControllers();
+                endpoints.MapControllerRoute(name:"api", pattern: "api/{controller}/{action}/{id?}");
             });
         }
     }

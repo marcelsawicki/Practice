@@ -1,4 +1,5 @@
 ﻿using Mediator.Functions.Command;
+using Mediator.Functions.Notifications;
 using Mediator.Functions.Query;
 using Mediator.Models;
 using MediatR;
@@ -21,12 +22,25 @@ namespace Mediator.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet(Name = "GetAllPosts")]
+        [HttpGet(Name = "GetAllPosts", Order = 1)]
+        //[Route("getallposts")]
         public async Task<ActionResult<List<Post>>> GetAllPosts()
         {
             var request = new GetAllPostsQuery { OrderBy = OrderByPostOptions.ByDate };
             var result = await _mediator.Send(request);
             return result;
+        }
+        [HttpGet("{message}", Name = "WritePost")]
+        //[Route("writepost")]
+        public async Task<ActionResult> WritePost(string message)
+        {
+            await _mediator.
+                Publish(new WritePostNotification()
+                {
+                    WhatToWrite = message
+                });
+
+            return NoContent();
         }
 
         [HttpPut(Name = "UpdatePost")]
