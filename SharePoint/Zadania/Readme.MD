@@ -129,10 +129,8 @@ Po dodaniu list oraz itemów napisać w języku PowerShell:
 	Po wykonanen archiwizacji skrypt wygeneruje plik CSV z raportem na temat przeniesionych itemow:
 	id, title, data, lista z ktorej archiwizowano, lista na ktora archiwizowano
 (d) dane pobrane z pliku XML dodać do list SharePoint (plik CharakterystykaUpraw.XML)
-(e*) dane uzyskane ze strony internetowej umieścić na liście SharePoint - może to być na przykład kurs dolara, pogoda we wrocławiu
-
-* dodatkowe, dla chętnych
-
+(e) dane uzyskane ze strony internetowej umieścić na liście SharePoint - może to być na przykład kurs dolara, pogoda we wrocławiu
+  
 # Zadanie 7.
 ## Obieg faktur
 aplikacja zarejestrowana w SharePoint
