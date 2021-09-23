@@ -153,9 +153,9 @@ Użytkownik może przechodzić do kolejnych do stron przez boczne menu nawigacyj
 
  LP | Nazwa faktury | Kontrahent | Kwota netto | Kwota brutto | Stan | Akcja |
 :--:|:-------------:|:----------:|:-----------:|:------------:|-----:|:-----:|
-1 :|: Invoice 1 :|: 10,20 :|: 0,00 :|: 1 :|: [Skieruj do opisu]
-2 :|: Invoice 2 :|: 12,50; 0,00 :|: 1 :|: [Skieruj do opisu]
-3 :|: Invoice 3 :|: 5,36; 0,00 :|: 1 :|: [Skieruj do opisu]
+1 | Invoice 1 | 10,20 | 0,00 | 1 | [Skieruj do opisu]
+2 | Invoice 2 | 12,50 | 0,00 | 1 | [Skieruj do opisu]
+3 | Invoice 3 | 5,36 | 0,00 | 1 | [Skieruj do opisu]
 
 Naciśnięcie przycisku w wierszu danej faktury w kolumnie z akcja spowoduje wyrenderowanie okna z upewnienem sie co do wyboru użytkownika.
 Jeśli użytkownik potwierdzi dokonany wybór poprzez naciśnięcie przycisku 'OK' to faktura zmieni stan za pośrednictwem WebAPI.
