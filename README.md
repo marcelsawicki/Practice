@@ -1,1 +1,1 @@
-C#, PowerShell, TypeScript, JavaScript  
+C#, JavaScript, C++, TypeScript, PowerShell  
