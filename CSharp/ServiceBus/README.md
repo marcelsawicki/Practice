@@ -5,3 +5,6 @@
 
 Pobieranie Connection String:  
 Service Bus -> Shared access policies -> Policy: RootManagedSharedAccessKey -> Primary Connection String
+
+![Shared access policies](./.images/shared-access-policies.png)  
+![SAS Policy](./.images/sas-policy.png)  
