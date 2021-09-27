@@ -2,7 +2,7 @@
 
 delete from dbo.[Customer] where Id IN(
 select maxId 
---select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCId, oMax.CustomerId as maxOrderCustomerId
+--select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCustomerId, oMax.CustomerId as maxOrderCustomerId
 from
 (select companyId, subiektId, count(*) as total, min(Id) as minId, max(Id) as maxId
 from dbo.customer 
@@ -15,7 +15,7 @@ where cumMin.CustomerId is not null)
 /* usuwam minId, poniewaz maja mapowanie na maxId */
 delete from dbo.[Customer] where Id IN(
 select minId 
---select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCId, oMax.CustomerId as maxOrderCustomerId
+--select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCustomerId, oMax.CustomerId as maxOrderCustomerId
 from
 (select companyId, subiektId, count(*) as total, min(Id) as minId, max(Id) as maxId
 from dbo.customer 
@@ -30,7 +30,7 @@ where cumMax.CustomerId is not null)
 
 delete from dbo.[Customer] where Id IN(
 select maxId 
---select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCId, oMax.CustomerId as maxOrderCustomerId
+--select c.*, cumMin.CustomerId as minCUM, cumMax.CustomerId as maxCum--, oMin.CustomerId as minOrderCustomerId, oMax.CustomerId as maxOrderCustomerId
 from
 (select companyId, subiektId, count(*) as total, min(Id) as minId, max(Id) as maxId
 from dbo.customer 
