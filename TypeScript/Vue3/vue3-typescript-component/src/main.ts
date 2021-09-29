@@ -1,11 +1,7 @@
-import { createApp, defineAsyncComponent } from 'vue'
-import Vue from 'vue';
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
-import store from './store'
+import {createApp, defineAsyncComponent} from 'vue';
+//import App from './App.vue';
 
-//const app = createApp(App).use(store).use(router).mount('#app')
+//createApp(App).mount('#app');
 
 const StaticComp = {
     template: `<div>Komponent statyczny</div>`
