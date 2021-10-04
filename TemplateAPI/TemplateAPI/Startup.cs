@@ -26,9 +26,15 @@ namespace TemplateAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("ApiCorsPolicy",
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8080", "http://localhost:3000", "http://localhost:5000").AllowAnyMethod().AllowAnyHeader();
+                                  });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TemplateAPI", Version = "v1" });
@@ -45,20 +51,10 @@ namespace TemplateAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TemplateAPI v1"));
             }
 
-            // global cors policy
-            services.AddCors(options =>
-            {
-                options.AddPolicy(MyAllowSpecificOrigins,
-                builder =>
-                {
-                    builder.WithOrigins("http://localhost");
-                });
-            });
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("ApiCorsPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
