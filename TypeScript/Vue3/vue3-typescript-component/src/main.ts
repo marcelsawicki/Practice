@@ -9,35 +9,14 @@ const StaticComp = {
 
 const DynamicComp:any = defineAsyncComponent(
     () => new Promise(
-        resolve => {
-            abc();
-            setTimeout(
-                () => resolve({ template: '<div>załadowany dynamicznie</div>' }),
-                5000
-            );
+        async resolve => {
+            const response = await fetch(`https://templatesapi-vue3.azurewebsites.net/api/templates/1`);
+            const template = await response.text();
+            resolve({template});
         }
     )
 );
-let abc = function fetchData() {
-    // I prefer to use fetch
-    // you can use use axios as an alternative
-    return fetch('https://templatesapi-vue3.azurewebsites.net/api/templates/1', {
-      method: 'get'
-    })
-      .then(res => {
-          debugger;
-        // a non-200 response code
-        if (!res.ok) {
-          // create error instance with HTTP status text
-          const error = new Error(res.statusText);
-          //error.json = res.json();
-          throw error;
-        }
-  
-        return res;
-      })
-      
-  }
+
 const app = createApp({
     components: {
         StaticComp,
@@ -45,7 +24,7 @@ const app = createApp({
     },
     template: `
         <div>
-            <div>Test ładowania komponentów</div>
+            <div>Test ładowania komponentów 1</div>
             <div><StaticComp /></div>
             <div>A poniżej komponent dynamiczny załaduje się za 5 sekund</div>
             <div><DynamicComp /></div>
