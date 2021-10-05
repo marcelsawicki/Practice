@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.AggregatesModel.OrderAggregate
 {
-    class Address
+    public class Address
     {
     }
 }

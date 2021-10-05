@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.AggregatesModel.OrderAggregate
 {
-    class OrderItem
+    public class OrderItem
     {
         public OrderItem(int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
         {

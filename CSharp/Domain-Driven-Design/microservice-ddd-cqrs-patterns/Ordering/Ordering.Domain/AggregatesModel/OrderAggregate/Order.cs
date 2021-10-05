@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.AggregatesModel.OrderAggregate
 {
-    class Order
+    public class Order
     {
         private DateTime _orderDate;
         public Address Address { get; private set; }
@@ -27,7 +27,7 @@ namespace Ordering.Domain.AggregatesModel.OrderAggregate
             _orderItems = new List<OrderItem>();
             _buyerId = buyerId;
             _paymentMethodId = paymentMethodId;
-            _orderStatusId = OrderStatus.Submitted.Id;
+            _orderStatusId = 1;//OrderStatus.Submitted.Id;
             _orderDate = DateTime.UtcNow;
             Address = address;
 

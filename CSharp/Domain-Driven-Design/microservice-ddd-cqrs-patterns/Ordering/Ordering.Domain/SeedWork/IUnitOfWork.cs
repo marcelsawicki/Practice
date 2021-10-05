@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.SeedWork
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
     }
 }

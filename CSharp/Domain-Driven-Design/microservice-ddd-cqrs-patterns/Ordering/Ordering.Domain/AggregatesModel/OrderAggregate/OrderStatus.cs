@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.AggregatesModel.OrderAggregate
 {
-    class OrderStatus
+    public class OrderStatus
     {
         public object Submitted { get; set; }
     }
