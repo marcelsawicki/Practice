@@ -32,7 +32,7 @@ namespace TemplateAPI
                 options.AddPolicy("ApiCorsPolicy",
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:8080", "http://localhost:3000", "http://localhost:5000").AllowAnyMethod().AllowAnyHeader();
+                                      builder.WithOrigins("http://localhost:8080", "http://localhost:3000", "http://localhost:5000", "https://poc-vue3async-component-node14.azurewebsites.net", "https://mx666pl.github.io").AllowAnyMethod().AllowAnyHeader();
                                   });
             });
             services.AddSwaggerGen(c =>

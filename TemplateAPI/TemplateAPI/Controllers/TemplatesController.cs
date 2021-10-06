@@ -18,7 +18,7 @@ namespace TemplateAPI.Controllers
         [EnableCors("ApiCorsPolicy")]
         public string Get(int id)
         {
-            return @"<div>załadowany dynamicznie z WebAPI</div>";
+            return @"<div>załadowany dynamicznie z WebAPI: Sukiennice przy Jerzmanowskiej zapraszają</div>";
         }
     }
 }
