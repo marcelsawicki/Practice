@@ -10,6 +10,7 @@ namespace UnitOfWorkApp1.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Welcome to Contoso University";
             return View();
         }
 

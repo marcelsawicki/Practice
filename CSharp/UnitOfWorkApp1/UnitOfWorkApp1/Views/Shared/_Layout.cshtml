@@ -17,17 +17,24 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                    <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                    <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                    <li>@Html.ActionLink("Departments", "Index", "Department")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Unit of work</p>
-        </footer>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
     </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Unit of work</p>
+    </footer>
     @RenderSection("scripts", required: false)
 </body>
 </html>
