@@ -1,3 +1,0 @@
-# Platformer
-  
-  Prosta gra platformowa
