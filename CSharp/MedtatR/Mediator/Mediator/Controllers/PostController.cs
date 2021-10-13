@@ -1,5 +1,5 @@
 ﻿using Mediator.Functions.Command;
-using Mediator.Functions.Notifications;
+using Mediator.Notification;
 using Mediator.Functions.Query;
 using Mediator.Models;
 using MediatR;
@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mediator.Notification.WritePost;
 
 namespace Mediator.Controllers
 {
