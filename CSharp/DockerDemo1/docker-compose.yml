@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  dockerdemo1:
+    image: ${DOCKER_REGISTRY-}dockerdemo1
+    build:
+      context: .
+      dockerfile: DockerDemo1/Dockerfile
+
+  webapplication1:
+    image: ${DOCKER_REGISTRY-}webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+
