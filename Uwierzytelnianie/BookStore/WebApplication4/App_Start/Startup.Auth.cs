@@ -85,8 +85,8 @@ namespace BookStoreApp
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "787045076114-1ea8qa6reig4v30dsliokc81v1egl07e.apps.googleusercontent.com",
-                ClientSecret = "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"
+                ClientId = "",
+                ClientSecret = ""
             });
         }
     }
