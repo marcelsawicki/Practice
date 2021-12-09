@@ -24,6 +24,11 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
                     <li>@Html.ActionLink("Books", "Index", "Books", new { area = "" }, null)</li>
+                    <li class="withButton">
+                        <button type="button" class="btn btn-default btn-sm" onclick="location.href='@Url.Action("Index", "Books")';return false;">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                        </button>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
