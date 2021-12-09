@@ -10,6 +10,7 @@ using Owin;
 using System;
 using BookStoreApp.Models;
 using BookStoreApp.Providers;
+using System.Web.Configuration;
 
 namespace BookStoreApp
 {
@@ -85,8 +86,8 @@ namespace BookStoreApp
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "",
-                ClientSecret = ""
+                ClientId = WebConfigurationManager.AppSettings["ClientId"],
+                ClientSecret = WebConfigurationManager.AppSettings["ClientSecret"]
             });
         }
     }
