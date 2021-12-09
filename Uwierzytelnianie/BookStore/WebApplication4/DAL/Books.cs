@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication4
+namespace WebApplication4.DAL
 {
     using System;
     using System.Collections.Generic;
