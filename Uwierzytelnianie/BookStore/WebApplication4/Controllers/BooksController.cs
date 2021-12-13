@@ -36,6 +36,21 @@ namespace WebApplication4.Controllers
             return View(books);
         }
 
+        // GET: Books/Insert/5
+        public ActionResult Insert(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Books books = db.Books.Find(id);
+            if (books == null)
+            {
+                return HttpNotFound();
+            }
+            return View(books);
+        }
+
         // GET: Books/Create
         [Authorize(Roles = "admin")]
         public ActionResult Create()
