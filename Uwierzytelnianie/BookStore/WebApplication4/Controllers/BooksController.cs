@@ -8,12 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication4;
 using WebApplication4.DAL;
+using WebApplication4.Models;
 
 namespace WebApplication4.Controllers
 {
     public class BooksController : Controller
     {
         private scrooge2_CyrensEntities db = new scrooge2_CyrensEntities();
+        private List<Books> _cart = new List<Books>();
 
         // GET: Books
         public ActionResult Index()
@@ -48,6 +50,8 @@ namespace WebApplication4.Controllers
             {
                 return HttpNotFound();
             }
+
+            _cart.Add(books);
             return View(books);
         }
 
