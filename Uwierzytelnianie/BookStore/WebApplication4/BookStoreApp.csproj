@@ -303,6 +303,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\datacrafter.pl - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\datacrafter.pl - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\datacrafter.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -313,6 +315,7 @@
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\react\bundle.js" />
     <Content Include="Scripts\sammy-0.7.5.js" />
     <Content Include="Scripts\sammy-0.7.5.min.js" />
     <Content Include="Views\_ViewStart.cshtml" />
