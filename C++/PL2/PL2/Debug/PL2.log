@@ -1,0 +1,5 @@
+﻿  PL2.cpp
+C:\Repo\Practice\C++\PL2\PL2\PL2.cpp(11,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Repo\Practice\C++\PL2\PL2\PL2.cpp(21,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Repo\Practice\C++\PL2\PL2\PL2.cpp(22,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  PL2.vcxproj -> C:\Repo\Practice\C++\PL2\Debug\PL2.exe
