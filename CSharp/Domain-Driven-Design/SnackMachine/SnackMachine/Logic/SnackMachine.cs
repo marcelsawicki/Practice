@@ -1,12 +1,12 @@
 ﻿using System;
+using static Logic.Money;
 
 namespace Logic
 {
     public sealed class SnackMachine : Entity
     {
-        public Money MoneyInside { get; private set; }
-        public Money MoneyInTransaction { get; private set; }
-
+        public Money MoneyInside { get; private set; } = None;
+        public Money MoneyInTransaction { get; private set; } = None;
 
         public void InsertMoney(Money money)
         {
@@ -15,7 +15,7 @@ namespace Logic
 
         public void ReturnMoney()
         {
-            //MoneyInTransaction = 0;
+            MoneyInTransaction = None;
         }
 
         public void BuySnack() 
