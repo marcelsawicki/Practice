@@ -1,9 +1,13 @@
+﻿using FluentAssertions;
+using SnackMachine.Logic;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xunit;
-using Logic;
-using FluentAssertions;
 
-namespace Tests
+namespace SnackMachine.Tests
 {
     public class MoneySpecs
     {
@@ -57,7 +61,7 @@ namespace Tests
         {
             Action action = () => new Money(oneCentCount, tenCentCount, quarterCount, oneDollarCount, fiveDollarCount, twentyDollarCount);
 
-            action.Should().Throw<InvalidOperationException>();
+            action.ShouldThrow<InvalidOperationException>();
         }
 
 
