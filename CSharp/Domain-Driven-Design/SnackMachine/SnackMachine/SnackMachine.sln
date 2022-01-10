@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{1BC1BA8C-EB12-434F-BD90-7031C93DF9B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachineApp.Logic", "SnackMachine.Logic\SnackMachineApp.Logic.csproj", "{753DA61A-D5ED-47A0-9D37-5B19AE16389F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{7E274FEF-EE9C-4639-9E12-AF443E86C228}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachineApp.UI", "SnackMachine.UI\SnackMachineApp.UI.csproj", "{C17C3E00-BD3F-4CFE-832B-DF51338C99A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.Logic", "SnackMachine.Logic\SnackMachine.Logic.csproj", "{753DA61A-D5ED-47A0-9D37-5B19AE16389F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.UI", "SnackMachine.UI\SnackMachine.UI.csproj", "{C17C3E00-BD3F-4CFE-832B-DF51338C99A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.Tests", "SnackMachine.Tests\SnackMachine.Tests.csproj", "{4F14B9C5-2EB8-4818-A914-2530C1D692B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachineApp.Tests", "SnackMachine.Tests\SnackMachineApp.Tests.csproj", "{4F14B9C5-2EB8-4818-A914-2530C1D692B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1BC1BA8C-EB12-434F-BD90-7031C93DF9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BC1BA8C-EB12-434F-BD90-7031C93DF9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BC1BA8C-EB12-434F-BD90-7031C93DF9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BC1BA8C-EB12-434F-BD90-7031C93DF9B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E274FEF-EE9C-4639-9E12-AF443E86C228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E274FEF-EE9C-4639-9E12-AF443E86C228}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E274FEF-EE9C-4639-9E12-AF443E86C228}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E274FEF-EE9C-4639-9E12-AF443E86C228}.Release|Any CPU.Build.0 = Release|Any CPU
 		{753DA61A-D5ED-47A0-9D37-5B19AE16389F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{753DA61A-D5ED-47A0-9D37-5B19AE16389F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{753DA61A-D5ED-47A0-9D37-5B19AE16389F}.Release|Any CPU.ActiveCfg = Release|Any CPU

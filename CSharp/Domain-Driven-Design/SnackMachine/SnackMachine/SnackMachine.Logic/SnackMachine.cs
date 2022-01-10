@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static SnackMachine.Logic.Money;
+using static SnackMachineApp.Logic.Money;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public class SnackMachine : Entity
     {
-        public Money MoneyInside { get; private set; } = None;
-        public Money MoneyInTransaction { get; private set; } = None;
+        public virtual Money MoneyInside { get; protected set; } = None;
+        public virtual Money MoneyInTransaction { get; protected set; } = None;
 
-        public void InsertMoney(Money money)
+        public virtual void InsertMoney(Money money)
         {
             MoneyInTransaction += money;
         }
 
-        public void ReturnMoney()
+        public virtual void ReturnMoney()
         {
             MoneyInTransaction = None;
         }
 
-        public void BuySnack()
+        public virtual void BuySnack()
         {
             MoneyInside += MoneyInTransaction;
-            //MoneyInTransaction = 0
+            MoneyInTransaction = None;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public abstract class ValueObject<T>
         where T : ValueObject<T>

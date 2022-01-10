@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public sealed class Money : ValueObject<Money>
     {
@@ -29,6 +29,9 @@ namespace SnackMachine.Logic
             {
                 return OneCentCount * 0.01m + TenCentCount * 0.10m + QuarterCount * 0.25m + OneDollarCount + FiveDollarCount * 5 + TwentyDollarCount * 20;
             }
+        }
+        private Money()
+        {
         }
 
         public Money(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount)
@@ -88,6 +91,14 @@ namespace SnackMachine.Logic
                 hashCode = (hashCode * 397) ^ TwentyDollarCount;
                 return hashCode;
             }
+        }
+
+        public override string ToString()
+        {
+            if (Amount < 1)
+                return "¢" + (Amount * 100).ToString("0");
+
+            return "$" + Amount.ToString("0.00");
         }
     }
 }

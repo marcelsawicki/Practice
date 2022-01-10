@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using SnackMachine.Logic;
+using SnackMachineApp.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace SnackMachine.Tests
+namespace SnackMachineApp.Tests
 {
     public class MoneySpecs
     {

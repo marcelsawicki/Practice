@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public abstract class Entity
     {
-        public long Id { get; private set; }
+        public virtual long Id { get; private set; }
         public override bool Equals(object obj)
         {
             var other = obj as Entity;
