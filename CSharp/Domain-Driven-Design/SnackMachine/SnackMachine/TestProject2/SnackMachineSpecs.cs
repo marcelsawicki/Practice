@@ -6,7 +6,7 @@ using Xunit;
 
 namespace TestProject2
 {
-    public class UnitTest1
+    public class SnackMachineSpecs
     {
         [Fact]
         public void Test1()
@@ -18,7 +18,7 @@ namespace TestProject2
             snackMachine.BuySnack(1);
 
             snackMachine.MoneyInTransaction.Should().Be(Money.None);
-            snackMachine.MoneyInside.Amount.Should().Be(2m);
+            snackMachine.MoneyInside.Amount.Should().Be(1m);
             snackMachine.Slots.Single(x => x.Position == 1).Quantity.Should().Be(9);
 
         }
