@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SnackMachine.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,11 @@ using static SnackMachineApp.Logic.Money;
 
 namespace SnackMachineApp.Logic
 {
-    public class SnackMachine : Entity
+    public class SnackMachine : AggregateRoot
     {
         public virtual Money MoneyInside { get; protected set; }
         public virtual Money MoneyInTransaction { get; protected set; }
-        public virtual IList<Slot> Slots { get; protected set; }
+        protected virtual IList<Slot> Slots { get; protected set; }
         public SnackMachine()
         {
             MoneyInside = None;

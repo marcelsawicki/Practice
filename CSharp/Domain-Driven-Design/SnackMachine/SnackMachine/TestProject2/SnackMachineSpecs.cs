@@ -19,7 +19,9 @@ namespace TestProject2
 
             snackMachine.MoneyInTransaction.Should().Be(Money.None);
             snackMachine.MoneyInside.Amount.Should().Be(1m);
-            snackMachine.Slots.Single(x => x.Position == 1).Quantity.Should().Be(9);
+            snackMachine.GetQuantityOfSnacksInSlot(1).Should().Be(9);
+            snackMachine.GetSnackInSlot(1).Should().Be(new Snack("Some snack"));
+            snackMachine.GetPriceInSlot(1).Should().Be(1m);
 
         }
     }
