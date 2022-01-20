@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
 using SnackMachineApp.Logic;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public class SlotMap : ClassMap<Slot>
     {
