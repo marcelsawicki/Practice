@@ -12,6 +12,7 @@ namespace SnackMachineApp.Logic
     {
         public virtual SnackMachine SnackMachine { get; set; }
         public virtual int Position { get; set; }
+        public SnackPile SnackPile { get; internal set; }
 
         public Slot()
         {

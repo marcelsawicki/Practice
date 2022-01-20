@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentNHibernate;
 using FluentNHibernate.Mapping;
 
 namespace SnackMachineApp.Logic
@@ -22,6 +23,8 @@ namespace SnackMachineApp.Logic
                 y.Map(x => x.FiveDollarCount);
                 y.Map(x => x.TwentyDollarCount);
             });
+
+            HasMany<Slot>(Reveal.Member<SnackMachine>("Slots")).Not.LazyLoad());
             
         }
     }

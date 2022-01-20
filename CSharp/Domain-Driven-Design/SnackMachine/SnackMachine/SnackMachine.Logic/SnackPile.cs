@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnackMachine.Logic
+namespace SnackMachineApp.Logic
 {
     public sealed class SnackPile : ValueObject<SnackPile>
     {
