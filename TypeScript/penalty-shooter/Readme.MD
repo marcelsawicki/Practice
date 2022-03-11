@@ -1,0 +1,1 @@
+![Image of Clock](https://github.com/marcelsawicki/Practice/blob/master/TypeScript/Szescian/Cube.png)  
