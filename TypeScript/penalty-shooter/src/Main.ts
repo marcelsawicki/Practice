@@ -1,6 +1,5 @@
 import { Message } from "./Message";
 import Draw from "./Draw";
-import { exit } from "process";
 
 
 function showMessage(message: Message)
@@ -31,6 +30,7 @@ window.onload = function()
 		Draw.DrawLine(context, x_p-8, y_p-8, x_p+8, y_p+8,'green');
 		x_p++
 		y_p=Math.tan(alfa)*x_p-(((9.81/(2*Math.pow(v0,2)*Math.pow(Math.cos(alfa),2))))*Math.pow(x_p,2));
+		//y_p=x_p*Math.tan(45);
 		y_p=canvas.height - Math.floor(y_p);
 		Draw.DrawLine(context, x_p, y_p, x_p+3, y_p+3,'white');
 		if(y_p>canvas.height){
