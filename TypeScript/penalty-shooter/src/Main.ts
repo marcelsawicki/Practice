@@ -24,12 +24,13 @@ window.onload = function()
 {
 	let x_p: number=0;
 	let y_p: number=0;
-	let alfa: number=45;
-	let v0: number=75;
+	let alfa: number=75;
+	let v0: number=100;
+	let deg = (Math.PI/180)
 	setInterval(function() {
 		Draw.DrawLine(context, x_p-8, y_p-8, x_p+8, y_p+8,'green');
 		x_p++
-		y_p=Math.tan(alfa)*x_p-(((9.81/(2*Math.pow(v0,2)*Math.pow(Math.cos(alfa),2))))*Math.pow(x_p,2));
+		y_p=Math.tan(alfa*deg)*x_p-(((9.81/(2*Math.pow(v0,2)*Math.pow(Math.cos(alfa*deg),2))))*Math.pow(x_p,2));
 		//y_p=x_p*Math.tan(45);
 		y_p=canvas.height - Math.floor(y_p);
 		Draw.DrawLine(context, x_p, y_p, x_p+3, y_p+3,'white');
