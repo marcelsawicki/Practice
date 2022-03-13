@@ -1,4 +1,20 @@
+import PointOY from "./PointOY";
 export default abstract class Draw {
+static DrawPoint(context: CanvasRenderingContext2D, xe: number, ye: number, color: string) {
+    context.beginPath();
+    context.arc(xe, ye, 5, 0, 2 * Math.PI, true);
+    context.stroke();
+}
+
+public static DrawLineFromPoints(context:CanvasRenderingContext2D, point1: PointOY, point2:PointOY, color: string)
+{
+    context.beginPath()
+    context.lineWidth = 5;
+	context.strokeStyle = color;
+    context.moveTo(point1.xe, point1.ye);
+    context.lineTo(point2.xe, point2.ye);
+    context.stroke(); 
+}
     
 public static DrawFloor(): string {
     return "Draw floor";
