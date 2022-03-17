@@ -21,28 +21,28 @@ export default  class Point
     }
 
     public Recalculate(){
-        this.xe=Math.floor(this.x/(1+(this.z/this.d)));
+        this.xe=Math.floor(this.x/(1+(this.z/this.d))+50);
         this.ye=Math.floor(this.y/(1+(this.z/this.d)));
     }
     public RotateOX(alfa: number): void {
         this.y = this.y*Math.cos(alfa*Math.PI/180)-this.z*Math.sin(alfa*Math.PI/180);
         this.z = this.y*Math.sin(alfa*Math.PI/180)+this.z*Math.cos(alfa*Math.PI/180);
-        this.xe=Math.floor(this.x/(1+(this.z/this.d)));
-        this.ye=Math.floor(this.y/(1+(this.z/this.d)));
+        this.xe=Math.floor(this.x/(1+(this.z/this.d))+50);
+        this.ye=Math.floor(this.y/(1+(this.z/this.d))-100);
         }
     
     public RotateOY(alfa: number): void {
         this.x = this.x*Math.cos(alfa*Math.PI/180)-this.z*Math.sin(alfa*Math.PI/180);
         this.z = this.x*Math.sin(alfa*Math.PI/180)+this.z*Math.cos(alfa*Math.PI/180);
-        this.xe=Math.floor(this.x/(1+(this.z/this.d)));
-        this.ye=Math.floor(this.y/(1+(this.z/this.d)));
+        this.xe=Math.floor(this.x/(1+(this.z/this.d))+50);
+        this.ye=Math.floor(this.y/(1+(this.z/this.d))-100);
         }
 
     public RotateOZ(alfa: number): void {
         this.x = this.x*Math.cos(alfa*Math.PI/180)-this.y*Math.sin(alfa*Math.PI/180);
         this.y = this.x*Math.sin(alfa*Math.PI/180)+this.y*Math.cos(alfa*Math.PI/180);
-        this.xe=Math.floor(this.x/(1+(this.z/this.d)));
-        this.ye=Math.floor(this.y/(1+(this.z/this.d)));
+        this.xe=Math.floor(this.x/(1+(this.z/this.d))+50);
+        this.ye=Math.floor(this.y/(1+(this.z/this.d))-100);
         }
 
 }

@@ -1,16 +1,21 @@
 import Point from "./Point";
 export default abstract class Draw {
 static DrawGate(context: CanvasRenderingContext2D) {
-	let alfa: number = 5;
-	let odl: number = 500;
+	let alfa: number = 0;
+	let odl: number = 2000;
 
-	let point11 = new Point(500,300,400,odl,alfa);
-	let point12 = new Point(500,300,10,odl,alfa);
 	let point13 = new Point(100,300,400,odl,alfa);
-	let point14 = new Point(100,300,10,odl,alfa);
+	//point13.RotateOX(15);
+	let point11 = new Point(500,300,400,odl,alfa);
+	//point11.RotateOX(15);
 	let point15 = new Point(100,400,400,odl,alfa);
-	let point16 = new Point(100,400,10,odl,alfa);
+	//point15.RotateOX(15);
 	let point17 = new Point(500,400,400,odl,alfa);
+	//point17.RotateOX(15);
+
+	let point12 = new Point(500,300,10,odl,alfa);
+	let point14 = new Point(100,300,10,odl,alfa);
+	let point16 = new Point(100,400,10,odl,alfa);
 	let point18 = new Point(500,400,10,odl,alfa);
 	
     let list = new Array<Point>();
