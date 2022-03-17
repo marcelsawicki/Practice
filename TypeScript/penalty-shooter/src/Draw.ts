@@ -1,15 +1,55 @@
-import PointOY from "./PointOY";
+import Point from "./Point";
 export default abstract class Draw {
+static DrawGate(context: CanvasRenderingContext2D) {
+	let alfa: number = 5;
+	let odl: number = 500;
+
+	let point11 = new Point(500,300,400,odl,alfa);
+	let point12 = new Point(500,300,10,odl,alfa);
+	let point13 = new Point(100,300,400,odl,alfa);
+	let point14 = new Point(100,300,10,odl,alfa);
+	let point15 = new Point(100,400,400,odl,alfa);
+	let point16 = new Point(100,400,10,odl,alfa);
+	let point17 = new Point(500,400,400,odl,alfa);
+	let point18 = new Point(500,400,10,odl,alfa);
+	
+    let list = new Array<Point>();
+	list.push(point11);
+	list.push(point12);
+	list.push(point13);
+	list.push(point14);
+	list.push(point15);
+	list.push(point16);
+	list.push(point17);
+	list.push(point18);
+	list.forEach((element) => {
+		Draw.DrawPoint(context,element.xe,element.ye, 'white');
+	});
+	
+
+	Draw.DrawLineFromPoints(context,point11, point12, 'white');
+    Draw.DrawLineFromPoints(context,point13, point15, 'white');
+    Draw.DrawLineFromPoints(context,point11, point17, 'white');
+    Draw.DrawLineFromPoints(context,point15, point17, 'white');
+	Draw.DrawLineFromPoints(context,point12, point14, 'white');
+	Draw.DrawLineFromPoints(context,point13, point14, 'white');
+	Draw.DrawLineFromPoints(context,point13, point11, 'white');
+	Draw.DrawLineFromPoints(context,point14, point16, 'white');
+	Draw.DrawLineFromPoints(context,point15, point16, 'white');
+	Draw.DrawLineFromPoints(context,point16, point18, 'white');
+	Draw.DrawLineFromPoints(context,point17, point18, 'white');
+    Draw.DrawLineFromPoints(context,point12, point18, 'white');
+}
 static DrawPoint(context: CanvasRenderingContext2D, xe: number, ye: number, color: string) {
     context.beginPath();
     context.arc(xe, ye, 5, 0, 2 * Math.PI, true);
     context.stroke();
 }
 
-public static DrawLineFromPoints(context:CanvasRenderingContext2D, point1: PointOY, point2:PointOY, color: string)
+public static DrawLineFromPoints(context:CanvasRenderingContext2D, point1: Point, point2: Point, color: string)
 {
     context.beginPath()
-    context.lineWidth = 5;
+    context.lineWidth = 3;
 	context.strokeStyle = color;
     context.moveTo(point1.xe, point1.ye);
     context.lineTo(point2.xe, point2.ye);
@@ -24,9 +64,11 @@ public static DrawWall(): string {
     return "Draw wall";
     }
 
-public static DrawField(context:CanvasRenderingContext2D, canvas: HTMLCanvasElement): void {
-        context.fillStyle = "green";
-        context.fillRect(0, 0, canvas.width, canvas.height);
+public static async DrawField(context:CanvasRenderingContext2D, canvas: HTMLCanvasElement): Promise<void> {
+    let fieldImage = new Image();
+    fieldImage.src = 'background.png';
+    await new Promise(r => fieldImage.onload=r);
+    context.drawImage(fieldImage, 0, 0, 640, 480);
     }
 public static DrawCube(context:CanvasRenderingContext2D, fi: number, teta: number, skala: number)
 {

@@ -10,8 +10,8 @@ export default class PointOX
         y = y*Math.cos(alfa*Math.PI/180)-z*Math.sin(alfa*Math.PI/180);
         z = y*Math.sin(alfa*Math.PI/180)+z*Math.cos(alfa*Math.PI/180);
 
-        xp=x/(1+(z/d))+200
-        yp=y/(1+(z/d))-100
+        xp=x/(1+(z/d))
+        yp=y/(1+(z/d))
 
         this.xe = Math.floor(xp);
         this.ye = Math.floor(yp);
