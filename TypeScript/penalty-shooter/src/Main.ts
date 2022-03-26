@@ -12,5 +12,5 @@ let draw: Draw = new Draw();
 
 draw.DrawField(context, canvas).then(() => {
 	draw.DrawGate(context);
-	draw.Shoot(context);
+	draw.Shoot(context, messanger);
 });
