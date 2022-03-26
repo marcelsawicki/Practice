@@ -1,13 +1,20 @@
 export class Message {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  private _container!: HTMLElement;
 
-  constructor(userId: number, id: number, title: string, body: string) {
-    this.userId = userId;
-    this.id = id;
-    this.title = title;
-    this.body = body;
+constructor() {
+  let container:HTMLElement|null = document.getElementById('main');
+  
+  if(container!=null)
+  {
+    this._container = container;
+  }
+  
+}
+  public ShowMessage(content: string)
+  {
+    
+    let childContainer = document.createElement('div');
+    childContainer.innerText = content;
+    this._container.appendChild(childContainer);
   }
 }
