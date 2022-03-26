@@ -2,6 +2,7 @@ import Point2d from "./Point2d";
 import Point from "./Point3d";
 import Pointfactory from "./PointFactory";
 export default class Draw {
+
 DrawGate(context: CanvasRenderingContext2D) {
 	let d: number = 2100;
 
@@ -74,6 +75,46 @@ public async DrawField(context:CanvasRenderingContext2D, canvas: HTMLCanvasEleme
     await new Promise(r => fieldImage.onload=r);
     context.drawImage(fieldImage, 0, 0, 640, 480);
     }
+
+public Shoot(context: CanvasRenderingContext2D) {
+	let animate: number = 0;
+	let self = this;
+	let alfaBall = 45;
+	let v0: number = 75;
+	let pilka: Point = new Point(400,300,-1400,2100)
+	let pilka3dto2d: Point2d;
+	let pilka2d: Point2d = new Point2d(1,1);
+	let pilkaTrain: Point = new Point(400,300,0,2100)
+	let pilkaTrain2: Point = new Point(400,300,-800,2100)
+	let pilkaTrain3: Point = new Point(400,300,-1200,2100)
+
+	let previousPoint: Point2d;
+	let pilkaTrain2d: Point2d = Pointfactory.GetFromPoint3d(pilkaTrain.RotateOY(10));
+	let pilkaTrain2d2: Point2d = Pointfactory.GetFromPoint3d(pilkaTrain2.RotateOY(10));
+	let pilkaTrain2d3: Point2d = Pointfactory.GetFromPoint3d(pilkaTrain3.RotateOY(10));
+	self.DrawPoint(context,pilkaTrain2d.x, pilkaTrain2d.y,'yellow');
+	self.DrawPoint(context,pilkaTrain2d2.x, pilkaTrain2d2.y,'green');
+	self.DrawPoint(context,pilkaTrain2d3.x, pilkaTrain2d3.y,'brown');
+	pilka.RotateOY(10)
+
+		setInterval(function() {	
+			pilka.z++;
+			//pilka.y=Math.tan(alfaBall*Math.PI/180)*pilka.z-(((9.81/(2*Math.pow(v0,2)*Math.pow(Math.cos(alfaBall*Math.PI/180),2))))*Math.pow(pilka.z,2));
+			pilka3dto2d = Pointfactory.GetFromPoint3d(pilka);
+			pilka2d.x++;
+			pilka2d.y=Math.tan(alfaBall*Math.PI/180)*pilka2d.x-(((9.81/(2*Math.pow(v0,2)*Math.pow(Math.cos(alfaBall*Math.PI/180),2))))*Math.pow(pilka2d.x,2));
+			self.DrawPoint(context, pilka2d.x, 480-pilka2d.y, 'white');
+			self.DrawPoint(context, pilka3dto2d.x, pilka3dto2d.y, 'red');
+			console.log(`${pilka.x}, ${pilka.y}, ${pilka.z}`)
+			
+			if(pilka2d.x>640 && pilka2d.y<0)
+			{
+				clearInterval(1);
+				console.log("exit");
+			}
+	  }, 5);
+}
+
 }
 
 	// window.onload = function()

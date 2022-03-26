@@ -1,6 +1,6 @@
 import Point2d from "./Point2d";
 
-export default  class Point3d
+export default  class Point
 {
     public  x: number;
     public  y: number;
@@ -16,19 +16,19 @@ export default  class Point3d
         this.d = d;
     }
 
-    public RotateOX(alfaX: number): Point3d {
+    public RotateOX(alfaX: number): Point {
         this.y = this.y*Math.cos(alfaX*(Math.PI/180))-this.z*Math.sin(alfaX*(Math.PI/180));
         this.z = this.y*Math.sin(alfaX*(Math.PI/180))+this.z*Math.cos(alfaX*(Math.PI/180));
         return this;
         }
     
-    public RotateOY(alfaY: number): Point3d {
+    public RotateOY(alfaY: number): Point {
         this.x = this.x*Math.cos(alfaY*(Math.PI/180))+this.z*Math.sin(alfaY*(Math.PI/180));
         this.z = -this.x*Math.sin(alfaY*(Math.PI/180))+this.z*Math.cos(alfaY*(Math.PI/180));
         return this;
         }
 
-    public RotateOZ(alfaZ: number): Point3d {
+    public RotateOZ(alfaZ: number): Point {
         this.x = this.x*Math.cos(alfaZ*Math.PI/180)-this.y*Math.sin(alfaZ*Math.PI/180);
         this.y = this.x*Math.sin(alfaZ*Math.PI/180)+this.y*Math.cos(alfaZ*Math.PI/180);
         return this;

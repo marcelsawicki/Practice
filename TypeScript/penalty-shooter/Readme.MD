@@ -1,1 +1,1 @@
-![Image of penalty shooter](https://github.com/marcelsawicki/Practice/blob/master/TypeScript/penalty-shooter/background.png)  
+![Image of penalty shooter](https://github.com/marcelsawicki/Practice/blob/master/TypeScript/penalty-shooter/penalty-shooter.png)
