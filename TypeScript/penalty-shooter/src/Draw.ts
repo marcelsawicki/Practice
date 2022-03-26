@@ -3,17 +3,17 @@ import Point from "./Point3d";
 import Pointfactory from "./PointFactory";
 export default class Draw {
 DrawGate(context: CanvasRenderingContext2D) {
-	let d: number = 500;
+	let d: number = 2100;
 
-	let pointA = new Point(100,300,400,d);
-	let pointB = new Point(500,300,400,d);
-	let pointC = new Point(100,400,400,d);
-	let pointD = new Point(500,400,400,d);
+	let pointA = new Point(100,100,900,d);
+	let pointB = new Point(600,100,900,d);
+	let pointC = new Point(100,400,900,d);
+	let pointD = new Point(600,400,900,d);
 
-	let pointE = new Point(100,300,800,d);
-	let pointF = new Point(500,300,800,d);
-	let pointG = new Point(100,400,800,d);
-	let pointH = new Point(500,400,800,d);
+	let pointE = new Point(100,100,1200,d);
+	let pointF = new Point(600,100,1200,d);
+	let pointG = new Point(100,400,1200,d);
+	let pointH = new Point(600,400,1200,d);
 	
     let list = new Array<Point>();
 	list.push(pointA);
@@ -29,16 +29,16 @@ DrawGate(context: CanvasRenderingContext2D) {
 	let list2d = new Array<Point2d>();
 
 	list.forEach((element) => {
-		let pointAA: Point2d = Pointfactory.GetFromPoint3d(element);
-		this.DrawPoint(context, pointAA.x, pointAA.y, 'black');
-		let pointBB: Point2d = Pointfactory.GetFromPoint3d(element.RotateOX(340));
-		this.DrawPoint(context,pointBB.x, pointBB.y, 'red');
+		// let pointAA: Point2d = Pointfactory.GetFromPoint3d(element);
+		// this.DrawPoint(context, pointAA.x, pointAA.y, 'black');
+		let pointBB: Point2d = Pointfactory.GetFromPoint3d(element.RotateOY(10));
+		//this.DrawPoint(context,pointBB.x, pointBB.y, 'red');
 		list2d.push(pointBB);
 	});
 
 	this.DrawLine(context, list2d[0], list2d[1], 'white');
 	this.DrawLine(context, list2d[0], list2d[2], 'white');
-	this.DrawLine(context, list2d[2], list2d[3], 'white');
+	//this.DrawLine(context, list2d[2], list2d[3], 'white');
 	this.DrawLine(context, list2d[4], list2d[5], 'white');
 	this.DrawLine(context, list2d[4], list2d[6], 'white');
 	this.DrawLine(context, list2d[6], list2d[7], 'white');
@@ -61,7 +61,7 @@ DrawPoint(context: CanvasRenderingContext2D, xe: number, ye: number, color: stri
 public DrawLine(context:CanvasRenderingContext2D, point1: Point2d, point2: Point2d, color: string)
 {
     context.beginPath()
-    context.lineWidth = 3;
+    context.lineWidth = 2;
 	context.strokeStyle = color;
     context.moveTo(point1.x, point1.y);
     context.lineTo(point2.x, point2.y);
