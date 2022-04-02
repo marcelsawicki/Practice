@@ -15,8 +15,7 @@ export default class App extends Component {
     this.setState({ userName: this.state.userName === "Adam"? "Jakub": "Adam" })
   }
 
-  render() {
-    return(
+  render = () => 
       <div>
         <h4 className="bg-primary text-white text-center p-2">
           Lista zadań użytkownika { this.state.userName }
@@ -25,6 +24,5 @@ export default class App extends Component {
           Zmień
         </button>
       </div>
-    )
-  }
+  
 }
