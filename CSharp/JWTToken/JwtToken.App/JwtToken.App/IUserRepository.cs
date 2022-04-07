@@ -1,6 +1,9 @@
-﻿namespace JwtToken.App
+﻿using JwtToken.App.Models;
+
+namespace JwtToken.App
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
+        UserDTO GetUser(UserModel userModel);
     }
 }

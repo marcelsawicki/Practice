@@ -1,6 +1,10 @@
-﻿namespace JwtToken.App
+﻿using JwtToken.App.Models;
+
+namespace JwtToken.App
 {
-    internal interface ITokenService
+    public interface ITokenService
     {
+        string BuildToken(string key, string issuer, UserDTO user);
+        bool IsTokenValid(string key, string issuer, string token);
     }
 }
