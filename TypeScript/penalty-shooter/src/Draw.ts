@@ -95,10 +95,12 @@ public DrawLine(context:CanvasRenderingContext2D, point1: Point2d, point2: Point
 }
     
 public async DrawField(context:CanvasRenderingContext2D, canvas: HTMLCanvasElement): Promise<void> {
+	context.globalCompositeOperation = 'destination-over';
     let fieldImage = new Image();
-    fieldImage.src = 'background.png';
+    fieldImage.src = 'gate1.png';
     await new Promise(r => fieldImage.onload=r);
     context.drawImage(fieldImage, 0, 0, 640, 480);
+	context.globalCompositeOperation = 'source-over';
     }
 
 public Shoot(context: CanvasRenderingContext2D, messanger: Message, rzut_ukosny_kat: number, rzut_ukosny_predkosc_poczatkowa: number, kat_horizontal: number ) {
@@ -131,11 +133,22 @@ public Shoot(context: CanvasRenderingContext2D, messanger: Message, rzut_ukosny_
 			console.log(`(x,y,z) = ${pilka._x}, ${pilka._y}, ${pilka._z}`)
 			console.log(`(x,y) = ${Pointfactory.GetFromPoint3d(pilka,korekta_x,50).x}, ${Pointfactory.GetFromPoint3d(pilka,korekta_x,50).y}`)
 			messanger.ShowMessage(`(x,y,z) / (rzut ukosny)= ${pilka._x}, ${pilka._y}, ${pilka._z} / ${rzut_ukosny}`);
-			//messanger.ShowMessage(`(x,y) = ${xe}, ${ye}`)
+			if(pilka._x>436 && pilka._y < 390 && pilka._y > 380)
+			{
+				this.DrawGoal(context);
+				messanger.ShowMessage(`Goal!`);
+			}
+			messanger.ShowMessage(`(x,y) = ${xe}, ${ye}`)
 				if(rzut_ukosny<0)
 				{
 					clearInterval(1);
 					console.log("exit");
+				}
+
+				if(pilka._z<0)
+				{
+					clearInterval(1);
+					console.log("exit ball on field");
 				}
 			old_xe = xe;
 			old_ye = ye;
@@ -143,5 +156,9 @@ public Shoot(context: CanvasRenderingContext2D, messanger: Message, rzut_ukosny_
 	  }, 5);
 	  
 }
+	DrawGoal(context: CanvasRenderingContext2D) {
+		context.font = "30px Arial";
+		context.fillText("Goal!", 10, 50);
+	}
 
 }
