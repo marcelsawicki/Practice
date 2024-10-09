@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { NumberValueAccessor } from '@angular/forms';
 
 @Component({
@@ -17,6 +17,8 @@ export class AppComponent {
     price: 12
   });
 
+  exPrice = computed(() => this.selectedProduct().price * this.quantity());
+  color = computed(() => this.exPrice() > 50 ? 'green' : 'blue');
   constructor() {
     console.log('In constructor:', this.quantity());
     effect(() => console.log('In effect', this.quantity()));
